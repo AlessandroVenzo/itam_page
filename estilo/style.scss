@@ -1,0 +1,1221 @@
+/*============importacion============*/
+@import"_index";
+@import"_testimonios";
+
+@import"_sobremi";
+@import"_contacto";
+@import"_cursos";
+/*============FIN importacion============*/
+/*variables*/
+
+$titulo: 0;
+
+/*condiciones responsivas, ESTO ME LO ESTÁ IGNORANDO*/
+
+/*fin condiciones responsivas*/
+
+/*fin variables*/
+
+/*animaciones*/
+
+@keyframes imagenAparicion {
+
+    0% {
+        transform: scale(0);
+        filter: blur(4px), saturate(0);
+    }
+
+    30% {
+        transform: scale(1.1);
+        filter: blur(3px), saturate(1);
+    }
+
+    60% {
+        transform: scale(0.8);
+        filter: blur(0px);
+    }
+
+    99% {
+        transform: scale(1);
+        filter: blur(0px);
+        visibility: visible;
+    }
+}
+
+@keyframes imagenCongelada {
+
+    99% {
+        transform: scale(1);
+        visibility: visible;
+    }
+
+    100% {
+        transform: scale(1);
+        visibility: visible;
+    }
+}
+
+@keyframes entradaIzq {
+
+    0% {
+        translate: -400px;
+        opacity: 0;
+        filter: blur(4px);
+    }
+
+    60% {
+        translate: 20px;
+        opacity: 1;
+        filter: blur(2px);
+    }
+
+    80% {
+        translate: -20px;
+        filter: blur(2px);
+    }
+
+    100% {
+        translate: 0px;
+        filter: blur(0px);
+    }
+}
+
+@keyframes aparicionFlecha {
+
+    0% {
+        translate: -400px;
+        opacity: 0;
+        filter: blur(4px);
+        visibility: visible;
+    }
+
+    40% {
+        translate: 20px;
+        opacity: 1;
+        filter: blur(2px);
+    }
+
+    70% {
+        translate: -20px;
+        filter: blur(2px);
+    }
+
+    99% {
+        translate: 0px;
+        filter: blur(0px);
+    }
+
+    100% {
+        translate: 0px;
+        filter: blur(0px);
+    }
+
+}
+
+@keyframes flechaCongelada {
+    99% {
+        filter: blur(0px) invert(1);
+        visibility: visible;
+    }
+
+    100% {
+        filter: blur(0px) invert(1);
+        visibility: visible;
+    }
+
+}
+
+/*fin animaciones*/
+
+/*GNERALES*/
+
+* {
+    padding: 0%;
+    margin: 0%;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5 {
+    margin: 0% !important;
+    padding: 0% !important;
+}
+
+/*============GENERAL============*/
+
+* {
+    margin: 0px;
+    padding: 0px;
+    box-sizing: border-box;
+}
+
+/*-----backgrounds-----*/
+
+.presentacion {
+    background-image: linear-gradient(to top, rgb(4, 4, 4), #0C0C0C);
+    background-size: cover;
+    padding-left: 10%;
+    padding-right: 10%;
+    width: 100%;
+}
+
+.redes {
+    padding-left: 10%;
+    padding-right: 10%;
+    text-align: center;
+    margin-top: 3em;
+}
+
+.extractos {
+    background-image: linear-gradient(to top, rgb(4, 4, 4), #0C0C0C);
+    width: 100%;
+}
+
+
+.footer {
+    background-color: #090909;
+    margin-top: 5em;
+}
+
+body {
+    background-color: rgb(4, 4, 4);
+    padding-top: 100px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+header {
+    background-image: linear-gradient(to bottom, rgb(17, 17, 17), rgb(26, 26, 26));
+    box-sizing: border-box;
+}
+
+.persuasion {
+    background-image: url(../imagenes/persuasion.png);
+    background-color: #000;
+    background-position-x: -400px;
+    box-shadow: rgba(0, 0, 0, 0.63) 0px -5px 60px;
+}
+
+
+/*-----FIN backgrounds-----*/
+
+/*-----TITULOS-----*/
+
+title {
+    display: block;
+    font-family: Arial, Helvetica, sans-serif !important;
+    letter-spacing: 2px !important;
+    padding: 0%;
+}
+
+.elemento--centrado {
+    display: flex;
+    justify-content: center;
+    height: auto;
+    width: 100%;
+    padding: 0%;
+    margin: 0%;
+}
+
+
+#atencionArriba {
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 3rem;
+    padding-left: 20%;
+    padding-right: 20%;
+}
+
+
+
+#tituloPrincipal {
+    font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif I !important;
+    order: 1;
+    font-size: 36px;
+    font-weight: lighter;
+    color: white;
+    text-align: left;
+    font-style: normal;
+    background-color: black;
+    width: 500px;
+    margin-left: 3rem;
+
+}
+
+.titulo {
+    background: repeating-linear-gradient(45deg, rgb(26, 26, 26), rgb(15, 15, 15) 15px, #f69d3c 10px);
+    text-align: center;
+    width: 100%;
+    color: yellow;
+    font-size: 40px;
+    font-family: Impact !important;
+    font-weight: 300;
+    font-style: normal;
+    letter-spacing: 2px;
+    padding-bottom: 1rem;
+    padding-top: 1rem;
+    text-shadow: black 0px 0px 10px;
+    margin: 0% !important;
+}
+
+#principalColorizado {
+    color: red;
+    text-align: center;
+}
+
+#principalPrimero,
+#principalUltimo,
+#principalUltimo2 {
+    text-align: center;
+}
+
+.subtitulo {
+    color: white;
+    background-color: rgba(65, 105, 225, 0.26);
+    text-align: center;
+    font-size: 29px;
+    font-weight: lighter;
+    font-style: normal;
+    margin-top: 1em;
+    margin-bottom: 1em;
+}
+
+.tituloSec {
+    padding-top: 0.5em;
+    color: white;
+    padding-bottom: 0.5em;
+    background-color: #0c0c0c;
+    font-size: 60px;
+    font-weight: lighter;
+    text-align: center;
+    text-decoration: underline white;
+    width: 100%;
+}
+
+.tituloBen {
+    font-size: 20px;
+    display: inline-block;
+    color: yellow;
+    background: linear-gradient(#1c1c1c, #090909);
+    text-align: center;
+    width: 100%;
+    font-weight: lighter;
+    margin-top: 1em;
+}
+
+.text--normalise{
+    font-style: normal ;
+    font-weight: normal;
+}
+
+h2 {
+    font-family: Arial, Helvetica, sans-serif !important;
+    letter-spacing: 2px !important;
+}
+
+h5 {
+    font-family: 'Roboto Condensed', sans-serif !important;
+    text-align: center !important;
+    font-weight: lighter !important;
+}
+
+#atencion_h3{
+    font-family: 'Roboto Condensed', sans-serif !important;
+    text-align: center !important;
+    font-weight: lighter !important;
+    letter-spacing: 2px;
+    font-size: 30px;
+}
+
+.tituloMediocre {
+    background-color: black;
+    padding-left: 0.5em;
+    padding-right: 0.5em;
+    color: yellow;
+    height: auto;
+}
+
+h3 {
+    margin: 0%;
+}
+
+.elemento--centrado h3,
+.elemento--centrado p {
+    text-align: center;
+}
+
+#atencionAbajo strong{
+    text-align: center;
+}
+
+/*-----FIN TITULOS-----*/
+
+/*-----FUENTES-----*/
+
+p, main {
+    font-family: Arial, Helvetica, sans-serif !important;
+    font-size: 18px !important;
+    color: white !important;
+}
+
+/*-----FIN FUENTES-----*/
+
+/*-----WHATSAPP BOTON-----*/
+#botonWhatsapp {
+    width: 100%;
+    height: auto;
+    position: fixed;
+    right: -92vw;
+    top: 80vh;
+    z-index: 5;
+}
+
+#botonWhatsapp a img {
+    width: 50px;
+    transition: all 0.5s;
+}
+
+#botonWhatsapp a img:hover {
+    z-index: 5;
+    transform: scale(1.4);
+    filter: drop-shadow(rgba(0, 0, 0, 0.767) 0px 0px 5px);
+}
+
+/*-----FIN WHATSAPP BOTON-----*/
+
+/*-----BOTONES-----*/
+
+.botonVenta {
+    border: none;
+    border-radius: 10px;
+    height: auto;
+    width: auto;
+    box-sizing: border-box;
+    padding-left: 0.5rem;
+    padding-right: 0.5rem;
+    margin-left: 1em;
+    margin-right: 1em;
+    padding-top: 1em;
+    padding-bottom: 1em;
+    margin-top: 2rem;
+    margin-bottom: 2rem;
+    font-size: 13px;
+    background-color: rgb(16, 27, 27);
+    text-transform: uppercase;
+    border: 1px yellow solid;
+    transition: all 0.4s ease-out;
+
+    a {
+        text-decoration: none;
+        color: yellow;
+        padding-top: 1em;
+        padding-bottom: 1em;
+    }
+}
+
+.botonVenta:hover {
+    transform: scale(1.2);
+    border-radius: 0px;
+    box-shadow: rgba(0, 0, 0, 0.801) 0px 0px 10px;
+    background-image: linear-gradient(to bottom, rgb(185, 167, 0), rgb(234, 246, 65));
+    cursor: pointer;
+
+    a {
+        color: black;
+    }
+}
+
+/* animacion cancelada por el momento
+.botonVenta a:hover {
+    .botonVenta {
+        animation-name: botonClick;
+        animation-duration: 2s;
+    }
+}
+
+@keyframes botonClick {
+
+    0% {
+        transform: scale(1.05);
+        border-radius: 0px;
+        box-shadow: rgba(0, 0, 0, 0.801) 0px 0px 10px;
+        filter: blur(0px);
+
+        a {
+            color: black;
+        }
+    }
+
+    5% {
+        filter: blur(3px);
+    }
+
+    10% {
+        transform: scale(0.9);
+        border-radius: 20px;
+        background-image: none;
+        background-color: yellow;
+        box-shadow: none(0, 0, 0, 0.801) 0px 0px 0px;
+        filter: blur(0px);
+        opacity: 1;
+
+        a {
+            color: black;
+        }
+    }
+
+    25% {
+        transform: scale(1.3);
+        border-radius: 10px;
+        box-shadow: rgba(0, 0, 0, 0.801) 0px 0px 30px;
+        filter: blur(4px);
+        opacity: 0;
+
+        a {
+            color: yellow;
+        }
+    }
+
+
+    99% {
+        transform: scale(2);
+        border-radius: 10px;
+        box-shadow: rgba(0, 0, 0, 0.801) 0px 0px 50px;
+        opacity: 0;
+
+        a {
+            color: yellow;
+        }
+    }
+
+    100% {
+        transform: scale(1);
+        border-radius: 10px;
+        box-shadow: none;
+
+        a {
+            color: yellow;
+        }
+    }
+}
+
+*/
+/*-----FIN BOTONES-----*/
+
+/*-----HEADER-----*/
+
+header {
+    border: none;
+    border-bottom: tomato;
+    border-bottom-style: solid;
+    border-bottom-width: 2px;
+    box-sizing: border-box;
+    position: fixed;
+    top: 0%;
+    right: 0%;
+    z-index: 5;
+    width: 100%;
+    height: 100px;
+    display: flex;
+    justify-content: center;
+    background-color: rgb(160, 0, 0);
+}
+
+.nav-item{
+    text-transform: uppercase;
+    text-align: center;
+}
+.nav-link{
+    color: yellow !important;
+}
+
+.nav-link:hover{
+    color: white !important;
+    background-color: black;
+}
+
+.header__hIzq {
+    overflow: hidden;
+    width: 40%;
+    height: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+#logCaja {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+h1 {
+    margin: 0%;
+    font-size: 40px;
+    font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+    letter-spacing: 2px;
+    padding: 0%;
+    color: gold !important;
+}
+
+#logCaja p {
+    letter-spacing: 1.8px;
+    color: rgb(65, 120, 207);
+    margin: 0%;
+    padding: 0%;
+}
+
+
+#hDer {
+    width: 60%;
+    height: 100%;
+    display: inline-flex;
+    justify-content: end;
+    align-items: center;
+}
+
+#hDer nav {
+    box-sizing: border-box;
+    display: flex;
+    height: 80%;
+    margin: 0%;
+    margin-right: 3%;
+    justify-content: space-evenly;
+    align-items: center;
+}
+
+#hDer nav ul {
+    margin: 0%;
+    padding: 0%;
+    display: flex;
+    flex-wrap: wrap;
+}
+
+#hDer nav ul li {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+#hDer nav ul li a {
+
+    box-sizing: border-box;
+    text-decoration: none;
+    text-transform: uppercase;
+    border-style: outset;
+    background-image: linear-gradient(to top, rgb(17, 17, 17), rgb(26, 26, 26));
+    margin-left: 5px;
+    color: rgb(65, 120, 207);
+    margin-right: 5px;
+    padding-top: 1em;
+    padding-bottom: 1em;
+    padding-left: 0.5em;
+    padding-right: 0.5em;
+
+}
+
+#hDer nav ul li a:hover {
+    color: yellow;
+    background-image: linear-gradient(to top, rgb(26, 26, 26), rgb(53, 53, 53));
+}
+
+header nav ul {
+    list-style: none;
+}
+
+#hDer #burger {
+    display: none;
+}
+
+/*-----FIN HEADER-----*/
+
+/*------BODY------*/
+
+.elemento--centrado {
+    display: flex;
+    justify-content: center;
+    height: 100%;
+    box-sizing: border-box;
+}
+
+.section--format {
+    width: 100%;
+    padding-top: 3em;
+    padding-bottom: 3em;
+    padding-left: 1em;
+    padding-right: 1em;
+    overflow: hidden;
+}
+
+/*------FIN BODY------*/
+
+/*-----FOOTER-----*/
+footer {
+    background-color: white;
+    width: 100%;
+}
+
+footer ul {
+    list-style: none;
+}
+
+footer p {
+    text-align: center;
+}
+
+/*-----FIN FOOTER-----*/
+
+
+/*============RESPONSIVIDAD============*/
+
+/*media query aplicado para un dispsitivo celular pequeño (md)
+
+*/
+@media only screen and (max-width: 1080px) and (orientation: portrait) {
+    $titulo: 2;
+
+    @if ($titulo==1) {
+        .atencion #atencionArriba #imagenPrincipal {
+            display: block;
+        }
+
+        .atencion #atencionArriba #flechaAtencion {
+            display: block;
+        }
+
+        .atencion #atencionArriba #tituloPrincipal #principalUltimo {
+            display: block;
+        }
+
+        .atencion #atencionArriba #tituloPrincipal #principalUltimo2 {
+            display: none;
+        }
+    }
+
+    @else if ($titulo==2) {
+        .atencion #atencionArriba #imagenPrincipal {
+            display: none;
+        }
+
+        .atencion #atencionArriba #flechaAtencion {
+            display: none;
+        }
+
+        .atencion #atencionArriba #tituloPrincipal #principalUltimo {
+            display: none;
+        }
+
+        .atencion #atencionArriba #tituloPrincipal #principalUltimo2 {
+            display: block;
+        }
+    }
+
+    /*nav*/
+    #responsiveNav{
+        display: block;
+    }
+
+    #hIzq{
+        display: none;
+    }
+    
+    #hDer{
+        display: none;
+    }
+
+    header{
+        height: auto;
+    }
+    /*fin nav*/
+
+    .persuasion #solucion .elemento--centrado p {
+        width: 600px;
+    }
+
+    .objeciones {
+        display: flex;
+        flex-direction: column;
+    }
+
+    .objeciones__objecionCaja--formato {
+        border: yellow;
+        border-width: 2px;
+        border-style: solid;
+        border-collapse: collapse;
+        border-bottom: hidden;
+    }
+
+    #objecion1,
+    #objecion3 {
+        background-image: linear-gradient(to right, rgb(27, 27, 27), rgb(63, 63, 63));
+    }
+
+    #objecion2,
+    #objecion4 {
+        background-image: linear-gradient(to left, rgb(27, 27, 27), rgb(63, 63, 63));
+    }
+
+    .objecionCaja_p {
+        background-color: black;
+        color: white;
+    }
+
+}
+
+/*media query aplicado para un dispsitivo celular estandar (md)
+
+*/
+@media only screen and (min-width: 576px) and (orientation: portrait) {
+
+    /*header*/
+
+    /*nav*/
+    #responsiveNav{
+        display: block;
+    }
+
+    #hIzq{
+        display: none;
+    }
+    
+    #hDer{
+        display: none;
+    }
+
+    header{
+        height: auto;
+    }
+    /*fin nav*/
+
+    $titulo: 2;
+
+    @if ($titulo==1) {
+        .atencion #atencionArriba #imagenPrincipal {
+            display: block;
+        }
+
+        .atencion #atencionArriba #flechaAtencion {
+            display: block;
+        }
+
+        .atencion #atencionArriba #tituloPrincipal #principalUltimo {
+            display: block;
+        }
+
+        .atencion #atencionArriba #tituloPrincipal #principalUltimo2 {
+            display: none;
+        }
+    }
+
+    @else if ($titulo==2) {
+        .atencion #atencionArriba #imagenPrincipal {
+            display: none;
+        }
+
+        .atencion #atencionArriba #flechaAtencion {
+            display: none;
+        }
+
+        .atencion #atencionArriba #tituloPrincipal #principalUltimo {
+            display: none;
+        }
+
+        .atencion #atencionArriba #tituloPrincipal #principalUltimo2 {
+            display: block;
+        }
+    }
+
+    #hDer nav ul {
+        display: none;
+    }
+
+    #hDer {
+        display: flex;
+        justify-content: end;
+        width: 20%;
+    }
+
+    .header__hIzq {
+        width: 80%;
+    }
+
+    header{
+    border: none;
+    border-bottom: tomato;
+    border-bottom-style: solid;
+    border-bottom-width: 2px;
+    }
+
+
+    .persuasion #solucion .elemento--centrado p {
+        width: 600px;
+    }
+
+    .objeciones__objecionCaja--formato {
+        border: yellow;
+        border-width: 2px;
+        border-style: solid;
+        border-collapse: collapse;
+        border-bottom: hidden;
+    }
+
+    #objecion1,
+    #objecion3 {
+        background-image: linear-gradient(to right, rgb(27, 27, 27), rgb(63, 63, 63));
+    }
+
+    #objecion2,
+    #objecion4 {
+        background-image: linear-gradient(to left, rgb(27, 27, 27), rgb(63, 63, 63));
+    }
+
+    .objecionCaja_p {
+        background-color: black;
+        color: white;
+    }
+
+    .objeciones__objecionCaja--formato:hover {
+        transform: scale(1.5);
+        filter: brightness(2)
+    }
+
+
+
+}
+
+/*media query aplicado para un dispositivo horizontal pequeño, tableta*/
+
+@media only screen and (min-width: 768px) and (orientation: landscape) {
+
+    $titulo: 1;
+
+    @if ($titulo==1) {
+        .atencion #atencionArriba #imagenPrincipal {
+            display: block;
+        }
+
+        .atencion #atencionArriba #flechaAtencion {
+            display: block;
+        }
+
+        .atencion #atencionArriba #tituloPrincipal #principalUltimo {
+            display: block;
+        }
+
+        .atencion #atencionArriba #tituloPrincipal #principalUltimo2 {
+            display: none;
+        }
+    }
+
+    @else if ($titulo==2) {
+        .atencion #atencionArriba #imagenPrincipal {
+            display: none;
+        }
+
+        .atencion #atencionArriba #flechaAtencion {
+            display: none;
+        }
+
+        .atencion #atencionArriba #tituloPrincipal #principalUltimo {
+            display: none;
+        }
+
+        .atencion #atencionArriba #tituloPrincipal #principalUltimo2 {
+            display: block;
+        }
+    }
+
+    /*nav*/
+    #responsiveNav{
+        display: none;
+    }
+
+    #hIzq{
+        display: flex;
+    }
+    
+    #hDer{
+        display: flex;
+    }
+
+    /*fin nav*/
+
+    .atencion #atencionAbajo h5 {
+        font-size: 30px;
+        text-shadow: black 0px 0px 30px;
+        font-weight: light;
+        letter-spacing: 1px;
+    }
+
+    .atencion #atencionArriba {
+        padding-left: 0%;
+        padding-right: 0%;
+        justify-content: space-evenly;
+    }
+
+    #tituloPrincipal {
+        animation-name: entradaIzq;
+        animation-duration: 0.8s;
+        animation-iteration-count: 1;
+        animation-timing-function: ease-out;
+        z-index: 2;
+    }
+
+    .atencion #atencionArriba #flechaAtencion {
+        animation: aparicionFlecha 0.8s 0.6s, flechaCongelada 0.8s 0.6s infinite;
+        z-index: 1;
+    }
+
+    #imagenAtencion {
+        visibility: hidden;
+        animation: imagenAparicion 0.8s 1.2s, imagenCongelada 0.8s 1.2s infinite;
+        animation-timing-function: ease-out;
+    }
+
+    .persuasion #solucion .elemento--centrado p {
+        width: 600px;
+    }
+
+    .atencion {
+        background-image: linear-gradient(black to url(../imagenes/atencion.jpg));
+        background-color: #000;
+        background-size: cover;
+        background-attachment: fixed;
+        background-position: top;
+    }
+
+    .persuasion #solucion .elemento--centrado p {
+        width: 600px;
+    }
+
+}
+
+/*media query aplicado para dispositivo horizontal medio*/
+
+@media only screen and (min-width: 992px) and (orientation: landscape) {
+
+    $titulo: 1;
+
+    @if ($titulo==1) {
+        .atencion #atencionArriba #imagenPrincipal {
+            display: block;
+        }
+
+        .atencion #atencionArriba #flechaAtencion {
+            display: block;
+        }
+
+        .atencion #atencionArriba #tituloPrincipal #principalUltimo {
+            display: block;
+        }
+
+        .atencion #atencionArriba #tituloPrincipal #principalUltimo2 {
+            display: none;
+        }
+    }
+
+    @else if ($titulo==2) {
+        .atencion #atencionArriba #imagenPrincipal {
+            display: none;
+        }
+
+        .atencion #atencionArriba #flechaAtencion {
+            display: none;
+        }
+
+        .atencion #atencionArriba #tituloPrincipal #principalUltimo {
+            display: none;
+        }
+
+        .atencion #atencionArriba #tituloPrincipal #principalUltimo2 {
+            display: block;
+        }
+    }
+
+        /*nav*/
+        #responsiveNav{
+            display: none;
+        }
+    
+        #hIzq{
+            display: flex;
+        }
+        
+        #hDer{
+            display: flex;
+        }
+    
+        /*fin nav*/
+
+    .atencion {
+        background-image: linear-gradient(to top, rgba(0, 0, 0, 0.733), rgba(0, 0, 0, 0)), url(../imagenes/atencion.jpg);
+        background-size: cover;
+        background-repeat: no-repeat;
+        background-attachment: fixed;
+    }
+
+    .atencion #atencionAbajo h5 {
+        font-size: 30px;
+        text-shadow: black 0px 0px 30px;
+        font-weight: light;
+        letter-spacing: 1px;
+    }
+
+    .atencion #atencionArriba {
+        width: 100%;
+        padding-left: 0%;
+        padding-right: 0%;
+        display: flex;
+        justify-content: space-evenly;
+    }
+
+    #tituloPrincipal {
+        animation-name: entradaIzq;
+        animation-duration: 0.8s;
+        animation-iteration-count: 1;
+        animation-timing-function: ease-out;
+        z-index: 2;
+    }
+
+    .atencion #atencionArriba #flechaAtencion {
+        animation: aparicionFlecha 0.8s 0.6s, flechaCongelada 0.8s 0.6s infinite;
+        z-index: 1;
+    }
+
+    #imagenAtencion {
+        visibility: hidden;
+        animation: imagenAparicion 0.8s 1.2s, imagenCongelada 0.8s 1.2s infinite;
+        animation-timing-function: ease-out;
+    }
+
+    .persuasion #solucion .elemento--centrado p {
+        width: 600px;
+    }
+
+    /*-----OBJECIONES-----*/
+    /*
+    #objecion1,
+    #objecion3 {
+        background-image: linear-gradient(to right, red, yellow);
+        margin-top: 1em;
+        margin-bottom: 1em;
+        transition: all 0.3s;
+        z-index: 4;
+    }
+
+    #objecion2,
+    #objecion4 {
+        background-image: linear-gradient(to right, lightblue, blue);
+        margin-top: 1em;
+        margin-bottom: 1em;
+        transition: all 0.3s;
+    }
+
+    */
+
+
+    .objeciones__objecionCaja--formato:hover {
+        transform: scale(1.5);
+        filter: brightness(2)
+    }
+
+    /*-----FIN OBJECIONES-----*/
+
+}
+
+/*media query aplicado para un dispositivo horizontal grande
+*/
+
+@media only screen and (min-width: 1200px) and (orientation: landscape) {
+
+    $titulo: 1;
+
+
+    @if ($titulo==1) {
+        .atencion #atencionArriba #imagenPrincipal {
+            display: block;
+        }
+
+        .atencion #atencionArriba #flechaAtencion {
+            display: block;
+        }
+
+        .atencion #atencionArriba #tituloPrincipal #principalUltimo {
+            display: block;
+        }
+
+        .atencion #atencionArriba #tituloPrincipal #principalUltimo2 {
+            display: none;
+        }
+    }
+
+    @else if ($titulo==2) {
+        .atencion #atencionArriba #imagenPrincipal {
+            display: none;
+        }
+
+        .atencion #atencionArriba #flechaAtencion {
+            display: none;
+        }
+
+        .atencion #atencionArriba #tituloPrincipal #principalUltimo {
+            display: none;
+        }
+
+        .atencion #atencionArriba #tituloPrincipal #principalUltimo2 {
+            display: block;
+        }
+    }
+
+    /*header*/
+
+    /*nav*/
+    #responsiveNav{
+        display: none;
+    }
+
+    #hIzq{
+        display: flex;
+    }
+    
+    #hDer{
+        display: flex;
+    }
+
+    /*fin nav*/
+
+
+
+    #hDer #burger {
+        display: none;
+    }
+
+    .atencion #atencionAbajo h5 {
+        font-size: 30px;
+        font-weight: light;
+        letter-spacing: 1px;
+    }
+
+    .atencion #atencionArriba {
+        padding-left: 0%;
+        padding-right: 0%;
+        justify-content: space-evenly;
+    }
+
+    .persuasion #solucion .elemento--centrado p {
+        width: 600px;
+    }
+
+    .objecionCaja_p {
+        background-color: black;
+        color: white;
+    }
+
+}
+

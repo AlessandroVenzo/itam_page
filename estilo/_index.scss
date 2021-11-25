@@ -1,0 +1,368 @@
+/*============INDEX.HTML============*/
+
+/*-----ATENCION-----*/
+
+.atencion #atencionArriba {
+    display: flex;
+    justify-content: center;
+}
+
+.atencion #atencionArriba #tituloPrincipal {
+    margin-left: 0%;
+    width: 400px;
+}
+
+#imagenPrincipal {
+    order: 3;
+}
+
+#flechaAtencion {
+    order: 1;
+    width: 100px;
+    height: 100px;
+    visibility: hidden;
+    filter: invert(1);
+}
+
+#atencionAbajo {
+    width: 100%;
+}
+
+#atencionAbajo h5 {
+    display: block;
+    font-size: 30px;
+    margin-bottom: 3rem;
+}
+
+#videoMain video {
+    border-radius: 24px;
+    margin-top: 2em;
+}
+
+#problema,
+#agitacion,
+#solucion {
+    margin-left: 2%;
+    margin-right: 2%;
+}
+
+#problema p,
+#agitacion p,
+#solucion p {
+    background-color: rgba(255, 255, 255, 0.7);
+}
+
+/*-----FIN ATENCION-----*/
+/*-----PERSUASION-----*/
+
+
+.persuasionCont {
+    width: 100%;
+    height: auto;
+}
+
+.persuasionCont #right {
+    display: inline-block;
+    text-align: left;
+    width: 65%;
+    order: 2;
+    background-color: transparent;
+}
+
+.persuasionCont #left {
+    text-align: left;
+    display: inline-block;
+    width: 65%;
+    order: 1;
+    background-color: transparent;
+}
+
+.persuasion__imagen--tamaño {
+    width: 300px;
+}
+
+#imgLeft {
+    order: 1;
+}
+
+#imgRight {
+    order: 2;
+}
+
+.persuasionCont {
+    display: flex;
+    justify-content: space-between;
+}
+
+.persuasion .tituloMediocre {
+    margin-bottom: 2em;
+    margin-top: 2em;
+}
+
+#solucion .elemento--centrado main {
+    margin-bottom: 2em;
+    width: 500px;
+    text-align: center;
+    color: white;
+    letter-spacing: 2px;
+    background-color: rgb(62, 96, 160);
+}
+
+.solucion #imagenProfe {
+    order: 1;
+}
+
+#imagenProfe figure img {
+    flex-basis: 300px;
+}
+
+#solucionCont {
+    margin-top: 2em;
+    display: flex;
+    justify-content: space-evenly;
+}
+
+#solucionCont p {
+    width: 65%;
+    background: transparent;
+}
+
+/*-----FIN PERSUASION-----*/
+/*-----BENEFICIOS-----*/
+
+
+
+.beneficios p {
+    background-color: rgba(60, 93, 241, 0.700);
+}
+
+#beneficiosli {
+    box-sizing: border-box;
+    display: flex;
+    justify-content: space-evenly;
+    flex-wrap: wrap;
+    list-style: none;
+}
+
+.beneficio__caja--formato {
+    text-align: center;
+    width: 333.6px;
+
+    img {
+        border-radius: 300px
+    }
+}
+
+/*-----FIN BENEFICIOS-----*/
+
+/*-----OBJECIONES-----*/
+
+.objecionCaja_p {
+    display: inline-block;
+    background-color: rgba(51, 120, 141, 0.157);
+    color: white;
+}
+
+    #objecion1,
+    #objecion3 {
+        background-image: linear-gradient(to right, red, yellow);
+        margin-top: 1em;
+        margin-bottom: 1em;
+        transition: all 0.3s;
+        z-index: 4;
+    }
+
+    #objecion2,
+    #objecion4 {
+        background-image: linear-gradient(to right, lightblue, blue);
+        margin-top: 1em;
+        margin-bottom: 1em;
+        transition: all 0.3s;
+        z-index: 4;
+    }
+
+
+/*estructuras decisivas para asignacion de propiedades a las cajas de objecion
+
+$objecion: 0;
+$id: 0;
+
+
+#objecion2,
+#objecion4 {
+    $objecion: 2;
+}
+
+#objecion1,
+#objecion3 {
+    $objecion: 3;
+}
+
+$objecion: map-merge(
+    (
+      "par": 2,
+      "impar": 1,
+      ),
+      $objecion
+  );
+
+$definidor: $objecion % 2 ;
+
+@if $definidor==0 {
+    .objeciones div{
+        background-image: linear-gradient(to right, lightblue, blue);
+        margin-top: 1em;
+        margin-bottom: 1em;
+        padding-left: 3em;
+        transition: all 0.3s;
+        z-index: 4;
+    }
+}
+
+@if $definidor != 0 {
+    .objeciones div{
+        background-image: linear-gradient(to right, red, yellow);
+        margin-top: 1em;
+        margin-bottom: 1em;
+        transition: all 0.3s;
+        z-index: 4;
+    }
+
+}
+
+estructuras decisivas para asignacion de propiedades a las cajas de objecion*/
+
+.objeciones__objecionCaja--formato:hover {
+    filter: brightness(120%);
+    transform: scale(1.01);
+    box-shadow: black 0px 0px 10px;
+    cursor: default;
+}
+
+objecionCaja_p:hover {
+    cursor: default;
+}
+
+#cajasObjeciones {
+    width: auto;
+    margin-left: 2%;
+    margin-right: 2%;
+}
+
+.objecionCaja_titulo {
+    display: inline;
+}
+
+.imagenBeneficio img {
+    width: 100px;
+}
+
+#objecion1,
+#objecion3 {
+    padding-top: 1em;
+    padding-bottom: 1em;
+    display: flex;
+    align-content: center;
+    justify-content: space-between;
+    height: 120px;
+}
+
+.textboxLeft {
+    width: 85%;
+    text-align: start;
+    padding-left: 2em;
+}
+
+#objecion2,
+#objecion4 {
+    padding-top: 1em;
+    padding-bottom: 1em;
+    display: flex;
+    align-content: center;
+    justify-content: space-between;
+    height: 120px;
+}
+
+.textboxRight {
+    width: 85%;
+    text-align: end;
+    order: 2;
+    padding-right: 2em;
+}
+
+#objecion2 .imagenBeneficio,
+#objecion4 .imagenBeneficio {
+    order: 1;
+    width: 15%;
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+#objecion1 .imagenBeneficio,
+#objecion3 .imagenBeneficio {
+    order: 2;
+    width: 15%;
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+/*-----TESTIMONIOS-----*/
+
+.testimonios {
+    background-color: black;
+}
+
+#testimoniosVideos {
+    width: 100%;
+    display: flex;
+    justify-content: space-evenly;
+}
+
+#listaTestimonial {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-evenly;
+}
+
+#listaTestimonial h3 {
+    margin-top: 2em;
+    margin-bottom: 1em;
+    color: white;
+}
+
+#extractosTestimoniales {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+/*-----FIN TESTIMONIOS-----*/
+
+/*-----PYR-----*/
+
+.pyr {
+    ol {
+        list-style: none;
+    }
+}
+
+.pyrar h4 {
+    font-size: 25px;
+    display: inline;
+    text-decoration: underline black;
+    background-color: lightblue;
+}
+
+.pyrar h4:hover {
+    font-size: 28px;
+}
+
+
+/*-----FIN PYR-----*/
+
+/*============FIN INDEX.HTML============*/

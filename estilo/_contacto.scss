@@ -1,0 +1,49 @@
+
+/*============CONTACTO.HTML============*/
+
+/*-----FORMULARIO-----*/
+
+.formulario {
+    padding-left: 10%;
+    padding-right: 10%;
+    width: 100%;
+}
+
+.formulario form {
+    width: 1000px;
+    height: auto;
+    padding-top: 3em;
+}
+
+.formulario fieldset {
+    background-color: rgb(24, 52, 80);
+    padding-left: 20%;
+    padding-right: 20%;
+    padding-top: 5%;
+    padding-bottom: 5%;
+    display: flex;
+    flex-direction: column;
+}
+
+.formulario input {
+    margin-bottom: 2em;
+}
+
+.formulario fieldset legend {
+    font-size: 30px;
+    color: white;
+}
+
+/*-----FIN FORMULARIO-----*/
+/*-----CONTACTO-----*/
+
+.contacto {
+    margin-top: 3em;
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+    flex-direction: column;
+    width: 100%;
+}
+/*-----FIN CONTACTO-----*/
+/*============FIN CONTACTO.HTML============*/

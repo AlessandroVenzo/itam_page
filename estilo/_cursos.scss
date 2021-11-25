@@ -1,0 +1,490 @@
+
+/*============CURSOS.HTML============*/
+
+/*FORMATO GENERAL DE CURSOS.HTML*/
+
+#tablaCentrada {
+    display: flex;
+    justify-content: center;
+}
+
+.tablaCentro {
+    display: flex;
+    justify-content: center;
+}
+
+
+/*FIN FORMATO GENERAL*/
+
+.pruebaSocial2 {
+    padding-left: 10%;
+    padding-right: 10%;
+    text-align: center;
+}
+
+/*-----INFORMACION-----*/
+
+.informacion {
+    background-image: linear-gradient(to top, rgb(4, 4, 4), #0C0C0C);
+    background-size: cover;
+    padding-left: 10%;
+    padding-right: 10%;
+}
+
+/*INFORMACIÓN_metodología*/
+
+#metodologia table th {
+    text-transform: uppercase;
+    font-weight: bolder;
+    padding-bottom: 2em;
+}
+
+#metodologia table tr td {
+    border-bottom: 2px;
+    border-bottom-color: black;
+    border-bottom-style: solid;
+}
+
+#metodologia table {
+    width: 1000px;
+    padding: 2em;
+    border-style: solid;
+    border-width: 2px;
+    border-color: black;
+    background-color: rgb(255, 255, 255);
+}
+
+/*FIN INFORMACIÓN_METODOLOGÍA*/
+
+/*INFORMACIÓN_TABLADESC*/
+
+#tablaDesc {
+    width: 500px;
+    height: auto;
+    background-color: white;
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    text-align: center;
+}
+
+
+#tablaVentajas {
+    width: 1000px;
+    display: grid;
+    grid-template-areas: "a b c d e f"
+        "g h i j k m"
+        "n l o p q s"
+        "t v w x y z"
+        "za zb zc zd ze zf";
+    margin-bottom: 2em;
+    text-align: center;
+}
+
+.item {
+    border: solid black 1px;
+    border-collapse: collapse;
+    text-align: center;
+    background-color: rgb(27, 27, 27);
+    color: white;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: stretch;
+    height: 100%;
+}
+
+.itemCabeza {
+    font-size: 18px;
+    font-weight: bold;
+    color: yellow;
+    background: black;
+    text-transform: uppercase;
+    display: flex;
+    align-items: center;
+    justify-items: center;
+    width: stretch;
+    height: stretch;
+    justify-content: center;
+    padding: 1em;
+}
+
+#itemNone {
+    border: hidden;
+    background-color: transparent;
+}
+
+.item1 {
+    grid-area: a;
+}
+
+.item2 {
+    grid-area: b;
+}
+
+.item3 {
+    grid-area: c;
+}
+
+.item4 {
+    grid-area: d;
+}
+
+.item5 {
+    grid-area: e;
+}
+
+.item6 {
+    grid-area: f;
+}
+
+.item7 {
+    grid-area: g;
+}
+
+.item8 {
+    grid-area: h;
+}
+
+.item9 {
+    grid-area: i;
+}
+
+.item10 {
+    grid-area: j;
+}
+
+.item11 {
+    grid-area: k;
+}
+
+.item12 {
+    grid-area: m;
+}
+
+.item13 {
+    grid-area: n;
+}
+
+.item14 {
+    grid-area: l;
+}
+
+.item15{
+    grid-area: o;
+}
+
+.item16{
+    grid-area: p;
+}
+
+.item17{
+    grid-area: q;
+}
+
+.item18{
+    grid-area: s;
+}
+
+.item19{
+    grid-area: t;
+}
+
+.item20{
+    grid-area: v;
+}
+
+.item21 {
+    grid-area: w;
+}
+
+.item22 {
+    grid-area: x;
+}
+
+.item23 {
+    grid-area: y;
+}
+
+.item24 {
+    grid-area: z;
+}
+
+.item25 {
+    grid-area: za;
+}
+
+.item26{
+    grid-area: zb;
+}
+
+.item27{
+    grid-area: zc;
+}
+
+.item28{
+    grid-area: zd;
+}
+
+.item29{
+    grid-area: ze;
+}
+
+.item30 {
+    grid-area: zf;
+}
+
+
+.tablaDesc li {
+    background-color: black;
+    list-style: none;
+    height: 40px;
+}
+
+
+.tablaDesc li ul li {
+    color: white;
+}
+
+/*FIN INFORMACION_TABLADESC*/
+
+/*-----FIN INFORMACIÓN-----*/
+
+/*-----DESCRIPCIONPRODUCTO-----*/
+
+/*-----DESCRIPCIONPRODUCTO_METODOESTUDIO-----*/
+
+
+#metodoEstudio {
+    display: flex;
+    justify-content: center;
+}
+
+#planEstudio {
+    display: grid;
+    grid-template-areas: "mod1 mod2 mod3"
+        "mod4 mod5 mod6";
+    row-gap: 1rem;
+    width: 80%;
+    justify-content: space-evenly;
+    height: auto;
+    margin-top: 2em;
+}
+
+.modulo:hover {
+    transform: scale(1.1);
+    background-color: dodgerblue;
+    transition: all 0.1s ease-out;
+}
+
+#planEstudio {
+    display: grid;
+    grid-template-areas: "mod1 mod2 mod3"
+        "mod4 mod5 mod6";
+    row-gap: 1rem;
+    width: 80%;
+    justify-content: space-evenly;
+    height: auto;
+    margin-top: 2em;
+}
+
+.blockMod1 {
+    grid-area: mod1;
+    width: 200px;
+}
+
+.blockMod2 {
+    grid-area: mod2;
+    width: 200px;
+}
+
+.blockMod3 {
+    grid-area: mod3;
+    width: 200px;
+}
+
+.blockMod4 {
+    grid-area: mod4;
+    width: 200px;
+}
+
+.blockMod5 {
+    grid-area: mod5;
+    width: 200px;
+}
+
+.blockMod6 {
+    grid-area: mod6;
+    width: 200px;
+}
+
+.blockMod1 ul,
+.blockMod2 ul,
+.blockMod3 ul,
+.blockMod4 ul,
+.blockMod5 ul,
+.blockMod6 ul {
+    list-style: none;
+}
+
+.blockMod1,
+.blockMod2,
+.blockMod3,
+.blockMod4,
+.blockMod5,
+.blockMod6 {
+    list-style: none;
+    border: solid #F4F4F4 2px;
+    text-align: center;
+    background-color: #0C0C0C;
+}
+
+.blockMod1 h4,
+.blockMod2 h4,
+.blockMod3 h4,
+.blockMod4 h4,
+.blockMod5 h4,
+.blockMod6 h4 {
+    background: chocolate;
+    padding-top: 0.5em;
+    padding-bottom: 0.5em;
+}
+
+.temario {
+    padding-top: 1em;
+    padding-bottom: 1em;
+}
+
+#planEstudio li {
+    color: white;
+}
+
+/*-----FIN DESCRIPCIONPRODUCTO_METODOESTUDIO-----*/
+/*-----DESCRIPCIONPRODUCTO_CONTENIDOS-----*/
+
+.descripcionProducto p {
+    text-align: center;
+}
+
+.descripcionProducto {
+    padding-left: 10%;
+    padding-right: 10%;
+}
+
+.contenidoMenu h4 {
+    font-size: 20px;
+    color: gold;
+}
+
+.contenidoMenu {
+    height: auto;
+    flex-direction: column;
+    display: flex;
+    justify-content: flex-start;
+}
+
+
+#cuadroContenido {
+    height: auto;
+    width: auto;
+    padding-top: 1em;
+    padding-left: 3em;
+    padding-bottom: 3em;
+    padding-right: 3em;
+    background-color: rgb(20, 20, 20);
+    margin-top: 3em;
+    margin-bottom: 3em;
+}
+
+#cuadroContenido h3 {
+    width: auto;
+    height: 1em;
+    text-align: center;
+    line-height: 1em;
+    font-size: 40px;
+    text-transform: uppercase;
+    color: white;
+}
+
+#cuadroContenido p {
+    width: auto;
+    height: 2em;
+    text-align: center;
+    line-height: 2em;
+    color: white;
+}
+
+.contenidos {
+    display: flex;
+    justify-content: center;
+}
+
+.descSubmenu {
+    width: 90%;
+    float: left;
+    text-align: left;
+    transition-property: opacity;
+    transition-duration: 3s;
+}
+
+.descSubmenu li {
+    padding-left: 2em;
+}
+
+
+
+
+#tablaDesc .contenidoMenu .descSubmenu {
+    transform: scaleY(0);
+    display: flex;
+    flex-direction: column;
+    filter: opacity(0);
+}
+
+#tablaDesc .contenidoMenu:hover>.descSubmenu {
+    transform: scaleY(1);
+    filter: opacity(1);
+}
+
+#tablaDesc .contenidoMenu:hover {
+    cursor: pointer;
+}
+
+#tablaDesc .contenidoMenu:hover ul li {
+    background-color: tomato;
+}
+
+#tablaDesc .contenidoMenu ul li {
+    letter-spacing: 2px;
+    padding-bottom: 0.4em;
+    padding-top: 0.4em;
+}
+
+#tablaDesc .contenidoMenu:hover h4 {
+    color: white;
+    background-color: rgb(182, 74, 55);
+}
+
+#tablaDesc .contenidoMenu h4 {
+    letter-spacing: 3px;
+    padding-bottom: 0.4em;
+    padding-top: 0.4em;
+}
+
+/*-----FIN DESCRIPCIONPRODUCTO_CONTENIDOS-----*/
+
+/*-----FIN DESCRIPCIONPRODUCTO-----*/
+
+/*-----pruebasocial2-----*/
+/*-----FIN pruebasocial2-----*/
+
+/*-----DISCURSO NEUTRAL-----*/
+
+.discursoNeutral {
+    padding-left: 10%;
+    padding-right: 10%;
+}
+
+/*-----FIN DISCURSO NEUTRAL-----*/
+
+/*============FIN CURSOS.HTML============*/
