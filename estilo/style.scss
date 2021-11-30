@@ -1,3 +1,5 @@
+@import"_general";
+
 /*============importacion============*/
 @import"_index";
 @import"_testimonios";
@@ -16,9 +18,24 @@ $titulo: 0;
 
 /*fin variables*/
 
+/*conf general*/
+
+
+/**/
+
+h1,
+h2,
+h3,
+h4,
+h5 {
+    margin: 0%;
+    padding: 0%;
+}
+
 /*animaciones*/
 
 @keyframes imagenAparicion {
+
 
     0% {
         transform: scale(0);
@@ -134,14 +151,6 @@ $titulo: 0;
     margin: 0%;
 }
 
-h1,
-h2,
-h3,
-h4,
-h5 {
-    margin: 0% !important;
-    padding: 0% !important;
-}
 
 /*============GENERAL============*/
 
@@ -154,7 +163,7 @@ h5 {
 /*-----backgrounds-----*/
 
 .presentacion {
-    background-image: linear-gradient(to top, rgb(4, 4, 4), #0C0C0C);
+    background-image: $color-dark;
     background-size: cover;
     padding-left: 10%;
     padding-right: 10%;
@@ -175,12 +184,12 @@ h5 {
 
 
 .footer {
-    background-color: #090909;
+    background-color: $color-dark;
     margin-top: 5em;
 }
 
 body {
-    background-color: rgb(4, 4, 4);
+    background-color: $color-dark;
     padding-top: 100px;
     display: flex;
     flex-direction: column;
@@ -194,7 +203,7 @@ header {
 
 .persuasion {
     background-image: url(../imagenes/persuasion.png);
-    background-color: #000;
+    background-color: $color-dark;
     background-position-x: -400px;
     box-shadow: rgba(0, 0, 0, 0.63) 0px -5px 60px;
 }
@@ -206,9 +215,7 @@ header {
 
 title {
     display: block;
-    font-family: Arial, Helvetica, sans-serif !important;
-    letter-spacing: 2px !important;
-    padding: 0%;
+    @extend .f_secundaria-uppercase;
 }
 
 .elemento--centrado {
@@ -234,33 +241,31 @@ title {
 
 
 #tituloPrincipal {
-    font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif I !important;
+    @extend .f_secundaria-uppercase;
     order: 1;
     font-size: 36px;
-    font-weight: lighter;
-    color: white;
+    color: $color-terciario;
     text-align: left;
-    font-style: normal;
-    background-color: black;
-    width: 500px;
+    background-color: $color-dark;
+    width: 300px !important;
     margin-left: 3rem;
 
 }
 
 .titulo {
-    background: repeating-linear-gradient(45deg, rgb(26, 26, 26), rgb(15, 15, 15) 15px, #f69d3c 10px);
+    background: linear-gradient(to top, $color-secundario-oscuro, $color-secundario);
     text-align: center;
     width: 100%;
-    color: yellow;
+    color: $color-terciario;
     font-size: 40px;
-    font-family: Impact !important;
+    @extend .f_secundaria-uppercase;
     font-weight: 300;
     font-style: normal;
     letter-spacing: 2px;
     padding-bottom: 1rem;
     padding-top: 1rem;
     text-shadow: black 0px 0px 10px;
-    margin: 0% !important;
+    margin: 0%;
 }
 
 #principalColorizado {
@@ -275,32 +280,33 @@ title {
 }
 
 .subtitulo {
-    color: white;
-    background-color: rgba(65, 105, 225, 0.26);
+    color: $color-terciario;
+    background-color: none;
     text-align: center;
     font-size: 29px;
-    font-weight: lighter;
+    font-weight: lighter !important;
     font-style: normal;
-    margin-top: 1em;
-    margin-bottom: 1em;
+    margin-top: 2em;
+    margin-bottom: 2em;
 }
 
 .tituloSec {
     padding-top: 0.5em;
-    color: white;
+    color: $color-terciario;
     padding-bottom: 0.5em;
-    background-color: #0c0c0c;
+    background-color: $color-dark;
     font-size: 60px;
     font-weight: lighter;
     text-align: center;
     text-decoration: underline white;
     width: 100%;
+    margin-bottom: 3rem;
 }
 
 .tituloBen {
     font-size: 20px;
     display: inline-block;
-    color: yellow;
+    color: $color-secundario;
     background: linear-gradient(#1c1c1c, #090909);
     text-align: center;
     width: 100%;
@@ -309,23 +315,23 @@ title {
 }
 
 .text--normalise{
-    font-style: normal ;
+    font-style: normal;
     font-weight: normal;
 }
 
 h2 {
-    font-family: Arial, Helvetica, sans-serif !important;
+    font-family: $fuente-secundaria !important;
     letter-spacing: 2px !important;
 }
 
 h5 {
-    font-family: 'Roboto Condensed', sans-serif !important;
+    font-family: $fuente-secundaria;
     text-align: center !important;
     font-weight: lighter !important;
 }
 
 #atencion_h3{
-    font-family: 'Roboto Condensed', sans-serif !important;
+    font-family: $fuente-secundaria;
     text-align: center !important;
     font-weight: lighter !important;
     letter-spacing: 2px;
@@ -333,11 +339,17 @@ h5 {
 }
 
 .tituloMediocre {
-    background-color: black;
+    background-color: $color-dark;
     padding-left: 0.5em;
     padding-right: 0.5em;
-    color: yellow;
+    color: $color-secundario;
     height: auto;
+    display: block;
+}
+
+.objecionCaja_titulo{
+@extend .tituloMediocre;
+display: inline;
 }
 
 h3 {
@@ -358,9 +370,9 @@ h3 {
 /*-----FUENTES-----*/
 
 p, main {
-    font-family: Arial, Helvetica, sans-serif !important;
     font-size: 18px !important;
-    color: white !important;
+    @extend .f_principal-normalise;
+    color: $color-terciario !important;
 }
 
 /*-----FIN FUENTES-----*/
@@ -402,10 +414,10 @@ p, main {
     margin-right: 1em;
     padding-top: 1em;
     padding-bottom: 1em;
-    margin-top: 2rem;
-    margin-bottom: 2rem;
+    margin-top: 3rem;
+    margin-bottom: 3rem;
     font-size: 13px;
-    background-color: rgb(16, 27, 27);
+    background-color: $color-dark;
     text-transform: uppercase;
     border: 1px yellow solid;
     transition: all 0.4s ease-out;
@@ -426,7 +438,7 @@ p, main {
     cursor: pointer;
 
     a {
-        color: black;
+        color: $color-dark;
     }
 }
 
@@ -523,7 +535,7 @@ header {
     height: 100px;
     display: flex;
     justify-content: center;
-    background-color: rgb(160, 0, 0);
+    background-color: $color-secundario;
 }
 
 .nav-item{
@@ -531,12 +543,12 @@ header {
     text-align: center;
 }
 .nav-link{
-    color: yellow !important;
+    color: $color-secundario !important;
 }
 
 .nav-link:hover{
-    color: white !important;
-    background-color: black;
+    color: $color-terciario !important;
+    background-color: $color-dark;
 }
 
 .header__hIzq {
@@ -558,15 +570,15 @@ header {
 h1 {
     margin: 0%;
     font-size: 40px;
-    font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
-    letter-spacing: 2px;
+    font-family: $fuente-secundaria;
+    letter-spacing: 3px !important;
     padding: 0%;
-    color: gold !important;
+    color: $color-secundario !important;
 }
 
 #logCaja p {
-    letter-spacing: 1.8px;
-    color: rgb(65, 120, 207);
+    letter-spacing: 1px;
+    color: $color-primario;
     margin: 0%;
     padding: 0%;
 }
@@ -611,7 +623,7 @@ h1 {
     border-style: outset;
     background-image: linear-gradient(to top, rgb(17, 17, 17), rgb(26, 26, 26));
     margin-left: 5px;
-    color: rgb(65, 120, 207);
+    color: $color-primario;
     margin-right: 5px;
     padding-top: 1em;
     padding-bottom: 1em;
@@ -621,7 +633,7 @@ h1 {
 }
 
 #hDer nav ul li a:hover {
-    color: yellow;
+    color: $color-secundario;
     background-image: linear-gradient(to top, rgb(26, 26, 26), rgb(53, 53, 53));
 }
 
@@ -646,28 +658,69 @@ header nav ul {
 
 .section--format {
     width: 100%;
-    padding-top: 3em;
-    padding-bottom: 3em;
+    padding-top: 4em;
     padding-left: 1em;
     padding-right: 1em;
     overflow: hidden;
 }
 
+
 /*------FIN BODY------*/
+
+/*bootstrap pyr*/
+.bootstrapPyr{
+    width: 100%;
+    color: $color-terciario;
+    background-color: $color-secundario;
+    border: 2px solid $color-secundario-oscuro;
+}
+
+.card-body{
+    margin-bottom: 1em;
+    text-align: center;
+}
+/*fin bootstrap pyr*/
 
 /*-----FOOTER-----*/
 footer {
-    background-color: white;
+    background-color: $color-terciario;
     width: 100%;
+    display: flex;
+    flex-direction: column;
+    border-top: solid rgb(22, 19, 19) 2px;
+    align-items: center;
+}
+
+.footer_lists{
+    display: flex;
+    justify-content: space-between;
+    width: 1000px;
+    max-width: 1200px;
+    align-items: center;
 }
 
 footer ul {
     list-style: none;
+    margin: 0%;
+    padding: 0%;
 }
+
+#enlaces{
+    text-align: left;
+}
+#rrss{
+    text-align: right;
+}
+
 
 footer p {
     text-align: center;
 }
+
+.footerTitle{
+    font-weight: bold;
+}
+
 
 /*-----FIN FOOTER-----*/
 
@@ -677,7 +730,7 @@ footer p {
 /*media query aplicado para un dispsitivo celular pequeño (md)
 
 */
-@media only screen and (max-width: 1080px) and (orientation: portrait) {
+@media only screen and (max-width: 767px) and (orientation: portrait) {
     $titulo: 2;
 
     @if ($titulo==1) {
@@ -740,15 +793,8 @@ footer p {
 
     .objeciones {
         display: flex;
-        flex-direction: column;
-    }
-
-    .objeciones__objecionCaja--formato {
-        border: yellow;
-        border-width: 2px;
-        border-style: solid;
-        border-collapse: collapse;
-        border-bottom: hidden;
+        flex-direction: row;
+        align-items: center;
     }
 
     #objecion1,
@@ -762,16 +808,29 @@ footer p {
     }
 
     .objecionCaja_p {
-        background-color: black;
-        color: white;
+        background-color: $color-dark;
+        color: $color-terciario;
     }
+
+/*boton whatsapp*/
+
+#botonWhatsapp {
+    width: 100%;
+    height: auto;
+    position: fixed;
+    right: -86vw;
+    top: 60vh;
+    z-index: 5;
+}
+
+/*fin boton whatsapp*/
 
 }
 
 /*media query aplicado para un dispsitivo celular estandar (md)
 
 */
-@media only screen and (min-width: 576px) and (orientation: portrait) {
+@media only screen and (min-width: 767px) and (max-width: 1023px) and (orientation: portrait) {
 
     /*header*/
 
@@ -831,25 +890,9 @@ footer p {
         }
     }
 
-    #hDer nav ul {
-        display: none;
-    }
-
-    #hDer {
-        display: flex;
-        justify-content: end;
-        width: 20%;
-    }
-
-    .header__hIzq {
-        width: 80%;
-    }
 
     header{
     border: none;
-    border-bottom: tomato;
-    border-bottom-style: solid;
-    border-bottom-width: 2px;
     }
 
 
@@ -857,13 +900,6 @@ footer p {
         width: 600px;
     }
 
-    .objeciones__objecionCaja--formato {
-        border: yellow;
-        border-width: 2px;
-        border-style: solid;
-        border-collapse: collapse;
-        border-bottom: hidden;
-    }
 
     #objecion1,
     #objecion3 {
@@ -876,15 +912,105 @@ footer p {
     }
 
     .objecionCaja_p {
-        background-color: black;
-        color: white;
+        background-color: $color-dark;
+        color: $color-terciario;
     }
 
-    .objeciones__objecionCaja--formato:hover {
-        transform: scale(1.5);
-        filter: brightness(2)
+/*boton whatsapp*/
+
+#botonWhatsapp {
+    width: 100%;
+    height: auto;
+    position: fixed;
+    right: -92vw;
+    top: 60vh;
+    z-index: 5;
+}
+
+/*fin boton whatsapp*/
+
+}
+
+/*media query aplicado para el conjunto vacío vertical (mayores a 1023)*/
+
+@media only screen and (min-width: 1024px) and (orientation: portrait) {
+
+    /*header*/
+
+    /*nav*/
+    #responsiveNav{
+        display: none;
     }
 
+    #hIzq{
+        display: flex;
+        justify-content: start;
+    }
+    
+    #hDer{
+        display: flex;
+        justify-content: end;
+    }
+
+    header{
+        height: auto;
+    }
+
+    #logCaja{
+        margin-left: 1em;
+    }
+    /*fin nav*/
+
+    $titulo: 2;
+
+    @if ($titulo==1) {
+        .atencion #atencionArriba #imagenPrincipal {
+            display: block;
+        }
+
+        .atencion #atencionArriba #flechaAtencion {
+            display: block;
+        }
+
+        .atencion #atencionArriba #tituloPrincipal #principalUltimo {
+            display: block;
+        }
+
+        .atencion #atencionArriba #tituloPrincipal #principalUltimo2 {
+            display: none;
+        }
+    }
+
+    @else if ($titulo==2) {
+        .atencion #atencionArriba #imagenPrincipal {
+            display: none;
+        }
+
+        .atencion #atencionArriba #flechaAtencion {
+            display: none;
+        }
+
+        .atencion #atencionArriba #tituloPrincipal #principalUltimo {
+            display: none;
+        }
+
+        .atencion #atencionArriba #tituloPrincipal #principalUltimo2 {
+            display: block;
+        }
+    }
+
+/*boton whatsapp*/
+
+#botonWhatsapp {
+    width: 100%;
+    height: auto;
+    position: fixed;
+    right: -92vw;
+    top: 60vh;
+    z-index: 5;
+}
+
+/*fin boton whatsapp*/
 
 
 }
@@ -946,113 +1072,6 @@ footer p {
 
     /*fin nav*/
 
-    .atencion #atencionAbajo h5 {
-        font-size: 30px;
-        text-shadow: black 0px 0px 30px;
-        font-weight: light;
-        letter-spacing: 1px;
-    }
-
-    .atencion #atencionArriba {
-        padding-left: 0%;
-        padding-right: 0%;
-        justify-content: space-evenly;
-    }
-
-    #tituloPrincipal {
-        animation-name: entradaIzq;
-        animation-duration: 0.8s;
-        animation-iteration-count: 1;
-        animation-timing-function: ease-out;
-        z-index: 2;
-    }
-
-    .atencion #atencionArriba #flechaAtencion {
-        animation: aparicionFlecha 0.8s 0.6s, flechaCongelada 0.8s 0.6s infinite;
-        z-index: 1;
-    }
-
-    #imagenAtencion {
-        visibility: hidden;
-        animation: imagenAparicion 0.8s 1.2s, imagenCongelada 0.8s 1.2s infinite;
-        animation-timing-function: ease-out;
-    }
-
-    .persuasion #solucion .elemento--centrado p {
-        width: 600px;
-    }
-
-    .atencion {
-        background-image: linear-gradient(black to url(../imagenes/atencion.jpg));
-        background-color: #000;
-        background-size: cover;
-        background-attachment: fixed;
-        background-position: top;
-    }
-
-    .persuasion #solucion .elemento--centrado p {
-        width: 600px;
-    }
-
-}
-
-/*media query aplicado para dispositivo horizontal medio*/
-
-@media only screen and (min-width: 992px) and (orientation: landscape) {
-
-    $titulo: 1;
-
-    @if ($titulo==1) {
-        .atencion #atencionArriba #imagenPrincipal {
-            display: block;
-        }
-
-        .atencion #atencionArriba #flechaAtencion {
-            display: block;
-        }
-
-        .atencion #atencionArriba #tituloPrincipal #principalUltimo {
-            display: block;
-        }
-
-        .atencion #atencionArriba #tituloPrincipal #principalUltimo2 {
-            display: none;
-        }
-    }
-
-    @else if ($titulo==2) {
-        .atencion #atencionArriba #imagenPrincipal {
-            display: none;
-        }
-
-        .atencion #atencionArriba #flechaAtencion {
-            display: none;
-        }
-
-        .atencion #atencionArriba #tituloPrincipal #principalUltimo {
-            display: none;
-        }
-
-        .atencion #atencionArriba #tituloPrincipal #principalUltimo2 {
-            display: block;
-        }
-    }
-
-        /*nav*/
-        #responsiveNav{
-            display: none;
-        }
-    
-        #hIzq{
-            display: flex;
-        }
-        
-        #hDer{
-            display: flex;
-        }
-    
-        /*fin nav*/
-
     .atencion {
         background-image: linear-gradient(to top, rgba(0, 0, 0, 0.733), rgba(0, 0, 0, 0)), url(../imagenes/atencion.jpg);
         background-size: cover;
@@ -1068,10 +1087,8 @@ footer p {
     }
 
     .atencion #atencionArriba {
-        width: 100%;
         padding-left: 0%;
         padding-right: 0%;
-        display: flex;
         justify-content: space-evenly;
     }
 
@@ -1098,38 +1115,13 @@ footer p {
         width: 600px;
     }
 
-    /*-----OBJECIONES-----*/
-    /*
-    #objecion1,
-    #objecion3 {
-        background-image: linear-gradient(to right, red, yellow);
-        margin-top: 1em;
-        margin-bottom: 1em;
-        transition: all 0.3s;
-        z-index: 4;
+    .persuasion #solucion .elemento--centrado p {
+        width: 600px;
     }
-
-    #objecion2,
-    #objecion4 {
-        background-image: linear-gradient(to right, lightblue, blue);
-        margin-top: 1em;
-        margin-bottom: 1em;
-        transition: all 0.3s;
-    }
-
-    */
-
-
-    .objeciones__objecionCaja--formato:hover {
-        transform: scale(1.5);
-        filter: brightness(2)
-    }
-
-    /*-----FIN OBJECIONES-----*/
 
 }
 
-/*media query aplicado para un dispositivo horizontal grande
+/*media query aplicado para un dispositivo horizontal medio
 */
 
 @media only screen and (min-width: 1200px) and (orientation: landscape) {
@@ -1191,31 +1183,72 @@ footer p {
     /*fin nav*/
 
 
-
     #hDer #burger {
         display: none;
     }
 
+    .atencion {
+        background-image: linear-gradient(to top, rgba(0, 0, 0, 0.733), rgba(0, 0, 0, 0)), url(../imagenes/atencion.jpg);
+        background-size: cover;
+        background-repeat: no-repeat;
+        background-attachment: fixed;
+    }
+
     .atencion #atencionAbajo h5 {
         font-size: 30px;
+        text-shadow: black 0px 0px 30px;
         font-weight: light;
         letter-spacing: 1px;
     }
 
     .atencion #atencionArriba {
+        width: 100%;
         padding-left: 0%;
         padding-right: 0%;
+        display: flex;
         justify-content: space-evenly;
+    }
+
+    #tituloPrincipal {
+        animation-name: entradaIzq;
+        animation-duration: 0.8s;
+        animation-iteration-count: 1;
+        animation-timing-function: ease-out;
+        z-index: 2;
+    }
+
+    .atencion #atencionArriba #flechaAtencion {
+        animation: aparicionFlecha 0.8s 0.6s, flechaCongelada 0.8s 0.6s infinite;
+        z-index: 1;
+    }
+
+    #imagenAtencion {
+        visibility: hidden;
+        animation: imagenAparicion 0.8s 1.2s, imagenCongelada 0.8s 1.2s infinite;
+        animation-timing-function: ease-out;
     }
 
     .persuasion #solucion .elemento--centrado p {
         width: 600px;
     }
 
-    .objecionCaja_p {
-        background-color: black;
-        color: white;
-    }
 
 }
 
+
+@media only screen and (min-width: 1757px) and (orientation: landscape) {
+    /*boton whatsapp*/
+
+    #botonWhatsapp a img {
+        width: 80px;
+        transition: all 0.5s;
+    }
+    
+    #botonWhatsapp a img:hover {
+        z-index: 5;
+        transform: scale(1.4);
+        filter: drop-shadow(rgba(0, 0, 0, 0.767) 0px 0px 5px);
+    }
+
+/*fin boton whatsapp*/
+}

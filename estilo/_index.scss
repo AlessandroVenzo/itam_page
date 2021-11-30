@@ -1,3 +1,9 @@
+/*conf general*/
+
+@import"_general";
+
+/**/
+
 /*============INDEX.HTML============*/
 
 /*-----ATENCION-----*/
@@ -49,12 +55,23 @@
 #problema p,
 #agitacion p,
 #solucion p {
-    background-color: rgba(255, 255, 255, 0.7);
+    background-color: $color-terciario;
+}
+
+.atencion{
+    padding-bottom: 0%;
+}
+
+.atencion {
+    background-image: linear-gradient(black to url(../imagenes/atencion.jpg));
+    background-color: $color-dark;
+    background-size: cover;
+    background-attachment: fixed;
+    background-position: top;
 }
 
 /*-----FIN ATENCION-----*/
 /*-----PERSUASION-----*/
-
 
 .persuasionCont {
     width: 100%;
@@ -100,37 +117,45 @@
 }
 
 #solucion .elemento--centrado main {
-    margin-bottom: 2em;
-    width: 500px;
+    margin-bottom: 4em;
+    width: 800px;
     text-align: center;
-    color: white;
+    color: $color-terciario;
     letter-spacing: 2px;
-    background-color: rgb(62, 96, 160);
+    background-color: $color-secundario-oscuro;
+    padding: 1em;
+    border: 1px solid $color-terciario;
 }
 
 .solucion #imagenProfe {
     order: 1;
+    height: fit-content;
 }
 
 #imagenProfe figure img {
-    flex-basis: 300px;
+    max-width: 300px;
+    display: inline-block;
 }
 
+/*el div imagenProfe genera un espacio que no debe estar allí*/
+
 #solucionCont {
-    margin-top: 2em;
-    display: flex;
+    display: inline-flex;
     justify-content: space-evenly;
 }
 
 #solucionCont p {
     width: 65%;
     background: transparent;
+    display: inline-block;
 }
 
 /*-----FIN PERSUASION-----*/
 /*-----BENEFICIOS-----*/
 
-
+.beneficios{
+    padding-bottom: 0%;
+}
 
 .beneficios p {
     background-color: rgba(60, 93, 241, 0.700);
@@ -158,28 +183,32 @@
 /*-----OBJECIONES-----*/
 
 .objecionCaja_p {
-    display: inline-block;
-    background-color: rgba(51, 120, 141, 0.157);
-    color: white;
+    display: block;
+    background-color: $color-dark;
+    color: $color-terciario;
+    margin: 0%;
 }
 
     #objecion1,
     #objecion3 {
-        background-image: linear-gradient(to right, red, yellow);
+        background-image: linear-gradient(to right, $color-secundario, $color-primario);
         margin-top: 1em;
         margin-bottom: 1em;
         transition: all 0.3s;
         z-index: 4;
+        height: auto;
     }
 
     #objecion2,
     #objecion4 {
-        background-image: linear-gradient(to right, lightblue, blue);
+        background-image: linear-gradient(to right, $color-primario, $color-secundario);
         margin-top: 1em;
         margin-bottom: 1em;
         transition: all 0.3s;
         z-index: 4;
+        height: auto;
     }
+
 
 
 /*estructuras decisivas para asignacion de propiedades a las cajas de objecion
@@ -232,67 +261,53 @@ $definidor: $objecion % 2 ;
 
 estructuras decisivas para asignacion de propiedades a las cajas de objecion*/
 
-.objeciones__objecionCaja--formato:hover {
-    filter: brightness(120%);
-    transform: scale(1.01);
-    box-shadow: black 0px 0px 10px;
+
+
+.objecionCaja_p:hover {
     cursor: default;
-}
-
-objecionCaja_p:hover {
-    cursor: default;
-}
-
-#cajasObjeciones {
-    width: auto;
-    margin-left: 2%;
-    margin-right: 2%;
-}
-
-.objecionCaja_titulo {
-    display: inline;
 }
 
 .imagenBeneficio img {
-    width: 100px;
+    max-width: 100px;
+    max-height: 100px;
 }
 
 #objecion1,
 #objecion3 {
-    padding-top: 1em;
-    padding-bottom: 1em;
     display: flex;
     align-content: center;
     justify-content: space-between;
-    height: 120px;
-}
-
-.textboxLeft {
-    width: 85%;
-    text-align: start;
-    padding-left: 2em;
+    height: auto;
 }
 
 #objecion2,
 #objecion4 {
-    padding-top: 1em;
-    padding-bottom: 1em;
     display: flex;
     align-content: center;
     justify-content: space-between;
-    height: 120px;
+    height: auto;
+}
+.textboxLeft {
+    width: 85%;
+    padding-left: 2em;
+    justify-content: center;
+    align-items: center;
+    text-align:start;
+    padding-right: 2em;
+    order: 1;
 }
 
 .textboxRight {
     width: 85%;
-    text-align: end;
     order: 2;
     padding-right: 2em;
+    justify-content: center;
+    align-items: center;
+    text-align:end;
+    padding-left: 2em;
 }
 
-#objecion2 .imagenBeneficio,
-#objecion4 .imagenBeneficio {
-    order: 1;
+.imagenBeneficio{
     width: 15%;
     height: 100%;
     display: flex;
@@ -302,18 +317,42 @@ objecionCaja_p:hover {
 
 #objecion1 .imagenBeneficio,
 #objecion3 .imagenBeneficio {
+    @extend .imagenBeneficio;
     order: 2;
-    width: 15%;
-    height: 100%;
+}
+
+#objecion2 .imagenBeneficio,
+#objecion4 .imagenBeneficio {
+    @extend .imagenBeneficio;
+    order: 1;
+}
+
+.objeciones__objecionCaja--formato{
+    max-width: 1200px;
     display: flex;
-    justify-content: center;
+    align-items: center;
+    padding-top: 1em;
+    padding-bottom: 1em;
+}
+
+.objeciones{
+    display: flex;
+    flex-direction: column;
     align-items: center;
 }
 
+
+.objeciones__objecionCaja--formato:hover {
+    filter: brightness(120%);
+    transform: scale(1.01);
+    box-shadow: black 0px 0px 10px;
+    cursor: default;
+}
 /*-----TESTIMONIOS-----*/
 
 .testimonios {
-    background-color: black;
+    background-color: $color-dark;
+    padding-bottom: 0%;
 }
 
 #testimoniosVideos {
@@ -332,7 +371,7 @@ objecionCaja_p:hover {
 #listaTestimonial h3 {
     margin-top: 2em;
     margin-bottom: 1em;
-    color: white;
+    color: $color-terciario;
 }
 
 #extractosTestimoniales {
@@ -355,12 +394,14 @@ objecionCaja_p:hover {
     font-size: 25px;
     display: inline;
     text-decoration: underline black;
-    background-color: lightblue;
+    background-color: none;
 }
 
 .pyrar h4:hover {
     font-size: 28px;
 }
+
+
 
 
 /*-----FIN PYR-----*/

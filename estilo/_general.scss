@@ -1,0 +1,43 @@
+/*conf general*/
+
+.section--espaciadoAbajo{
+    padding-bottom: 4em;
+}
+
+$color-secundario: #3C3B6E;
+$color-primario:#B22234;
+$color-secundario-oscuro:#1b1a33;
+$color-terciario:#F4F4F4;
+$color-dark: #0C0C0C;
+
+$fuente-principal: verdana;
+$fuente-secundaria:  'impact';
+
+.f_principal-normalise{
+    font-family: $fuente-principal;
+    text-transform: none;
+    font-style: normal;
+}
+
+.f_secundaria-normalise{
+    font-family: $fuente-secundaria;
+    text-transform: none;
+    font-style: normal;
+    letter-spacing: 30;
+}
+
+.f_principal-uppercase{
+    font-family: $fuente-principal;
+    text-transform: uppercase;
+    font-style: normal;
+    letter-spacing: 1.5px;
+}
+
+.f_secundaria-uppercase{
+    font-family: $fuente-secundaria;
+    text-transform: uppercase;
+    font-style: normal;
+    letter-spacing: 2px;
+}
+
+/**/

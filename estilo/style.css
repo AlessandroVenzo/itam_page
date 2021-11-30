@@ -1,5 +1,73 @@
 @charset "UTF-8";
+/*conf general*/
+.section--espaciadoAbajo {
+  padding-bottom: 4em;
+}
+
+.f_principal-normalise, p, main {
+  font-family: verdana;
+  text-transform: none;
+  font-style: normal;
+}
+
+.f_secundaria-normalise {
+  font-family: "impact";
+  text-transform: none;
+  font-style: normal;
+  letter-spacing: 30;
+}
+
+.f_principal-uppercase {
+  font-family: verdana;
+  text-transform: uppercase;
+  font-style: normal;
+  letter-spacing: 1.5px;
+}
+
+.f_secundaria-uppercase, title, #tituloPrincipal, .titulo {
+  font-family: "impact";
+  text-transform: uppercase;
+  font-style: normal;
+  letter-spacing: 2px;
+}
+
+/**/
 /*============importacion============*/
+/*conf general*/
+/*conf general*/
+.section--espaciadoAbajo {
+  padding-bottom: 4em;
+}
+
+.f_principal-normalise, p, main {
+  font-family: verdana;
+  text-transform: none;
+  font-style: normal;
+}
+
+.f_secundaria-normalise {
+  font-family: "impact";
+  text-transform: none;
+  font-style: normal;
+  letter-spacing: 30;
+}
+
+.f_principal-uppercase {
+  font-family: verdana;
+  text-transform: uppercase;
+  font-style: normal;
+  letter-spacing: 1.5px;
+}
+
+.f_secundaria-uppercase, title, #tituloPrincipal, .titulo {
+  font-family: "impact";
+  text-transform: uppercase;
+  font-style: normal;
+  letter-spacing: 2px;
+}
+
+/**/
+/**/
 /*============INDEX.HTML============*/
 /*-----ATENCION-----*/
 .atencion #atencionArriba {
@@ -58,7 +126,20 @@
 #problema p,
 #agitacion p,
 #solucion p {
-  background-color: rgba(255, 255, 255, 0.7);
+  background-color: #F4F4F4;
+}
+
+.atencion {
+  padding-bottom: 0%;
+}
+
+.atencion {
+  background-image: -webkit-gradient(linear, left top, left bottom, color-stop(to, black));
+  background-image: linear-gradient(black to url(../imagenes/atencion.jpg));
+  background-color: #0C0C0C;
+  background-size: cover;
+  background-attachment: fixed;
+  background-position: top;
 }
 
 /*-----FIN ATENCION-----*/
@@ -113,36 +194,41 @@
           justify-content: space-between;
 }
 
-.persuasion .tituloMediocre {
+.persuasion .tituloMediocre, .persuasion .objecionCaja_titulo {
   margin-bottom: 2em;
   margin-top: 2em;
 }
 
 #solucion .elemento--centrado main {
-  margin-bottom: 2em;
-  width: 500px;
+  margin-bottom: 4em;
+  width: 800px;
   text-align: center;
-  color: white;
+  color: #F4F4F4;
   letter-spacing: 2px;
-  background-color: #3e60a0;
+  background-color: #1b1a33;
+  padding: 1em;
+  border: 1px solid #F4F4F4;
 }
 
 .solucion #imagenProfe {
   -webkit-box-ordinal-group: 2;
       -ms-flex-order: 1;
           order: 1;
+  height: -webkit-fit-content;
+  height: -moz-fit-content;
+  height: fit-content;
 }
 
 #imagenProfe figure img {
-  -ms-flex-preferred-size: 300px;
-      flex-basis: 300px;
+  max-width: 300px;
+  display: inline-block;
 }
 
+/*el div imagenProfe genera un espacio que no debe estar allí*/
 #solucionCont {
-  margin-top: 2em;
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
+  display: -webkit-inline-box;
+  display: -ms-inline-flexbox;
+  display: inline-flex;
   -webkit-box-pack: space-evenly;
       -ms-flex-pack: space-evenly;
           justify-content: space-evenly;
@@ -151,10 +237,15 @@
 #solucionCont p {
   width: 65%;
   background: transparent;
+  display: inline-block;
 }
 
 /*-----FIN PERSUASION-----*/
 /*-----BENEFICIOS-----*/
+.beneficios {
+  padding-bottom: 0%;
+}
+
 .beneficios p {
   background-color: rgba(60, 93, 241, 0.7);
 }
@@ -185,31 +276,34 @@
 /*-----FIN BENEFICIOS-----*/
 /*-----OBJECIONES-----*/
 .objecionCaja_p {
-  display: inline-block;
-  background-color: rgba(51, 120, 141, 0.157);
-  color: white;
+  display: block;
+  background-color: #0C0C0C;
+  color: #F4F4F4;
+  margin: 0%;
 }
 
 #objecion1,
 #objecion3 {
-  background-image: -webkit-gradient(linear, left top, right top, from(red), to(yellow));
-  background-image: linear-gradient(to right, red, yellow);
+  background-image: -webkit-gradient(linear, left top, right top, from(#3C3B6E), to(#B22234));
+  background-image: linear-gradient(to right, #3C3B6E, #B22234);
   margin-top: 1em;
   margin-bottom: 1em;
   -webkit-transition: all 0.3s;
   transition: all 0.3s;
   z-index: 4;
+  height: auto;
 }
 
 #objecion2,
 #objecion4 {
-  background-image: -webkit-gradient(linear, left top, right top, from(lightblue), to(blue));
-  background-image: linear-gradient(to right, lightblue, blue);
+  background-image: -webkit-gradient(linear, left top, right top, from(#B22234), to(#3C3B6E));
+  background-image: linear-gradient(to right, #B22234, #3C3B6E);
   margin-top: 1em;
   margin-bottom: 1em;
   -webkit-transition: all 0.3s;
   transition: all 0.3s;
   z-index: 4;
+  height: auto;
 }
 
 /*estructuras decisivas para asignacion de propiedades a las cajas de objecion
@@ -261,38 +355,17 @@ $definidor: $objecion % 2 ;
 }
 
 estructuras decisivas para asignacion de propiedades a las cajas de objecion*/
-.objeciones__objecionCaja--formato:hover {
-  -webkit-filter: brightness(120%);
-          filter: brightness(120%);
-  -webkit-transform: scale(1.01);
-          transform: scale(1.01);
-  -webkit-box-shadow: black 0px 0px 10px;
-          box-shadow: black 0px 0px 10px;
+.objecionCaja_p:hover {
   cursor: default;
 }
 
-objecionCaja_p:hover {
-  cursor: default;
-}
-
-#cajasObjeciones {
-  width: auto;
-  margin-left: 2%;
-  margin-right: 2%;
-}
-
-.objecionCaja_titulo {
-  display: inline;
-}
-
-.imagenBeneficio img {
-  width: 100px;
+.imagenBeneficio img, #objecion1 .imagenBeneficio img, #objecion3 .imagenBeneficio img, #objecion2 .imagenBeneficio img, #objecion4 .imagenBeneficio img {
+  max-width: 100px;
+  max-height: 100px;
 }
 
 #objecion1,
 #objecion3 {
-  padding-top: 1em;
-  padding-bottom: 1em;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -301,19 +374,11 @@ objecionCaja_p:hover {
   -webkit-box-pack: justify;
       -ms-flex-pack: justify;
           justify-content: space-between;
-  height: 120px;
-}
-
-.textboxLeft {
-  width: 85%;
-  text-align: start;
-  padding-left: 2em;
+  height: auto;
 }
 
 #objecion2,
 #objecion4 {
-  padding-top: 1em;
-  padding-bottom: 1em;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -322,23 +387,44 @@ objecionCaja_p:hover {
   -webkit-box-pack: justify;
       -ms-flex-pack: justify;
           justify-content: space-between;
-  height: 120px;
+  height: auto;
+}
+
+.textboxLeft {
+  width: 85%;
+  padding-left: 2em;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  text-align: start;
+  padding-right: 2em;
+  -webkit-box-ordinal-group: 2;
+      -ms-flex-order: 1;
+          order: 1;
 }
 
 .textboxRight {
   width: 85%;
-  text-align: end;
   -webkit-box-ordinal-group: 3;
       -ms-flex-order: 2;
           order: 2;
   padding-right: 2em;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  text-align: end;
+  padding-left: 2em;
 }
 
-#objecion2 .imagenBeneficio,
+.imagenBeneficio, #objecion1 .imagenBeneficio,
+#objecion3 .imagenBeneficio, #objecion2 .imagenBeneficio,
 #objecion4 .imagenBeneficio {
-  -webkit-box-ordinal-group: 2;
-      -ms-flex-order: 1;
-          order: 1;
   width: 15%;
   height: 100%;
   display: -webkit-box;
@@ -357,22 +443,54 @@ objecionCaja_p:hover {
   -webkit-box-ordinal-group: 3;
       -ms-flex-order: 2;
           order: 2;
-  width: 15%;
-  height: 100%;
+}
+
+#objecion2 .imagenBeneficio,
+#objecion4 .imagenBeneficio {
+  -webkit-box-ordinal-group: 2;
+      -ms-flex-order: 1;
+          order: 1;
+}
+
+.objeciones__objecionCaja--formato {
+  max-width: 1200px;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
-  -webkit-box-pack: center;
-      -ms-flex-pack: center;
-          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  padding-top: 1em;
+  padding-bottom: 1em;
+}
+
+.objeciones {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
 }
 
+.objeciones__objecionCaja--formato:hover {
+  -webkit-filter: brightness(120%);
+          filter: brightness(120%);
+  -webkit-transform: scale(1.01);
+          transform: scale(1.01);
+  -webkit-box-shadow: black 0px 0px 10px;
+          box-shadow: black 0px 0px 10px;
+  cursor: default;
+}
+
 /*-----TESTIMONIOS-----*/
 .testimonios {
-  background-color: black;
+  background-color: #0C0C0C;
+  padding-bottom: 0%;
 }
 
 #testimoniosVideos {
@@ -404,7 +522,7 @@ objecionCaja_p:hover {
 #listaTestimonial h3 {
   margin-top: 2em;
   margin-bottom: 1em;
-  color: white;
+  color: #F4F4F4;
 }
 
 #extractosTestimoniales {
@@ -431,7 +549,7 @@ objecionCaja_p:hover {
   display: inline;
   -webkit-text-decoration: underline black;
           text-decoration: underline black;
-  background-color: lightblue;
+  background-color: none;
 }
 
 .pyrar h4:hover {
@@ -442,22 +560,57 @@ objecionCaja_p:hover {
 /*============FIN INDEX.HTML============*/
 /*============ABOUT.HTML============*/
 /*-----GENERAL-----*/
+/*conf general*/
+/*conf general*/
+.section--espaciadoAbajo {
+  padding-bottom: 4em;
+}
+
+.f_principal-normalise, p, main {
+  font-family: verdana;
+  text-transform: none;
+  font-style: normal;
+}
+
+.f_secundaria-normalise {
+  font-family: "impact";
+  text-transform: none;
+  font-style: normal;
+  letter-spacing: 30;
+}
+
+.f_principal-uppercase {
+  font-family: verdana;
+  text-transform: uppercase;
+  font-style: normal;
+  letter-spacing: 1.5px;
+}
+
+.f_secundaria-uppercase, title, #tituloPrincipal, .titulo {
+  font-family: "impact";
+  text-transform: uppercase;
+  font-style: normal;
+  letter-spacing: 2px;
+}
+
+/**/
+/**/
 .why p,
 .how p {
-  color: white;
-  background: rgba(0, 0, 0, 0.514);
+  color: #F4F4F4;
+  background: #0C0C0C;
   padding-top: 3em;
 }
 
 .what p {
-  color: white;
-  background: rgba(0, 0, 0, 0.514);
+  color: #F4F4F4;
+  background: #0C0C0C;
 }
 
 #ladeadoDer,
 #ladeadoIzq {
-  background-color: black;
-  color: yellow;
+  background-color: #0C0C0C;
+  color: #3C3B6E;
   text-align: center;
   margin-bottom: 3em;
   display: inline;
@@ -601,12 +754,63 @@ objecionCaja_p:hover {
 
 /*-----FIN REDES-----*/
 /*============FIN ABOUT.HTML============*/
+/*conf general*/
+/*conf general*/
+.section--espaciadoAbajo {
+  padding-bottom: 4em;
+}
+
+.f_principal-normalise, p, main {
+  font-family: verdana;
+  text-transform: none;
+  font-style: normal;
+}
+
+.f_secundaria-normalise {
+  font-family: "impact";
+  text-transform: none;
+  font-style: normal;
+  letter-spacing: 30;
+}
+
+.f_principal-uppercase {
+  font-family: verdana;
+  text-transform: uppercase;
+  font-style: normal;
+  letter-spacing: 1.5px;
+}
+
+.f_secundaria-uppercase, title, #tituloPrincipal, .titulo {
+  font-family: "impact";
+  text-transform: uppercase;
+  font-style: normal;
+  letter-spacing: 2px;
+}
+
+/**/
+/**/
 /*============CONTACTO.HTML============*/
+/*-----PRESENTACION-----*/
+.presentacion {
+  text-align: center;
+  width: 100%;
+  padding-left: 1em;
+  padding-right: 1em;
+  overflow: hidden;
+}
+
+/*-----FIN PRESENTACION-----*/
 /*-----FORMULARIO-----*/
 .formulario {
   padding-left: 10%;
   padding-right: 10%;
   width: 100%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
 }
 
 .formulario form {
@@ -616,7 +820,7 @@ objecionCaja_p:hover {
 }
 
 .formulario fieldset {
-  background-color: #183450;
+  background-color: #B22234;
   padding-left: 20%;
   padding-right: 20%;
   padding-top: 5%;
@@ -636,7 +840,7 @@ objecionCaja_p:hover {
 
 .formulario fieldset legend {
   font-size: 30px;
-  color: white;
+  color: #F4F4F4;
 }
 
 /*-----FIN FORMULARIO-----*/
@@ -661,6 +865,41 @@ objecionCaja_p:hover {
 
 /*-----FIN CONTACTO-----*/
 /*============FIN CONTACTO.HTML============*/
+/*conf general*/
+/*conf general*/
+.section--espaciadoAbajo {
+  padding-bottom: 4em;
+}
+
+.f_principal-normalise, p, main {
+  font-family: verdana;
+  text-transform: none;
+  font-style: normal;
+}
+
+.f_secundaria-normalise {
+  font-family: "impact";
+  text-transform: none;
+  font-style: normal;
+  letter-spacing: 30;
+}
+
+.f_principal-uppercase {
+  font-family: verdana;
+  text-transform: uppercase;
+  font-style: normal;
+  letter-spacing: 1.5px;
+}
+
+.f_secundaria-uppercase, title, #tituloPrincipal, .titulo {
+  font-family: "impact";
+  text-transform: uppercase;
+  font-style: normal;
+  letter-spacing: 2px;
+}
+
+/**/
+/**/
 /*============CURSOS.HTML============*/
 /*FORMATO GENERAL DE CURSOS.HTML*/
 #tablaCentrada {
@@ -685,7 +924,15 @@ objecionCaja_p:hover {
 .pruebaSocial2 {
   padding-left: 10%;
   padding-right: 10%;
-  text-align: center;
+}
+
+.pruebaSocial2 #testimoniosVideos {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: space-evenly;
+      -ms-flex-pack: space-evenly;
+          justify-content: space-evenly;
 }
 
 /*-----INFORMACION-----*/
@@ -706,7 +953,7 @@ objecionCaja_p:hover {
 
 #metodologia table tr td {
   border-bottom: 2px;
-  border-bottom-color: black;
+  border-bottom-color: #0C0C0C;
   border-bottom-style: solid;
 }
 
@@ -715,8 +962,8 @@ objecionCaja_p:hover {
   padding: 2em;
   border-style: solid;
   border-width: 2px;
-  border-color: black;
-  background-color: white;
+  border-color: #0C0C0C;
+  background-color: #F4F4F4;
 }
 
 /*FIN INFORMACIÓN_METODOLOGÍA*/
@@ -724,7 +971,7 @@ objecionCaja_p:hover {
 #tablaDesc {
   width: 500px;
   height: auto;
-  background-color: white;
+  background-color: #F4F4F4;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -751,8 +998,8 @@ objecionCaja_p:hover {
   border: solid black 1px;
   border-collapse: collapse;
   text-align: center;
-  background-color: #1b1b1b;
-  color: white;
+  background-color: #0C0C0C;
+  color: #F4F4F4;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -771,8 +1018,8 @@ objecionCaja_p:hover {
 .itemCabeza {
   font-size: 18px;
   font-weight: bold;
-  color: yellow;
-  background: black;
+  color: #3C3B6E;
+  background: #0C0C0C;
   text-transform: uppercase;
   display: -webkit-box;
   display: -ms-flexbox;
@@ -979,13 +1226,13 @@ objecionCaja_p:hover {
 }
 
 .tablaDesc li {
-  background-color: black;
+  background-color: #0C0C0C;
   list-style: none;
   height: 40px;
 }
 
 .tablaDesc li ul li {
-  color: white;
+  color: #F4F4F4;
 }
 
 /*FIN INFORMACION_TABLADESC*/
@@ -1017,7 +1264,7 @@ objecionCaja_p:hover {
 .modulo:hover {
   -webkit-transform: scale(1.1);
           transform: scale(1.1);
-  background-color: dodgerblue;
+  background-color: #B22234;
   -webkit-transition: all 0.1s ease-out;
   transition: all 0.1s ease-out;
 }
@@ -1104,7 +1351,7 @@ objecionCaja_p:hover {
 .blockMod4 h4,
 .blockMod5 h4,
 .blockMod6 h4 {
-  background: chocolate;
+  background: #3C3B6E;
   padding-top: 0.5em;
   padding-bottom: 0.5em;
 }
@@ -1115,7 +1362,7 @@ objecionCaja_p:hover {
 }
 
 #planEstudio li {
-  color: white;
+  color: #F4F4F4;
 }
 
 /*-----FIN DESCRIPCIONPRODUCTO_METODOESTUDIO-----*/
@@ -1131,7 +1378,7 @@ objecionCaja_p:hover {
 
 .contenidoMenu h4 {
   font-size: 20px;
-  color: gold;
+  color: #3C3B6E;
 }
 
 .contenidoMenu {
@@ -1155,9 +1402,8 @@ objecionCaja_p:hover {
   padding-left: 3em;
   padding-bottom: 3em;
   padding-right: 3em;
-  background-color: #141414;
+  background-color: #1b1a33;
   margin-top: 3em;
-  margin-bottom: 3em;
 }
 
 #cuadroContenido h3 {
@@ -1167,7 +1413,7 @@ objecionCaja_p:hover {
   line-height: 1em;
   font-size: 40px;
   text-transform: uppercase;
-  color: white;
+  color: #F4F4F4;
 }
 
 #cuadroContenido p {
@@ -1175,7 +1421,7 @@ objecionCaja_p:hover {
   height: 2em;
   text-align: center;
   line-height: 2em;
-  color: white;
+  color: #F4F4F4;
 }
 
 .contenidos {
@@ -1227,7 +1473,7 @@ objecionCaja_p:hover {
 }
 
 #tablaDesc .contenidoMenu:hover ul li {
-  background-color: tomato;
+  background-color: #3C3B6E;
 }
 
 #tablaDesc .contenidoMenu ul li {
@@ -1238,7 +1484,7 @@ objecionCaja_p:hover {
 
 #tablaDesc .contenidoMenu:hover h4 {
   color: white;
-  background-color: #b64a37;
+  background-color: #3C3B6E;
 }
 
 #tablaDesc .contenidoMenu h4 {
@@ -1264,6 +1510,17 @@ objecionCaja_p:hover {
 /*condiciones responsivas, ESTO ME LO ESTÁ IGNORANDO*/
 /*fin condiciones responsivas*/
 /*fin variables*/
+/*conf general*/
+/**/
+h1,
+h2,
+h3,
+h4,
+h5 {
+  margin: 0%;
+  padding: 0%;
+}
+
 /*animaciones*/
 @-webkit-keyframes imagenAparicion {
   0% {
@@ -1491,15 +1748,6 @@ objecionCaja_p:hover {
   margin: 0%;
 }
 
-h1,
-h2,
-h3,
-h4,
-h5 {
-  margin: 0% !important;
-  padding: 0% !important;
-}
-
 /*============GENERAL============*/
 * {
   margin: 0px;
@@ -1510,8 +1758,7 @@ h5 {
 
 /*-----backgrounds-----*/
 .presentacion {
-  background-image: -webkit-gradient(linear, left bottom, left top, from(#040404), to(#0C0C0C));
-  background-image: linear-gradient(to top, #040404, #0C0C0C);
+  background-image: #0C0C0C;
   background-size: cover;
   padding-left: 10%;
   padding-right: 10%;
@@ -1532,12 +1779,12 @@ h5 {
 }
 
 .footer {
-  background-color: #090909;
+  background-color: #0C0C0C;
   margin-top: 5em;
 }
 
 body {
-  background-color: #040404;
+  background-color: #0C0C0C;
   padding-top: 100px;
   display: -webkit-box;
   display: -ms-flexbox;
@@ -1560,7 +1807,7 @@ header {
 
 .persuasion {
   background-image: url(../imagenes/persuasion.png);
-  background-color: #000;
+  background-color: #0C0C0C;
   background-position-x: -400px;
   -webkit-box-shadow: rgba(0, 0, 0, 0.63) 0px -5px 60px;
           box-shadow: rgba(0, 0, 0, 0.63) 0px -5px 60px;
@@ -1570,9 +1817,6 @@ header {
 /*-----TITULOS-----*/
 title {
   display: block;
-  font-family: Arial, Helvetica, sans-serif !important;
-  letter-spacing: 2px !important;
-  padding: 0%;
 }
 
 .elemento--centrado {
@@ -1605,34 +1849,31 @@ title {
 }
 
 #tituloPrincipal {
-  font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif I !important;
   -webkit-box-ordinal-group: 2;
       -ms-flex-order: 1;
           order: 1;
   font-size: 36px;
-  font-weight: lighter;
-  color: white;
+  color: #F4F4F4;
   text-align: left;
-  font-style: normal;
-  background-color: black;
-  width: 500px;
+  background-color: #0C0C0C;
+  width: 300px !important;
   margin-left: 3rem;
 }
 
 .titulo {
-  background: repeating-linear-gradient(45deg, #1a1a1a, #0f0f0f 15px, #f69d3c 10px);
+  background: -webkit-gradient(linear, left bottom, left top, from(#1b1a33), to(#3C3B6E));
+  background: linear-gradient(to top, #1b1a33, #3C3B6E);
   text-align: center;
   width: 100%;
-  color: yellow;
+  color: #F4F4F4;
   font-size: 40px;
-  font-family: Impact !important;
   font-weight: 300;
   font-style: normal;
   letter-spacing: 2px;
   padding-bottom: 1rem;
   padding-top: 1rem;
   text-shadow: black 0px 0px 10px;
-  margin: 0% !important;
+  margin: 0%;
 }
 
 #principalColorizado {
@@ -1647,33 +1888,34 @@ title {
 }
 
 .subtitulo {
-  color: white;
-  background-color: rgba(65, 105, 225, 0.26);
+  color: #F4F4F4;
+  background-color: none;
   text-align: center;
   font-size: 29px;
-  font-weight: lighter;
+  font-weight: lighter !important;
   font-style: normal;
-  margin-top: 1em;
-  margin-bottom: 1em;
+  margin-top: 2em;
+  margin-bottom: 2em;
 }
 
 .tituloSec {
   padding-top: 0.5em;
-  color: white;
+  color: #F4F4F4;
   padding-bottom: 0.5em;
-  background-color: #0c0c0c;
+  background-color: #0C0C0C;
   font-size: 60px;
   font-weight: lighter;
   text-align: center;
   -webkit-text-decoration: underline white;
           text-decoration: underline white;
   width: 100%;
+  margin-bottom: 3rem;
 }
 
 .tituloBen {
   font-size: 20px;
   display: inline-block;
-  color: yellow;
+  color: #3C3B6E;
   background: -webkit-gradient(linear, left top, left bottom, from(#1c1c1c), to(#090909));
   background: linear-gradient(#1c1c1c, #090909);
   text-align: center;
@@ -1688,30 +1930,35 @@ title {
 }
 
 h2 {
-  font-family: Arial, Helvetica, sans-serif !important;
+  font-family: "impact" !important;
   letter-spacing: 2px !important;
 }
 
 h5 {
-  font-family: 'Roboto Condensed', sans-serif !important;
+  font-family: "impact";
   text-align: center !important;
   font-weight: lighter !important;
 }
 
 #atencion_h3 {
-  font-family: 'Roboto Condensed', sans-serif !important;
+  font-family: "impact";
   text-align: center !important;
   font-weight: lighter !important;
   letter-spacing: 2px;
   font-size: 30px;
 }
 
-.tituloMediocre {
-  background-color: black;
+.tituloMediocre, .objecionCaja_titulo {
+  background-color: #0C0C0C;
   padding-left: 0.5em;
   padding-right: 0.5em;
-  color: yellow;
+  color: #3C3B6E;
   height: auto;
+  display: block;
+}
+
+.objecionCaja_titulo {
+  display: inline;
 }
 
 h3 {
@@ -1730,9 +1977,8 @@ h3 {
 /*-----FIN TITULOS-----*/
 /*-----FUENTES-----*/
 p, main {
-  font-family: Arial, Helvetica, sans-serif !important;
   font-size: 18px !important;
-  color: white !important;
+  color: #F4F4F4 !important;
 }
 
 /*-----FIN FUENTES-----*/
@@ -1775,10 +2021,10 @@ p, main {
   margin-right: 1em;
   padding-top: 1em;
   padding-bottom: 1em;
-  margin-top: 2rem;
-  margin-bottom: 2rem;
+  margin-top: 3rem;
+  margin-bottom: 3rem;
   font-size: 13px;
-  background-color: #101b1b;
+  background-color: #0C0C0C;
   text-transform: uppercase;
   border: 1px yellow solid;
   -webkit-transition: all 0.4s ease-out;
@@ -1804,7 +2050,7 @@ p, main {
 }
 
 .botonVenta:hover a {
-  color: black;
+  color: #0C0C0C;
 }
 
 /* animacion cancelada por el momento
@@ -1903,7 +2149,7 @@ header {
   -webkit-box-pack: center;
       -ms-flex-pack: center;
           justify-content: center;
-  background-color: #a00000;
+  background-color: #3C3B6E;
 }
 
 .nav-item {
@@ -1912,12 +2158,12 @@ header {
 }
 
 .nav-link {
-  color: yellow !important;
+  color: #3C3B6E !important;
 }
 
 .nav-link:hover {
-  color: white !important;
-  background-color: black;
+  color: #F4F4F4 !important;
+  background-color: #0C0C0C;
 }
 
 .header__hIzq {
@@ -1954,15 +2200,15 @@ header {
 h1 {
   margin: 0%;
   font-size: 40px;
-  font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
-  letter-spacing: 2px;
+  font-family: "impact";
+  letter-spacing: 3px !important;
   padding: 0%;
-  color: gold !important;
+  color: #3C3B6E !important;
 }
 
 #logCaja p {
-  letter-spacing: 1.8px;
-  color: #4178cf;
+  letter-spacing: 1px;
+  color: #B22234;
   margin: 0%;
   padding: 0%;
 }
@@ -2029,7 +2275,7 @@ h1 {
   background-image: -webkit-gradient(linear, left bottom, left top, from(#111111), to(#1a1a1a));
   background-image: linear-gradient(to top, #111111, #1a1a1a);
   margin-left: 5px;
-  color: #4178cf;
+  color: #B22234;
   margin-right: 5px;
   padding-top: 1em;
   padding-bottom: 1em;
@@ -2038,7 +2284,7 @@ h1 {
 }
 
 #hDer nav ul li a:hover {
-  color: yellow;
+  color: #3C3B6E;
   background-image: -webkit-gradient(linear, left bottom, left top, from(#1a1a1a), to(#353535));
   background-image: linear-gradient(to top, #1a1a1a, #353535);
 }
@@ -2067,26 +2313,78 @@ header nav ul {
 
 .section--format {
   width: 100%;
-  padding-top: 3em;
-  padding-bottom: 3em;
+  padding-top: 4em;
   padding-left: 1em;
   padding-right: 1em;
   overflow: hidden;
 }
 
 /*------FIN BODY------*/
+/*bootstrap pyr*/
+.bootstrapPyr {
+  width: 100%;
+  color: #F4F4F4;
+  background-color: #3C3B6E;
+  border: 2px solid #1b1a33;
+}
+
+.card-body {
+  margin-bottom: 1em;
+  text-align: center;
+}
+
+/*fin bootstrap pyr*/
 /*-----FOOTER-----*/
 footer {
-  background-color: white;
+  background-color: #F4F4F4;
   width: 100%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  border-top: solid #161313 2px;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.footer_lists {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  width: 1000px;
+  max-width: 1200px;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
 }
 
 footer ul {
   list-style: none;
+  margin: 0%;
+  padding: 0%;
+}
+
+#enlaces {
+  text-align: left;
+}
+
+#rrss {
+  text-align: right;
 }
 
 footer p {
   text-align: center;
+}
+
+.footerTitle {
+  font-weight: bold;
 }
 
 /*-----FIN FOOTER-----*/
@@ -2094,7 +2392,7 @@ footer p {
 /*media query aplicado para un dispsitivo celular pequeño (md)
 
 */
-@media only screen and (max-width: 1080px) and (orientation: portrait) {
+@media only screen and (max-width: 767px) and (orientation: portrait) {
   .atencion #atencionArriba #imagenPrincipal {
     display: none;
   }
@@ -2128,17 +2426,13 @@ footer p {
     display: -webkit-box;
     display: -ms-flexbox;
     display: flex;
-    -webkit-box-orient: vertical;
+    -webkit-box-orient: horizontal;
     -webkit-box-direction: normal;
-        -ms-flex-direction: column;
-            flex-direction: column;
-  }
-  .objeciones__objecionCaja--formato {
-    border: yellow;
-    border-width: 2px;
-    border-style: solid;
-    border-collapse: collapse;
-    border-bottom: hidden;
+        -ms-flex-direction: row;
+            flex-direction: row;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
   }
   #objecion1,
   #objecion3 {
@@ -2151,15 +2445,25 @@ footer p {
     background-image: linear-gradient(to left, #1b1b1b, #3f3f3f);
   }
   .objecionCaja_p {
-    background-color: black;
-    color: white;
+    background-color: #0C0C0C;
+    color: #F4F4F4;
   }
+  /*boton whatsapp*/
+  #botonWhatsapp {
+    width: 100%;
+    height: auto;
+    position: fixed;
+    right: -86vw;
+    top: 60vh;
+    z-index: 5;
+  }
+  /*fin boton whatsapp*/
 }
 
 /*media query aplicado para un dispsitivo celular estandar (md)
 
 */
-@media only screen and (min-width: 576px) and (orientation: portrait) {
+@media only screen and (min-width: 767px) and (max-width: 1023px) and (orientation: portrait) {
   /*header*/
   /*nav*/
   #responsiveNav {
@@ -2187,36 +2491,11 @@ footer p {
   .atencion #atencionArriba #tituloPrincipal #principalUltimo2 {
     display: block;
   }
-  #hDer nav ul {
-    display: none;
-  }
-  #hDer {
-    display: -webkit-box;
-    display: -ms-flexbox;
-    display: flex;
-    -webkit-box-pack: end;
-        -ms-flex-pack: end;
-            justify-content: end;
-    width: 20%;
-  }
-  .header__hIzq {
-    width: 80%;
-  }
   header {
     border: none;
-    border-bottom: tomato;
-    border-bottom-style: solid;
-    border-bottom-width: 2px;
   }
   .persuasion #solucion .elemento--centrado p {
     width: 600px;
-  }
-  .objeciones__objecionCaja--formato {
-    border: yellow;
-    border-width: 2px;
-    border-style: solid;
-    border-collapse: collapse;
-    border-bottom: hidden;
   }
   #objecion1,
   #objecion3 {
@@ -2229,15 +2508,73 @@ footer p {
     background-image: linear-gradient(to left, #1b1b1b, #3f3f3f);
   }
   .objecionCaja_p {
-    background-color: black;
-    color: white;
+    background-color: #0C0C0C;
+    color: #F4F4F4;
   }
-  .objeciones__objecionCaja--formato:hover {
-    -webkit-transform: scale(1.5);
-            transform: scale(1.5);
-    -webkit-filter: brightness(2);
-            filter: brightness(2);
+  /*boton whatsapp*/
+  #botonWhatsapp {
+    width: 100%;
+    height: auto;
+    position: fixed;
+    right: -92vw;
+    top: 60vh;
+    z-index: 5;
   }
+  /*fin boton whatsapp*/
+}
+
+/*media query aplicado para el conjunto vacío vertical (mayores a 1023)*/
+@media only screen and (min-width: 1024px) and (orientation: portrait) {
+  /*header*/
+  /*nav*/
+  #responsiveNav {
+    display: none;
+  }
+  #hIzq {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-pack: start;
+        -ms-flex-pack: start;
+            justify-content: start;
+  }
+  #hDer {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-pack: end;
+        -ms-flex-pack: end;
+            justify-content: end;
+  }
+  header {
+    height: auto;
+  }
+  #logCaja {
+    margin-left: 1em;
+  }
+  /*fin nav*/
+  .atencion #atencionArriba #imagenPrincipal {
+    display: none;
+  }
+  .atencion #atencionArriba #flechaAtencion {
+    display: none;
+  }
+  .atencion #atencionArriba #tituloPrincipal #principalUltimo {
+    display: none;
+  }
+  .atencion #atencionArriba #tituloPrincipal #principalUltimo2 {
+    display: block;
+  }
+  /*boton whatsapp*/
+  #botonWhatsapp {
+    width: 100%;
+    height: auto;
+    position: fixed;
+    right: -92vw;
+    top: 60vh;
+    z-index: 5;
+  }
+  /*fin boton whatsapp*/
 }
 
 /*media query aplicado para un dispositivo horizontal pequeño, tableta*/
@@ -2269,6 +2606,13 @@ footer p {
     display: flex;
   }
   /*fin nav*/
+  .atencion {
+    background-image: -webkit-gradient(linear, left bottom, left top, from(rgba(0, 0, 0, 0.733)), to(rgba(0, 0, 0, 0))), url(../imagenes/atencion.jpg);
+    background-image: linear-gradient(to top, rgba(0, 0, 0, 0.733), rgba(0, 0, 0, 0)), url(../imagenes/atencion.jpg);
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+  }
   .atencion #atencionAbajo h5 {
     font-size: 30px;
     text-shadow: black 0px 0px 30px;
@@ -2308,21 +2652,14 @@ footer p {
   .persuasion #solucion .elemento--centrado p {
     width: 600px;
   }
-  .atencion {
-    background-image: -webkit-gradient(linear, left top, left bottom, color-stop(to, black));
-    background-image: linear-gradient(black to url(../imagenes/atencion.jpg));
-    background-color: #000;
-    background-size: cover;
-    background-attachment: fixed;
-    background-position: top;
-  }
   .persuasion #solucion .elemento--centrado p {
     width: 600px;
   }
 }
 
-/*media query aplicado para dispositivo horizontal medio*/
-@media only screen and (min-width: 992px) and (orientation: landscape) {
+/*media query aplicado para un dispositivo horizontal medio
+*/
+@media only screen and (min-width: 1200px) and (orientation: landscape) {
   .atencion #atencionArriba #imagenPrincipal {
     display: block;
   }
@@ -2335,6 +2672,7 @@ footer p {
   .atencion #atencionArriba #tituloPrincipal #principalUltimo2 {
     display: none;
   }
+  /*header*/
   /*nav*/
   #responsiveNav {
     display: none;
@@ -2350,6 +2688,9 @@ footer p {
     display: flex;
   }
   /*fin nav*/
+  #hDer #burger {
+    display: none;
+  }
   .atencion {
     background-image: -webkit-gradient(linear, left bottom, left top, from(rgba(0, 0, 0, 0.733)), to(rgba(0, 0, 0, 0))), url(../imagenes/atencion.jpg);
     background-image: linear-gradient(to top, rgba(0, 0, 0, 0.733), rgba(0, 0, 0, 0)), url(../imagenes/atencion.jpg);
@@ -2400,87 +2741,22 @@ footer p {
   .persuasion #solucion .elemento--centrado p {
     width: 600px;
   }
-  /*-----OBJECIONES-----*/
-  /*
-    #objecion1,
-    #objecion3 {
-        background-image: linear-gradient(to right, red, yellow);
-        margin-top: 1em;
-        margin-bottom: 1em;
-        transition: all 0.3s;
-        z-index: 4;
-    }
-
-    #objecion2,
-    #objecion4 {
-        background-image: linear-gradient(to right, lightblue, blue);
-        margin-top: 1em;
-        margin-bottom: 1em;
-        transition: all 0.3s;
-    }
-
-    */
-  .objeciones__objecionCaja--formato:hover {
-    -webkit-transform: scale(1.5);
-            transform: scale(1.5);
-    -webkit-filter: brightness(2);
-            filter: brightness(2);
-  }
-  /*-----FIN OBJECIONES-----*/
 }
 
-/*media query aplicado para un dispositivo horizontal grande
-*/
-@media only screen and (min-width: 1200px) and (orientation: landscape) {
-  .atencion #atencionArriba #imagenPrincipal {
-    display: block;
+@media only screen and (min-width: 1757px) and (orientation: landscape) {
+  /*boton whatsapp*/
+  #botonWhatsapp a img {
+    width: 80px;
+    -webkit-transition: all 0.5s;
+    transition: all 0.5s;
   }
-  .atencion #atencionArriba #flechaAtencion {
-    display: block;
+  #botonWhatsapp a img:hover {
+    z-index: 5;
+    -webkit-transform: scale(1.4);
+            transform: scale(1.4);
+    -webkit-filter: drop-shadow(rgba(0, 0, 0, 0.767) 0px 0px 5px);
+            filter: drop-shadow(rgba(0, 0, 0, 0.767) 0px 0px 5px);
   }
-  .atencion #atencionArriba #tituloPrincipal #principalUltimo {
-    display: block;
-  }
-  .atencion #atencionArriba #tituloPrincipal #principalUltimo2 {
-    display: none;
-  }
-  /*header*/
-  /*nav*/
-  #responsiveNav {
-    display: none;
-  }
-  #hIzq {
-    display: -webkit-box;
-    display: -ms-flexbox;
-    display: flex;
-  }
-  #hDer {
-    display: -webkit-box;
-    display: -ms-flexbox;
-    display: flex;
-  }
-  /*fin nav*/
-  #hDer #burger {
-    display: none;
-  }
-  .atencion #atencionAbajo h5 {
-    font-size: 30px;
-    font-weight: light;
-    letter-spacing: 1px;
-  }
-  .atencion #atencionArriba {
-    padding-left: 0%;
-    padding-right: 0%;
-    -webkit-box-pack: space-evenly;
-        -ms-flex-pack: space-evenly;
-            justify-content: space-evenly;
-  }
-  .persuasion #solucion .elemento--centrado p {
-    width: 600px;
-  }
-  .objecionCaja_p {
-    background-color: black;
-    color: white;
-  }
+  /*fin boton whatsapp*/
 }
 /*# sourceMappingURL=style.css.map */

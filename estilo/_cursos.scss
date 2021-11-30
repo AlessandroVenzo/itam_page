@@ -1,4 +1,9 @@
 
+/*conf general*/
+
+@import"_general";
+
+/**/
 /*============CURSOS.HTML============*/
 
 /*FORMATO GENERAL DE CURSOS.HTML*/
@@ -19,7 +24,11 @@
 .pruebaSocial2 {
     padding-left: 10%;
     padding-right: 10%;
-    text-align: center;
+
+    #testimoniosVideos{
+        display: flex;
+        justify-content: space-evenly;
+    }
 }
 
 /*-----INFORMACION-----*/
@@ -41,7 +50,7 @@
 
 #metodologia table tr td {
     border-bottom: 2px;
-    border-bottom-color: black;
+    border-bottom-color: $color-dark;
     border-bottom-style: solid;
 }
 
@@ -50,8 +59,8 @@
     padding: 2em;
     border-style: solid;
     border-width: 2px;
-    border-color: black;
-    background-color: rgb(255, 255, 255);
+    border-color: $color-dark;
+    background-color: $color-terciario;
 }
 
 /*FIN INFORMACIÓN_METODOLOGÍA*/
@@ -61,7 +70,7 @@
 #tablaDesc {
     width: 500px;
     height: auto;
-    background-color: white;
+    background-color: $color-terciario;
     display: flex;
     justify-content: center;
     flex-direction: column;
@@ -85,8 +94,8 @@
     border: solid black 1px;
     border-collapse: collapse;
     text-align: center;
-    background-color: rgb(27, 27, 27);
-    color: white;
+    background-color: $color-dark;
+    color: $color-terciario;
     display: flex;
     align-items: center;
     justify-content: center;
@@ -97,8 +106,8 @@
 .itemCabeza {
     font-size: 18px;
     font-weight: bold;
-    color: yellow;
-    background: black;
+    color: $color-secundario;
+    background: $color-dark;
     text-transform: uppercase;
     display: flex;
     align-items: center;
@@ -236,14 +245,14 @@
 
 
 .tablaDesc li {
-    background-color: black;
+    background-color: $color-dark;
     list-style: none;
     height: 40px;
 }
 
 
 .tablaDesc li ul li {
-    color: white;
+    color: $color-terciario;
 }
 
 /*FIN INFORMACION_TABLADESC*/
@@ -273,7 +282,7 @@
 
 .modulo:hover {
     transform: scale(1.1);
-    background-color: dodgerblue;
+    background-color: $color-primario;
     transition: all 0.1s ease-out;
 }
 
@@ -336,7 +345,7 @@
     list-style: none;
     border: solid #F4F4F4 2px;
     text-align: center;
-    background-color: #0C0C0C;
+    background-color: $color-dark;
 }
 
 .blockMod1 h4,
@@ -345,7 +354,7 @@
 .blockMod4 h4,
 .blockMod5 h4,
 .blockMod6 h4 {
-    background: chocolate;
+    background: $color-secundario;
     padding-top: 0.5em;
     padding-bottom: 0.5em;
 }
@@ -356,7 +365,7 @@
 }
 
 #planEstudio li {
-    color: white;
+    color: $color-terciario;
 }
 
 /*-----FIN DESCRIPCIONPRODUCTO_METODOESTUDIO-----*/
@@ -373,7 +382,7 @@
 
 .contenidoMenu h4 {
     font-size: 20px;
-    color: gold;
+    color: $color-secundario;
 }
 
 .contenidoMenu {
@@ -391,9 +400,8 @@
     padding-left: 3em;
     padding-bottom: 3em;
     padding-right: 3em;
-    background-color: rgb(20, 20, 20);
+    background-color: $color-secundario-oscuro;
     margin-top: 3em;
-    margin-bottom: 3em;
 }
 
 #cuadroContenido h3 {
@@ -403,7 +411,7 @@
     line-height: 1em;
     font-size: 40px;
     text-transform: uppercase;
-    color: white;
+    color: $color-terciario;
 }
 
 #cuadroContenido p {
@@ -411,7 +419,7 @@
     height: 2em;
     text-align: center;
     line-height: 2em;
-    color: white;
+    color: $color-terciario;
 }
 
 .contenidos {
@@ -451,7 +459,7 @@
 }
 
 #tablaDesc .contenidoMenu:hover ul li {
-    background-color: tomato;
+    background-color: $color-secundario;
 }
 
 #tablaDesc .contenidoMenu ul li {
@@ -462,7 +470,7 @@
 
 #tablaDesc .contenidoMenu:hover h4 {
     color: white;
-    background-color: rgb(182, 74, 55);
+    background-color: $color-secundario;
 }
 
 #tablaDesc .contenidoMenu h4 {

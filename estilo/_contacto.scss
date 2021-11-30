@@ -1,5 +1,21 @@
 
+/*conf general*/
+
+@import"_general";
+
+/**/
+
 /*============CONTACTO.HTML============*/
+
+/*-----PRESENTACION-----*/
+.presentacion{
+    text-align: center;
+    width: 100%;
+    padding-left: 1em;
+    padding-right: 1em;
+    overflow: hidden;
+}
+/*-----FIN PRESENTACION-----*/
 
 /*-----FORMULARIO-----*/
 
@@ -7,6 +23,8 @@
     padding-left: 10%;
     padding-right: 10%;
     width: 100%;
+    display: flex;
+    justify-content: center;
 }
 
 .formulario form {
@@ -16,7 +34,7 @@
 }
 
 .formulario fieldset {
-    background-color: rgb(24, 52, 80);
+    background-color: $color-primario;
     padding-left: 20%;
     padding-right: 20%;
     padding-top: 5%;
@@ -31,7 +49,7 @@
 
 .formulario fieldset legend {
     font-size: 30px;
-    color: white;
+    color: $color-terciario;
 }
 
 /*-----FIN FORMULARIO-----*/
@@ -45,5 +63,6 @@
     flex-direction: column;
     width: 100%;
 }
+
 /*-----FIN CONTACTO-----*/
 /*============FIN CONTACTO.HTML============*/
