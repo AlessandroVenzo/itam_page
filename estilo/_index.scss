@@ -95,7 +95,8 @@
 }
 
 .persuasion__imagen--tamaño {
-    width: 300px;
+    max-width: 300px;
+    align-self: center;
 }
 
 #imgLeft {
