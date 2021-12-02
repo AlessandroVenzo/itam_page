@@ -156,7 +156,13 @@
 
 .beneficios{
     padding-bottom: 0%;
+    background: url(../imagenes/beneficios.jpg);
+    background-attachment: fixed;
+    background-size: cover;
+    -webkit-backdrop-filter: blur(448px);
+    backdrop-filter: blur(448px);
 }
+
 
 .beneficios p {
     background-color: rgba(60, 93, 241, 0.700);
@@ -168,6 +174,7 @@
     justify-content: space-evenly;
     flex-wrap: wrap;
     list-style: none;
+    padding: 0%;
 }
 
 .beneficio__caja--formato {
@@ -275,7 +282,7 @@
 }
 
 .objeciones__objecionCaja--formato{
-    max-width: 1200px;
+    width: 1200px;
     display: flex;
     align-items: center;
     padding-top: 1em;
@@ -291,7 +298,7 @@
 
 .objeciones__objecionCaja--formato:hover {
     filter: brightness(120%);
-    transform: scale(1.01);
+    transform: scale(1.01) !important;
     box-shadow: black 0px 0px 10px;
     cursor: default;
 }
@@ -347,7 +354,6 @@
 .pyrar h4:hover {
     font-size: 28px;
 }
-
 
 
 

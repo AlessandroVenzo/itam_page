@@ -468,12 +468,14 @@ header {
     text-align: center;
 }
 .nav-link{
-    color: $color-secundario !important;
+    color: $color-secundario;
 }
 
 .nav-link:hover{
-    color: $color-terciario !important;
-    background-color: $color-dark;
+    color: $color-terciario;
+    border-color: $color-secundario;
+    background-image: linear-gradient(to top, $color-secundario, $color-secundario) !important;
+    
 }
 
 .header__hIzq {
@@ -482,7 +484,7 @@ header {
     height: 100%;
     display: flex;
     align-items: center;
-    justify-content: center;
+    justify-content: start;
 }
 
 #logCaja {
@@ -490,6 +492,7 @@ header {
     flex-direction: column;
     align-items: center;
     justify-content: center;
+    margin-left: 2em;
 }
 
 h1 {
@@ -522,7 +525,7 @@ h1 {
     display: flex;
     height: 80%;
     margin: 0%;
-    margin-right: 3%;
+    margin-right: 2em;
     justify-content: space-evenly;
     align-items: center;
 }
@@ -548,18 +551,12 @@ h1 {
     border-style: outset;
     background-image: linear-gradient(to top, rgb(17, 17, 17), rgb(26, 26, 26));
     margin-left: 5px;
-    color: $color-primario;
     margin-right: 5px;
     padding-top: 1em;
     padding-bottom: 1em;
     padding-left: 0.5em;
     padding-right: 0.5em;
 
-}
-
-#hDer nav ul li a:hover {
-    color: $color-secundario;
-    background-image: linear-gradient(to top, rgb(26, 26, 26), rgb(53, 53, 53));
 }
 
 header nav ul {
@@ -593,8 +590,15 @@ header nav ul {
 /*------FIN BODY------*/
 
 /*bootstrap pyr*/
+
+.pyr{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
 .bootstrapPyr{
-    width: 100%;
+    width: 1200px;
     color: $color-terciario;
     background-color: $color-secundario;
     border: 2px solid $color-secundario-oscuro;
@@ -603,6 +607,7 @@ header nav ul {
 .card-body{
     margin-bottom: 1em;
     text-align: center;
+    width: 1200px;
 }
 /*fin bootstrap pyr*/
 
@@ -756,6 +761,17 @@ padding-top: 56px;
 
 /*fin boton whatsapp*/
 
+.section--format{
+    padding-top:2em;
+  }
+
+  /*titulos*/
+
+  
+  .titulo{
+    font-size: 16px;
+}
+
 }
 
 /*media query aplicado para un dispsitivo celular estandar (md)
@@ -866,6 +882,18 @@ body{
 
 /*fin boton whatsapp*/
 
+.section--format{
+    padding-top:2em;
+  }
+
+    /*titulos*/
+
+  
+    .titulo{
+        font-size: 30px;
+    }
+    
+
 }
 
 /*media query aplicado para el conjunto vacío vertical (mayores a 1023)*/
@@ -955,12 +983,86 @@ body{
 
 /*fin boton whatsapp*/
 
+.section--format{
+    padding-top:2em;
+  }
+
+    /*titulos*/
+
+  
+    .titulo{
+        font-size: 30px;
+    }
+    
+
+}
+
+/*media query aplicado para un dispositivo horizontal muy pequeño*/
+@media only screen and (max-width: 767px) and (orientation: landscape) {
+
+    $titulo: 2;
+
+    @if ($titulo==1) {
+        .atencion #atencionArriba #imagenPrincipal {
+            display: block;
+        }
+
+        .atencion #atencionArriba #flechaAtencion {
+            display: block;
+        }
+
+        .atencion #atencionArriba #tituloPrincipal #principalUltimo {
+            display: block;
+        }
+
+        .atencion #atencionArriba #tituloPrincipal #principalUltimo2 {
+            display: none;
+        }
+    }
+
+    @else if ($titulo==2) {
+        .atencion #atencionArriba #imagenPrincipal {
+            display: none;
+        }
+
+        .atencion #atencionArriba #flechaAtencion {
+            display: none;
+        }
+
+        .atencion #atencionArriba #tituloPrincipal #principalUltimo {
+            display: none;
+        }
+
+        .atencion #atencionArriba #tituloPrincipal #principalUltimo2 {
+            display: block;
+        }
+    }
+
+    
+    /*nav*/
+    #responsiveNav{
+        display: block;
+    }
+
+    #hIzq{
+        display: none;
+    }
+    
+    #hDer{
+        display: none;
+    }
+
+    header{
+        height: auto;
+    }
+
+    /*fin nav*/
 
 }
 
 /*media query aplicado para un dispositivo horizontal pequeño, tableta*/
 
-@media only screen and (min-width: 0px) and (orientation: landscape) {
+@media only screen and (min-width: 768px) and (orientation: landscape) {
 
     $titulo: 1;
 
