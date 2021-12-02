@@ -170,7 +170,7 @@
 }
 
 .persuasion__imagen--tamaño {
-  max-width: 300px;
+  width: 300px;
   -ms-flex-item-align: center;
       -ms-grid-row-align: center;
       align-self: center;
@@ -247,6 +247,11 @@
 /*-----BENEFICIOS-----*/
 .beneficios {
   padding-bottom: 0%;
+  background: url(../imagenes/beneficios.jpg);
+  background-attachment: fixed;
+  background-size: cover;
+  -webkit-backdrop-filter: blur(448px);
+  backdrop-filter: blur(448px);
 }
 
 .beneficios p {
@@ -310,55 +315,6 @@
   height: auto;
 }
 
-/*estructuras decisivas para asignacion de propiedades a las cajas de objecion
-
-$objecion: 0;
-$id: 0;
-
-
-#objecion2,
-#objecion4 {
-    $objecion: 2;
-}
-
-#objecion1,
-#objecion3 {
-    $objecion: 3;
-}
-
-$objecion: map-merge(
-    (
-      "par": 2,
-      "impar": 1,
-      ),
-      $objecion
-  );
-
-$definidor: $objecion % 2 ;
-
-@if $definidor==0 {
-    .objeciones div{
-        background-image: linear-gradient(to right, lightblue, blue);
-        margin-top: 1em;
-        margin-bottom: 1em;
-        padding-left: 3em;
-        transition: all 0.3s;
-        z-index: 4;
-    }
-}
-
-@if $definidor != 0 {
-    .objeciones div{
-        background-image: linear-gradient(to right, red, yellow);
-        margin-top: 1em;
-        margin-bottom: 1em;
-        transition: all 0.3s;
-        z-index: 4;
-    }
-
-}
-
-estructuras decisivas para asignacion de propiedades a las cajas de objecion*/
 .objecionCaja_p:hover {
   cursor: default;
 }
@@ -457,7 +413,7 @@ estructuras decisivas para asignacion de propiedades a las cajas de objecion*/
 }
 
 .objeciones__objecionCaja--formato {
-  max-width: 1200px;
+  width: 1200px;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -484,8 +440,8 @@ estructuras decisivas para asignacion de propiedades a las cajas de objecion*/
 .objeciones__objecionCaja--formato:hover {
   -webkit-filter: brightness(120%);
           filter: brightness(120%);
-  -webkit-transform: scale(1.01);
-          transform: scale(1.01);
+  -webkit-transform: scale(1.01) !important;
+          transform: scale(1.01) !important;
   -webkit-box-shadow: black 0px 0px 10px;
           box-shadow: black 0px 0px 10px;
   cursor: default;
@@ -2057,81 +2013,6 @@ p, main {
   color: #0C0C0C;
 }
 
-/* animacion cancelada por el momento
-.botonVenta a:hover {
-    .botonVenta {
-        animation-name: botonClick;
-        animation-duration: 2s;
-    }
-}
-
-@keyframes botonClick {
-
-    0% {
-        transform: scale(1.05);
-        border-radius: 0px;
-        box-shadow: rgba(0, 0, 0, 0.801) 0px 0px 10px;
-        filter: blur(0px);
-
-        a {
-            color: black;
-        }
-    }
-
-    5% {
-        filter: blur(3px);
-    }
-
-    10% {
-        transform: scale(0.9);
-        border-radius: 20px;
-        background-image: none;
-        background-color: yellow;
-        box-shadow: none(0, 0, 0, 0.801) 0px 0px 0px;
-        filter: blur(0px);
-        opacity: 1;
-
-        a {
-            color: black;
-        }
-    }
-
-    25% {
-        transform: scale(1.3);
-        border-radius: 10px;
-        box-shadow: rgba(0, 0, 0, 0.801) 0px 0px 30px;
-        filter: blur(4px);
-        opacity: 0;
-
-        a {
-            color: yellow;
-        }
-    }
-
-
-    99% {
-        transform: scale(2);
-        border-radius: 10px;
-        box-shadow: rgba(0, 0, 0, 0.801) 0px 0px 50px;
-        opacity: 0;
-
-        a {
-            color: yellow;
-        }
-    }
-
-    100% {
-        transform: scale(1);
-        border-radius: 10px;
-        box-shadow: none;
-
-        a {
-            color: yellow;
-        }
-    }
-}
-
-*/
 /*-----FIN BOTONES-----*/
 /*-----HEADER-----*/
 header {
@@ -2162,12 +2043,14 @@ header {
 }
 
 .nav-link {
-  color: #3C3B6E !important;
+  color: #3C3B6E;
 }
 
 .nav-link:hover {
-  color: #F4F4F4 !important;
-  background-color: #0C0C0C;
+  color: #F4F4F4;
+  border-color: #3C3B6E;
+  background-image: -webkit-gradient(linear, left bottom, left top, from(#3C3B6E), to(#3C3B6E)) !important;
+  background-image: linear-gradient(to top, #3C3B6E, #3C3B6E) !important;
 }
 
 .header__hIzq {
@@ -2180,9 +2063,9 @@ header {
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
-  -webkit-box-pack: center;
-      -ms-flex-pack: center;
-          justify-content: center;
+  -webkit-box-pack: start;
+      -ms-flex-pack: start;
+          justify-content: start;
 }
 
 #logCaja {
@@ -2199,6 +2082,7 @@ header {
   -webkit-box-pack: center;
       -ms-flex-pack: center;
           justify-content: center;
+  margin-left: 2em;
 }
 
 h1 {
@@ -2239,7 +2123,7 @@ h1 {
   display: flex;
   height: 80%;
   margin: 0%;
-  margin-right: 3%;
+  margin-right: 2em;
   -webkit-box-pack: space-evenly;
       -ms-flex-pack: space-evenly;
           justify-content: space-evenly;
@@ -2279,18 +2163,11 @@ h1 {
   background-image: -webkit-gradient(linear, left bottom, left top, from(#111111), to(#1a1a1a));
   background-image: linear-gradient(to top, #111111, #1a1a1a);
   margin-left: 5px;
-  color: #B22234;
   margin-right: 5px;
   padding-top: 1em;
   padding-bottom: 1em;
   padding-left: 0.5em;
   padding-right: 0.5em;
-}
-
-#hDer nav ul li a:hover {
-  color: #3C3B6E;
-  background-image: -webkit-gradient(linear, left bottom, left top, from(#1a1a1a), to(#353535));
-  background-image: linear-gradient(to top, #1a1a1a, #353535);
 }
 
 header nav ul {
@@ -2325,8 +2202,21 @@ header nav ul {
 
 /*------FIN BODY------*/
 /*bootstrap pyr*/
+.pyr {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
 .bootstrapPyr {
-  width: 100%;
+  width: 1200px;
   color: #F4F4F4;
   background-color: #3C3B6E;
   border: 2px solid #1b1a33;
@@ -2335,6 +2225,7 @@ header nav ul {
 .card-body {
   margin-bottom: 1em;
   text-align: center;
+  width: 1200px;
 }
 
 /*fin bootstrap pyr*/
@@ -2397,6 +2288,11 @@ footer p {
 
 */
 @media only screen and (max-width: 767px) and (orientation: portrait) {
+  /*padding-top del body*/
+  body {
+    padding-top: 56px;
+  }
+  /*fin padding-top del body*/
   .atencion #atencionArriba #imagenPrincipal {
     display: none;
   }
@@ -2462,6 +2358,13 @@ footer p {
     z-index: 5;
   }
   /*fin boton whatsapp*/
+  .section--format {
+    padding-top: 2em;
+  }
+  /*titulos*/
+  .titulo {
+    font-size: 16px;
+  }
 }
 
 /*media query aplicado para un dispsitivo celular estandar (md)
@@ -2469,6 +2372,11 @@ footer p {
 */
 @media only screen and (min-width: 767px) and (max-width: 1023px) and (orientation: portrait) {
   /*header*/
+  /*padding-top del body*/
+  body {
+    padding-top: 56px;
+  }
+  /*fin padding-top del body*/
   /*nav*/
   #responsiveNav {
     display: block;
@@ -2525,11 +2433,23 @@ footer p {
     z-index: 5;
   }
   /*fin boton whatsapp*/
+  .section--format {
+    padding-top: 2em;
+  }
+  /*titulos*/
+  .titulo {
+    font-size: 30px;
+  }
 }
 
 /*media query aplicado para el conjunto vacío vertical (mayores a 1023)*/
 @media only screen and (min-width: 1024px) and (orientation: portrait) {
   /*header*/
+  /*padding-top del body*/
+  body {
+    padding-top: 56px;
+  }
+  /*fin padding-top del body*/
   /*nav*/
   #responsiveNav {
     display: none;
@@ -2579,6 +2499,43 @@ footer p {
     z-index: 5;
   }
   /*fin boton whatsapp*/
+  .section--format {
+    padding-top: 2em;
+  }
+  /*titulos*/
+  .titulo {
+    font-size: 30px;
+  }
+}
+
+/*media query aplicado para un dispositivo horizontal muy pequeño*/
+@media only screen and (max-width: 767px) and (orientation: landscape) {
+  .atencion #atencionArriba #imagenPrincipal {
+    display: none;
+  }
+  .atencion #atencionArriba #flechaAtencion {
+    display: none;
+  }
+  .atencion #atencionArriba #tituloPrincipal #principalUltimo {
+    display: none;
+  }
+  .atencion #atencionArriba #tituloPrincipal #principalUltimo2 {
+    display: block;
+  }
+  /*nav*/
+  #responsiveNav {
+    display: block;
+  }
+  #hIzq {
+    display: none;
+  }
+  #hDer {
+    display: none;
+  }
+  header {
+    height: auto;
+  }
+  /*fin nav*/
 }
 
 /*media query aplicado para un dispositivo horizontal pequeño, tableta*/
