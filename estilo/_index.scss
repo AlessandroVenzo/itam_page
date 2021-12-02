@@ -96,6 +96,7 @@
 
 .persuasion__imagen--tamaño {
     width: 300px;
+    align-self: center;
 }
 
 #imgLeft {
@@ -208,60 +209,6 @@
         z-index: 4;
         height: auto;
     }
-
-
-
-/*estructuras decisivas para asignacion de propiedades a las cajas de objecion
-
-$objecion: 0;
-$id: 0;
-
-
-#objecion2,
-#objecion4 {
-    $objecion: 2;
-}
-
-#objecion1,
-#objecion3 {
-    $objecion: 3;
-}
-
-$objecion: map-merge(
-    (
-      "par": 2,
-      "impar": 1,
-      ),
-      $objecion
-  );
-
-$definidor: $objecion % 2 ;
-
-@if $definidor==0 {
-    .objeciones div{
-        background-image: linear-gradient(to right, lightblue, blue);
-        margin-top: 1em;
-        margin-bottom: 1em;
-        padding-left: 3em;
-        transition: all 0.3s;
-        z-index: 4;
-    }
-}
-
-@if $definidor != 0 {
-    .objeciones div{
-        background-image: linear-gradient(to right, red, yellow);
-        margin-top: 1em;
-        margin-bottom: 1em;
-        transition: all 0.3s;
-        z-index: 4;
-    }
-
-}
-
-estructuras decisivas para asignacion de propiedades a las cajas de objecion*/
-
-
 
 .objecionCaja_p:hover {
     cursor: default;
