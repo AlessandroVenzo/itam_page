@@ -28,7 +28,41 @@
     #testimoniosVideos{
         display: flex;
         justify-content: space-evenly;
+
+        video{
+            width: 1fr;
+        }
     }
+
+    
+/*responsividad de los testimonios videos*/
+
+@media only screen and (max-width: 767px) and (orientation: landscape){
+
+#testimoniosVideos{
+    display: flex;
+    flex-direction: column;
+}
+
+}
+@media only screen and (max-width: 767px) and (orientation: portrait) {
+    #testimoniosVideos{
+        display: flex;
+        flex-direction: column;
+    }
+}
+@media only screen and (min-width: 768px) and (max-width: 1020px) and (orientation: landscape) {
+    #testimoniosVideos{
+        display: flex;
+        flex-direction: row;
+        width: 100%;
+        video{
+            margin-left: 1em;  
+        }
+    }
+}   
+
+/*fin responsividad de la testimonios videos*/
 }
 
 /*-----INFORMACION-----*/
@@ -46,16 +80,19 @@
     text-transform: uppercase;
     font-weight: bolder;
     padding-bottom: 2em;
+    text-align: center;
 }
 
 #metodologia table tr td {
     border-bottom: 2px;
     border-bottom-color: $color-dark;
     border-bottom-style: solid;
+    text-align: center;
+    margin-left: 2em;
 }
 
 #metodologia table {
-    width: 1000px;
+    max-width: 1200px;
     padding: 2em;
     border-style: solid;
     border-width: 2px;
@@ -113,7 +150,7 @@
     align-items: center;
     justify-items: center;
     width: stretch;
-    height: stretch;
+    height: auto;
     justify-content: center;
     padding: 1em;
 }
@@ -255,6 +292,40 @@
     color: $color-terciario;
 }
 
+/*responsividad de la tabla ventajas*/
+
+@media only screen and (max-width: 767px) and (orientation: landscape){
+
+    #tablaVentajas{
+        .item4, .item10, .item16, .item22, .item28{
+            display: none;
+        }
+
+        .item5, .item11, .item17, .item23, .item29{
+            display: none;
+        }
+    }
+}
+@media only screen and (max-width: 767px) and (orientation: portrait) {
+
+    #tablaVentajas{
+        .item4, .item10, .item16, .item22, .item28{
+            display: none;
+        }
+
+        .item5, .item11, .item17, .item23, .item29{
+            display: none;
+        }
+    }
+}
+@media only screen and (min-width: 768px) and (max-width: 1020px) and (orientation: landscape) {
+    .item4, .item10, .item16, .item22, .item28{
+        display: none;
+    }
+}   
+
+/*fin responsividad de la tabla ventajas*/
+
 /*FIN INFORMACION_TABLADESC*/
 
 /*-----FIN INFORMACIÓN-----*/
@@ -267,96 +338,55 @@
 #metodoEstudio {
     display: flex;
     justify-content: center;
+    padding: 0%;
+    margin: 0%;
+    width: 100%;
 }
 
 #planEstudio {
     display: grid;
-    grid-template-areas: "mod1 mod2 mod3"
-        "mod4 mod5 mod6";
-    row-gap: 1rem;
-    width: 80%;
-    justify-content: space-evenly;
+    grid-template-columns: repeat(auto-fill, minmax(20em, 1fr));
+    gap: 1rem;
+    width: 100%;
     height: auto;
     margin-top: 2em;
+    padding-left: 0%;
+    justify-self: center;
+}
+
+.modulo{
+    list-style: none;
+    border: solid $color-primario 1px;
+    text-align: center;
+    background-color: $color-dark;
+    display: flex;
+    flex-direction: column;
+
+    h4{
+        height: 40%;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        font-size: 20px;
+        background: $color-secundario;
+        line-height: 100%;
+        padding-top: 1em;
+        padding-bottom: 1em;
+        padding-left: 1em;
+        padding-right: 1em;
+    }
+
+        .temario{
+            @extend .lista--formateada;
+            list-style: circle !important;
+        }
+
 }
 
 .modulo:hover {
     transform: scale(1.1);
-    background-color: $color-primario;
+    background-color: $color-secundario-oscuro;
     transition: all 0.1s ease-out;
-}
-
-#planEstudio {
-    display: grid;
-    grid-template-areas: "mod1 mod2 mod3"
-        "mod4 mod5 mod6";
-    row-gap: 1rem;
-    width: 80%;
-    justify-content: space-evenly;
-    height: auto;
-    margin-top: 2em;
-}
-
-.blockMod1 {
-    grid-area: mod1;
-    width: 200px;
-}
-
-.blockMod2 {
-    grid-area: mod2;
-    width: 200px;
-}
-
-.blockMod3 {
-    grid-area: mod3;
-    width: 200px;
-}
-
-.blockMod4 {
-    grid-area: mod4;
-    width: 200px;
-}
-
-.blockMod5 {
-    grid-area: mod5;
-    width: 200px;
-}
-
-.blockMod6 {
-    grid-area: mod6;
-    width: 200px;
-}
-
-.blockMod1 ul,
-.blockMod2 ul,
-.blockMod3 ul,
-.blockMod4 ul,
-.blockMod5 ul,
-.blockMod6 ul {
-    list-style: none;
-}
-
-.blockMod1,
-.blockMod2,
-.blockMod3,
-.blockMod4,
-.blockMod5,
-.blockMod6 {
-    list-style: none;
-    border: solid #F4F4F4 2px;
-    text-align: center;
-    background-color: $color-dark;
-}
-
-.blockMod1 h4,
-.blockMod2 h4,
-.blockMod3 h4,
-.blockMod4 h4,
-.blockMod5 h4,
-.blockMod6 h4 {
-    background: $color-secundario;
-    padding-top: 0.5em;
-    padding-bottom: 0.5em;
 }
 
 .temario {
@@ -395,36 +425,33 @@
 
 #cuadroContenido {
     height: auto;
-    width: auto;
+    width: 800px;
     padding-top: 1em;
     padding-left: 3em;
-    padding-bottom: 3em;
     padding-right: 3em;
-    background-color: $color-secundario-oscuro;
-    margin-top: 3em;
+    padding-bottom: 1em;
 }
 
 #cuadroContenido h3 {
     width: auto;
-    height: 1em;
     text-align: center;
-    line-height: 1em;
     font-size: 40px;
     text-transform: uppercase;
     color: $color-terciario;
+    margin-bottom: 0.5em;
 }
 
 #cuadroContenido p {
     width: auto;
-    height: 2em;
     text-align: center;
-    line-height: 2em;
     color: $color-terciario;
 }
 
 .contenidos {
+    padding-top: 2em;
     display: flex;
     justify-content: center;
+    background-color: $color-dark;
 }
 
 .descSubmenu {
@@ -439,44 +466,50 @@
     padding-left: 2em;
 }
 
+/*tablaDesc*/
 
+.tablaDesc__cuadroContenidos--formato{
+    display: block;
 
+    button{
+        width: 100%;
+        border-radius: 0%;
+        padding-top: 1em;
+        padding-bottom: 1em;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+    }
 
-#tablaDesc .contenidoMenu .descSubmenu {
-    transform: scaleY(0);
-    display: flex;
-    flex-direction: column;
-    filter: opacity(0);
-}
+    .btn-primary{
+        background-color: $color-secundario;
+        border: none;
+    }
 
-#tablaDesc .contenidoMenu:hover>.descSubmenu {
-    transform: scaleY(1);
-    filter: opacity(1);
-}
+    ul{
+        width: 100%;
+        align-items: center;
 
-#tablaDesc .contenidoMenu:hover {
-    cursor: pointer;
-}
+        li{
+            .dropdown-item{
+                background-color: $color-terciario;
+                padding: 0%;
+                padding-top: 0.5em;
+                padding-bottom: 0.5em;
+                margin: 0%;
+                color: $color-dark !important;
+            }
+            .dropdown-item:hover{
+                background-color: $color-secundario-oscuro;
+                transform: scaleX(1.09) skewX(-10deg);
+                padding-left: 1em;
+                padding-right: 1em;
+                color: $color-terciario !important;
+                transition-duration: 0.3s;
 
-#tablaDesc .contenidoMenu:hover ul li {
-    background-color: $color-secundario;
-}
-
-#tablaDesc .contenidoMenu ul li {
-    letter-spacing: 2px;
-    padding-bottom: 0.4em;
-    padding-top: 0.4em;
-}
-
-#tablaDesc .contenidoMenu:hover h4 {
-    color: white;
-    background-color: $color-secundario;
-}
-
-#tablaDesc .contenidoMenu h4 {
-    letter-spacing: 3px;
-    padding-bottom: 0.4em;
-    padding-top: 0.4em;
+            }
+        }
+    }
 }
 
 /*-----FIN DESCRIPCIONPRODUCTO_CONTENIDOS-----*/

@@ -12,9 +12,6 @@
 
 $titulo: 0;
 
-/*condiciones responsivas, ESTO ME LO ESTÁ IGNORANDO*/
-
-/*fin condiciones responsivas*/
 
 /*fin variables*/
 
@@ -367,6 +364,18 @@ h3 {
 
 /*-----FIN TITULOS-----*/
 
+/*-----LISTAS-----*/
+
+.lista--formateada{
+    list-style: none;
+    margin: 0%;
+    padding: 0%;
+}
+    
+/*-----FIN LISTAS-----*/
+
+
+
 /*-----FUENTES-----*/
 
 p, main {
@@ -526,7 +535,7 @@ h1 {
     height: 80%;
     margin: 0%;
     margin-right: 2em;
-    justify-content: space-evenly;
+    justify-content: end;
     align-items: center;
 }
 
@@ -534,13 +543,16 @@ h1 {
     margin: 0%;
     padding: 0%;
     display: flex;
-    flex-wrap: wrap;
+    flex-wrap:nowrap;
+    width: 90%;
+    justify-content: center;
 }
 
 #hDer nav ul li {
     display: flex;
     align-items: center;
     justify-content: center;
+    margin-left: 10px;
 }
 
 #hDer nav ul li a {
@@ -550,12 +562,11 @@ h1 {
     text-transform: uppercase;
     border-style: outset;
     background-image: linear-gradient(to top, rgb(17, 17, 17), rgb(26, 26, 26));
-    margin-left: 5px;
-    margin-right: 5px;
-    padding-top: 1em;
-    padding-bottom: 1em;
+    height:100%;
     padding-left: 0.5em;
     padding-right: 0.5em;
+    display: flex;
+    align-items: center;
 
 }
 
@@ -1163,6 +1174,16 @@ body{
     .persuasion #solucion .elemento--centrado p {
         width: 600px;
     }
+
+    /*=====SECCION CURSOS=====*/
+
+/*metodoEstudio*/
+
+
+
+/*FIN metodoEstudio*/
+
+    /*=====FIN SECCION CURSOS=====*/
 
 }
 
