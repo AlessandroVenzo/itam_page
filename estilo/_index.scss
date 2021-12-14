@@ -128,14 +128,35 @@
     border: 1px solid $color-terciario;
 }
 
-.solucion #imagenProfe {
-    order: 1;
-    height: fit-content;
+#imagenProfe{
+    text-align: center;
+    border: 5px solid $color-secundario-oscuro;
 }
 
-#imagenProfe figure img {
-    max-width: 300px;
-    display: inline-block;
+.solucion #imagenProfe {
+    order: 1;
+    height: auto;
+}
+
+#imagenDelProfe{
+    width: 300px;
+    display: inline;
+}
+
+figure{
+    padding-bottom: 0% !important;
+    margin-bottom: 0% !important;
+}
+
+#figcaption{
+    color: $color-terciario;
+    background-color: $color-secundario-oscuro;
+    width: 100%;
+    font-size: 20px;
+    font-weight: bold;
+    position: relative;
+    right: 0%;
+    padding: 0%;
 }
 
 /*el div imagenProfe genera un espacio que no debe estar allí*/
@@ -163,7 +184,6 @@
     backdrop-filter: blur(448px);
 }
 
-
 .beneficios p {
     background-color: rgba(60, 93, 241, 0.700);
 }
@@ -180,6 +200,7 @@
 .beneficio__caja--formato {
     text-align: center;
     width: 333.6px;
+    padding: 5px;
 
     img {
         border-radius: 300px
@@ -195,6 +216,7 @@
     background-color: $color-dark;
     color: $color-terciario;
     margin: 0%;
+    padding: 5px;
 }
 
     #objecion1,

@@ -157,6 +157,8 @@ h5 {
     box-sizing: border-box;
 }
 
+
+
 /*-----backgrounds-----*/
 
 .presentacion {
@@ -187,7 +189,7 @@ h5 {
 
 body {
     background-color: $color-dark;
-    padding-top: 100px;
+    padding-top: 80px;
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -411,6 +413,10 @@ p, main {
 
 /*-----BOTONES-----*/
 
+button{
+    border: none;
+}
+
 .botonVenta {
     border: none;
     border-radius: 10px;
@@ -457,7 +463,7 @@ p, main {
 
 header {
     border: none;
-    border-bottom: tomato;
+    border-bottom:$color-primario;
     border-bottom-style: solid;
     border-bottom-width: 2px;
     box-sizing: border-box;
@@ -466,26 +472,81 @@ header {
     right: 0%;
     z-index: 5;
     width: 100%;
-    height: 100px;
+    height: 80px;
     display: flex;
     justify-content: center;
-    background-color: $color-secundario;
+    transition: 0.5s;
+    transition-timing-function: ease-out;
+
+    #logCaja p{
+        display: none;
+        filter: opacity(0%);
+        transition: 0.8s;
+    }
 }
 
-.nav-item{
+header:hover{
+    border: none;
+    border-bottom:$color-secundario;
+    border-bottom-style: solid;
+    border-bottom-width: 2px;
+    height: 100px;
+
+    #logCaja p{
+        display: block;
+        filter: opacity(100%);
+        transition: 0.8s;
+    }
+
+
+    .nav-itemm{
+       background-color: $color-secundario;
+       border: 2px $color-secundario-oscuro solid;
+       border-top: hidden;
+       border-bottom: hidden;
+       transition: 0.3s;
+    
+        .nav-linkk{
+            color: $color-terciario;
+            transition: 0.5s;
+        }
+    }
+
+    .nav-itemm:hover{
+        background-color: rgb(36, 112, 184);
+        border: 2px $color-secundario solid;
+        border-top: hidden;
+        border-bottom: hidden;
+     
+         .nav-linkk{
+             color: $color-terciario !important;
+         }
+     }
+}
+
+
+.nav-itemm{
     text-transform: uppercase;
     text-align: center;
+    background-color: $color-primario;
+    border: 2px #521018 solid;
+    border-top: hidden;
+    border-bottom: hidden;
+    transition-duration: 0.03s;
+    transition-timing-function: ease-out;
 }
-.nav-link{
-    color: $color-secundario;
+.nav-linkk{
+    color: $color-terciario;
+    box-sizing: border-box;
+    padding-left: 0.5rem;
+    padding-right: 0.5rem;
+    padding-top: 1em;
+    padding-bottom: 1em;
+    font-size: 16px;
+    text-transform: uppercase;
+    font-weight: bold;
 }
 
-.nav-link:hover{
-    color: $color-terciario;
-    border-color: $color-secundario;
-    background-image: linear-gradient(to top, $color-secundario, $color-secundario) !important;
-    
-}
 
 .header__hIzq {
     overflow: hidden;
@@ -527,41 +588,44 @@ h1 {
     display: inline-flex;
     justify-content: end;
     align-items: center;
+
 }
 
 #hDer nav {
     box-sizing: border-box;
     display: flex;
-    height: 80%;
+    height: 100%;
     margin: 0%;
-    margin-right: 2em;
+    padding-right: 2em;
     justify-content: end;
     align-items: center;
+    transform: skewX(-15deg);
 }
 
 #hDer nav ul {
     margin: 0%;
-    padding: 0%;
+    padding-left: 0%;
     display: flex;
     flex-wrap:nowrap;
     width: 90%;
     justify-content: center;
+    height: 100%;
+    list-style: none;
+    
 }
 
 #hDer nav ul li {
     display: flex;
     align-items: center;
     justify-content: center;
-    margin-left: 10px;
+    height: 100%;
+    margin-left: 5px;
 }
 
 #hDer nav ul li a {
-
     box-sizing: border-box;
     text-decoration: none;
     text-transform: uppercase;
-    border-style: outset;
-    background-image: linear-gradient(to top, rgb(17, 17, 17), rgb(26, 26, 26));
     height:100%;
     padding-left: 0.5em;
     padding-right: 0.5em;
