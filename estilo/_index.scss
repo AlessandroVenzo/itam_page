@@ -58,11 +58,8 @@
     background-color: $color-terciario;
 }
 
-.atencion{
-    padding-bottom: 0%;
-}
-
 .atencion {
+    padding-bottom: 0%;
     background-image: linear-gradient(black to url(../imagenes/atencion.jpg));
     background-color: $color-dark;
     background-size: cover;
@@ -76,40 +73,43 @@
 .persuasionCont {
     width: 100%;
     height: auto;
+    display: flex;
+    justify-content: space-between;
+
+    #right {
+        display: inline;
+        text-align: left;
+        width: 60%;
+        order: 2;
+        background-color: transparent;
+    }
+
+    #left {
+        text-align: left;
+        display: inline;
+        width: 60%;
+        order: 1;
+        background-color: transparent;
+    }
 }
 
-.persuasionCont #right {
-    display: inline-block;
-    text-align: left;
-    width: 65%;
-    order: 2;
-    background-color: transparent;
-}
-
-.persuasionCont #left {
-    text-align: left;
-    display: inline-block;
-    width: 65%;
-    order: 1;
-    background-color: transparent;
-}
 
 .persuasion__imagen--tamaño {
     width: 300px;
     align-self: center;
-}
 
-#imgLeft {
-    order: 1;
 }
 
 #imgRight {
+    margin-left: 1em;
     order: 2;
+
 }
 
-.persuasionCont {
-    display: flex;
-    justify-content: space-between;
+#imgLeft {
+    margin-right: 1em;
+    order: 1;
+
 }
 
 .persuasion .tituloMediocre {
@@ -128,64 +128,65 @@
     border: 1px solid $color-terciario;
 }
 
-#imagenProfe{
-    text-align: center;
-    border: 5px solid $color-secundario-oscuro;
-}
-
-.solucion #imagenProfe {
-    order: 1;
-    height: auto;
-}
-
-#imagenDelProfe{
-    width: 300px;
-    display: inline;
-}
-
-figure{
-    padding-bottom: 0% !important;
-    margin-bottom: 0% !important;
-}
-
-#figcaption{
-    color: $color-terciario;
-    background-color: $color-secundario-oscuro;
-    width: 100%;
-    font-size: 20px;
-    font-weight: bold;
-    position: relative;
-    right: 0%;
-    padding: 0%;
-}
-
-/*el div imagenProfe genera un espacio que no debe estar allí*/
-
 #solucionCont {
-    display: inline-flex;
+    display: flex;
     justify-content: space-evenly;
-}
 
-#solucionCont p {
-    width: 65%;
-    background: transparent;
-    display: inline-block;
+    p {
+        width: 65%;
+        background: transparent;
+        display: inline-block;
+        order: 2;
+    }
+
+    #imagenProfe {
+        text-align: center;
+        border: 5px solid $color-secundario-oscuro;
+        margin-right: 1em;
+    }
+
+    #imagenProfe {
+        order: 1;
+        height: auto;
+    }
+
+    #imagenDelProfe {
+        width: 300px;
+        display: inline;
+    }
+
+    figure {
+        padding-bottom: 0% !important;
+        margin-bottom: 0% !important;
+    }
+
+    #figcaption {
+        color: $color-terciario;
+        background-color: $color-secundario-oscuro;
+        width: 100%;
+        font-size: 20px;
+        font-weight: bold;
+        position: relative;
+        right: 0%;
+        padding: 0%;
+    }
 }
 
 /*-----FIN PERSUASION-----*/
 /*-----BENEFICIOS-----*/
 
-.beneficios{
+.beneficios {
     padding-bottom: 0%;
     background: url(../imagenes/beneficios.jpg);
     background-attachment: fixed;
     background-size: cover;
     -webkit-backdrop-filter: blur(448px);
     backdrop-filter: blur(448px);
-}
 
-.beneficios p {
-    background-color: rgba(60, 93, 241, 0.700);
+    p {
+        background-color: rgba(60, 93, 241, 0.700);
+        margin: 0%;
+    }
 }
 
 #beneficiosli {
@@ -195,6 +196,7 @@ figure{
     flex-wrap: wrap;
     list-style: none;
     padding: 0%;
+    margin: 0%;
 }
 
 .beneficio__caja--formato {
@@ -219,25 +221,35 @@ figure{
     padding: 5px;
 }
 
-    #objecion1,
-    #objecion3 {
-        background-image: linear-gradient(to right, $color-secundario, $color-primario);
-        margin-top: 1em;
-        margin-bottom: 1em;
-        transition: all 0.3s;
-        z-index: 4;
-        height: auto;
-    }
+#objecion1,
+#objecion3 {
+    background-image: linear-gradient(to right, $color-secundario, $color-primario);
+    margin-top: 1em;
+    margin-bottom: 1em;
+    transition: all 0.3s;
+    z-index: 4;
+    height: auto;
 
-    #objecion2,
-    #objecion4 {
-        background-image: linear-gradient(to right, $color-primario, $color-secundario);
-        margin-top: 1em;
-        margin-bottom: 1em;
-        transition: all 0.3s;
-        z-index: 4;
-        height: auto;
-    }
+    display: flex;
+    align-content: center;
+    justify-content: space-between;
+    height: auto;
+}
+
+#objecion2,
+#objecion4 {
+    background-image: linear-gradient(to right, $color-primario, $color-secundario);
+    margin-top: 1em;
+    margin-bottom: 1em;
+    transition: all 0.3s;
+    z-index: 4;
+    height: auto;
+
+    display: flex;
+    align-content: center;
+    justify-content: space-between;
+    height: auto;
+}
 
 .objecionCaja_p:hover {
     cursor: default;
@@ -248,27 +260,12 @@ figure{
     max-height: 100px;
 }
 
-#objecion1,
-#objecion3 {
-    display: flex;
-    align-content: center;
-    justify-content: space-between;
-    height: auto;
-}
-
-#objecion2,
-#objecion4 {
-    display: flex;
-    align-content: center;
-    justify-content: space-between;
-    height: auto;
-}
 .textboxLeft {
     width: 85%;
     padding-left: 2em;
     justify-content: center;
     align-items: center;
-    text-align:start;
+    text-align: start;
     padding-right: 2em;
     order: 1;
 }
@@ -279,11 +276,11 @@ figure{
     padding-right: 2em;
     justify-content: center;
     align-items: center;
-    text-align:end;
+    text-align: end;
     padding-left: 2em;
 }
 
-.imagenBeneficio{
+.imagenBeneficio {
     width: 15%;
     height: 100%;
     display: flex;
@@ -303,15 +300,15 @@ figure{
     order: 1;
 }
 
-.objeciones__objecionCaja--formato{
-    width: 1200px;
+.objeciones__objecionCaja--formato {
+    max-width: 1200px;
     display: flex;
     align-items: center;
     padding-top: 1em;
     padding-bottom: 1em;
 }
 
-.objeciones{
+.objeciones {
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -324,6 +321,7 @@ figure{
     box-shadow: black 0px 0px 10px;
     cursor: default;
 }
+
 /*-----TESTIMONIOS-----*/
 
 .testimonios {
@@ -335,6 +333,17 @@ figure{
     width: 100%;
     display: flex;
     justify-content: space-evenly;
+
+    video{
+        min-width: 200px;
+        align-self: center;
+        margin-left: 1em;
+    }
+
+    #firstinList{
+        margin-left: 0%;
+    }
+
 }
 
 #listaTestimonial {
@@ -342,12 +351,12 @@ figure{
     flex-direction: column;
     align-items: center;
     justify-content: space-evenly;
-}
 
-#listaTestimonial h3 {
+    h3 {
     margin-top: 2em;
     margin-bottom: 1em;
     color: $color-terciario;
+    }
 }
 
 #extractosTestimoniales {
@@ -359,12 +368,6 @@ figure{
 /*-----FIN TESTIMONIOS-----*/
 
 /*-----PYR-----*/
-
-.pyr {
-    ol {
-        list-style: none;
-    }
-}
 
 .pyrar h4 {
     font-size: 25px;
@@ -378,6 +381,47 @@ figure{
 }
 
 
+/*bootstrap pyr*/
+
+.pyr {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center !important;
+
+    p, .pyrButton{
+        width: 100%;
+        max-width: 1200px;
+    }
+
+}
+
+.bootstrapPyr{
+    width: 100%;
+    max-width: 1200px;
+    color: $color-terciario;
+    background-color: $color-secundario;
+    border: 2px solid $color-secundario-oscuro;
+    
+    .btn{
+        width: 100%;
+        max-width: 1200px;
+    }
+}
+
+.card-body {
+    margin-bottom: 1em;
+    text-align: center;
+    width: 100% !important;
+    max-width: 1200px;
+}
+
+#collapsePyr1,#collapsePyr2,#collapsePyr3,#collapsePyr4{
+    width: 100% ;
+    max-width: 1200px;
+}
+
+/*fin bootstrap pyr*/
 
 /*-----FIN PYR-----*/
 

@@ -4,7 +4,8 @@
   padding-bottom: 4em;
 }
 
-.f_principal-normalise, p, main {
+.f_principal-normalise, p,
+main {
   font-family: verdana;
   text-transform: none;
   font-style: normal;
@@ -39,7 +40,8 @@
   padding-bottom: 4em;
 }
 
-.f_principal-normalise, p, main {
+.f_principal-normalise, p,
+main {
   font-family: verdana;
   text-transform: none;
   font-style: normal;
@@ -131,9 +133,6 @@
 
 .atencion {
   padding-bottom: 0%;
-}
-
-.atencion {
   background-image: -webkit-gradient(linear, left top, left bottom, color-stop(to, black));
   background-image: linear-gradient(black to url(../imagenes/atencion.jpg));
   background-color: #0C0C0C;
@@ -147,12 +146,18 @@
 .persuasionCont {
   width: 100%;
   height: auto;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
 }
 
 .persuasionCont #right {
-  display: inline-block;
+  display: inline;
   text-align: left;
-  width: 65%;
+  width: 60%;
   -webkit-box-ordinal-group: 3;
       -ms-flex-order: 2;
           order: 2;
@@ -161,8 +166,8 @@
 
 .persuasionCont #left {
   text-align: left;
-  display: inline-block;
-  width: 65%;
+  display: inline;
+  width: 60%;
   -webkit-box-ordinal-group: 2;
       -ms-flex-order: 1;
           order: 1;
@@ -176,25 +181,18 @@
       align-self: center;
 }
 
-#imgLeft {
-  -webkit-box-ordinal-group: 2;
-      -ms-flex-order: 1;
-          order: 1;
-}
-
 #imgRight {
+  margin-left: 1em;
   -webkit-box-ordinal-group: 3;
       -ms-flex-order: 2;
           order: 2;
 }
 
-.persuasionCont {
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-pack: justify;
-      -ms-flex-pack: justify;
-          justify-content: space-between;
+#imgLeft {
+  margin-right: 1em;
+  -webkit-box-ordinal-group: 2;
+      -ms-flex-order: 1;
+          order: 1;
 }
 
 .persuasion .tituloMediocre, .persuasion .objecionCaja_titulo {
@@ -213,44 +211,10 @@
   border: 1px solid #F4F4F4;
 }
 
-#imagenProfe {
-  text-align: center;
-  border: 5px solid #1b1a33;
-}
-
-.solucion #imagenProfe {
-  -webkit-box-ordinal-group: 2;
-      -ms-flex-order: 1;
-          order: 1;
-  height: auto;
-}
-
-#imagenDelProfe {
-  width: 300px;
-  display: inline;
-}
-
-figure {
-  padding-bottom: 0% !important;
-  margin-bottom: 0% !important;
-}
-
-#figcaption {
-  color: #F4F4F4;
-  background-color: #1b1a33;
-  width: 100%;
-  font-size: 20px;
-  font-weight: bold;
-  position: relative;
-  right: 0%;
-  padding: 0%;
-}
-
-/*el div imagenProfe genera un espacio que no debe estar allí*/
 #solucionCont {
-  display: -webkit-inline-box;
-  display: -ms-inline-flexbox;
-  display: inline-flex;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
   -webkit-box-pack: space-evenly;
       -ms-flex-pack: space-evenly;
           justify-content: space-evenly;
@@ -260,6 +224,43 @@ figure {
   width: 65%;
   background: transparent;
   display: inline-block;
+  -webkit-box-ordinal-group: 3;
+      -ms-flex-order: 2;
+          order: 2;
+}
+
+#solucionCont #imagenProfe {
+  text-align: center;
+  border: 5px solid #1b1a33;
+  margin-right: 1em;
+}
+
+#solucionCont #imagenProfe {
+  -webkit-box-ordinal-group: 2;
+      -ms-flex-order: 1;
+          order: 1;
+  height: auto;
+}
+
+#solucionCont #imagenDelProfe {
+  width: 300px;
+  display: inline;
+}
+
+#solucionCont figure {
+  padding-bottom: 0% !important;
+  margin-bottom: 0% !important;
+}
+
+#solucionCont #figcaption {
+  color: #F4F4F4;
+  background-color: #1b1a33;
+  width: 100%;
+  font-size: 20px;
+  font-weight: bold;
+  position: relative;
+  right: 0%;
+  padding: 0%;
 }
 
 /*-----FIN PERSUASION-----*/
@@ -275,6 +276,7 @@ figure {
 
 .beneficios p {
   background-color: rgba(60, 93, 241, 0.7);
+  margin: 0%;
 }
 
 #beneficiosli {
@@ -290,6 +292,7 @@ figure {
       flex-wrap: wrap;
   list-style: none;
   padding: 0%;
+  margin: 0%;
 }
 
 .beneficio__caja--formato {
@@ -322,6 +325,15 @@ figure {
   transition: all 0.3s;
   z-index: 4;
   height: auto;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-line-pack: center;
+      align-content: center;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  height: auto;
 }
 
 #objecion2,
@@ -334,6 +346,15 @@ figure {
   transition: all 0.3s;
   z-index: 4;
   height: auto;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-line-pack: center;
+      align-content: center;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  height: auto;
 }
 
 .objecionCaja_p:hover {
@@ -343,32 +364,6 @@ figure {
 .imagenBeneficio img, #objecion1 .imagenBeneficio img, #objecion3 .imagenBeneficio img, #objecion2 .imagenBeneficio img, #objecion4 .imagenBeneficio img {
   max-width: 100px;
   max-height: 100px;
-}
-
-#objecion1,
-#objecion3 {
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -ms-flex-line-pack: center;
-      align-content: center;
-  -webkit-box-pack: justify;
-      -ms-flex-pack: justify;
-          justify-content: space-between;
-  height: auto;
-}
-
-#objecion2,
-#objecion4 {
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -ms-flex-line-pack: center;
-      align-content: center;
-  -webkit-box-pack: justify;
-      -ms-flex-pack: justify;
-          justify-content: space-between;
-  height: auto;
 }
 
 .textboxLeft {
@@ -434,7 +429,7 @@ figure {
 }
 
 .objeciones__objecionCaja--formato {
-  width: 1200px;
+  max-width: 1200px;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -484,6 +479,18 @@ figure {
           justify-content: space-evenly;
 }
 
+#testimoniosVideos video {
+  min-width: 200px;
+  -ms-flex-item-align: center;
+      -ms-grid-row-align: center;
+      align-self: center;
+  margin-left: 1em;
+}
+
+#testimoniosVideos #firstinList {
+  margin-left: 0%;
+}
+
 #listaTestimonial {
   display: -webkit-box;
   display: -ms-flexbox;
@@ -521,10 +528,6 @@ figure {
 
 /*-----FIN TESTIMONIOS-----*/
 /*-----PYR-----*/
-.pyr ol {
-  list-style: none;
-}
-
 .pyrar h4 {
   font-size: 25px;
   display: inline;
@@ -537,6 +540,54 @@ figure {
   font-size: 28px;
 }
 
+/*bootstrap pyr*/
+.pyr {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center !important;
+      -ms-flex-pack: center !important;
+          justify-content: center !important;
+}
+
+.pyr p, .pyr .pyrButton {
+  width: 100%;
+  max-width: 1200px;
+}
+
+.bootstrapPyr {
+  width: 100%;
+  max-width: 1200px;
+  color: #F4F4F4;
+  background-color: #3C3B6E;
+  border: 2px solid #1b1a33;
+}
+
+.bootstrapPyr .btn {
+  width: 100%;
+  max-width: 1200px;
+}
+
+.card-body {
+  margin-bottom: 1em;
+  text-align: center;
+  width: 100% !important;
+  max-width: 1200px;
+}
+
+#collapsePyr1, #collapsePyr2, #collapsePyr3, #collapsePyr4 {
+  width: 100%;
+  max-width: 1200px;
+}
+
+/*fin bootstrap pyr*/
 /*-----FIN PYR-----*/
 /*============FIN INDEX.HTML============*/
 /*============ABOUT.HTML============*/
@@ -547,7 +598,8 @@ figure {
   padding-bottom: 4em;
 }
 
-.f_principal-normalise, p, main {
+.f_principal-normalise, p,
+main {
   font-family: verdana;
   text-transform: none;
   font-style: normal;
@@ -741,7 +793,8 @@ figure {
   padding-bottom: 4em;
 }
 
-.f_principal-normalise, p, main {
+.f_principal-normalise, p,
+main {
   font-family: verdana;
   text-transform: none;
   font-style: normal;
@@ -852,7 +905,8 @@ figure {
   padding-bottom: 4em;
 }
 
-.f_principal-normalise, p, main {
+.f_principal-normalise, p,
+main {
   font-family: verdana;
   text-transform: none;
   font-style: normal;
@@ -1995,7 +2049,8 @@ h3 {
 
 /*-----FIN LISTAS-----*/
 /*-----FUENTES-----*/
-p, main {
+p,
+main {
   font-size: 18px !important;
   color: #F4F4F4 !important;
 }
@@ -2337,34 +2392,6 @@ header nav ul {
 }
 
 /*------FIN BODY------*/
-/*bootstrap pyr*/
-.pyr {
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-orient: vertical;
-  -webkit-box-direction: normal;
-      -ms-flex-direction: column;
-          flex-direction: column;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
-}
-
-.bootstrapPyr {
-  width: 1200px;
-  color: #F4F4F4;
-  background-color: #3C3B6E;
-  border: 2px solid #1b1a33;
-}
-
-.card-body {
-  margin-bottom: 1em;
-  text-align: center;
-  width: 1200px;
-}
-
-/*fin bootstrap pyr*/
 /*-----FOOTER-----*/
 footer {
   background-color: #F4F4F4;
@@ -2389,7 +2416,7 @@ footer {
   -webkit-box-pack: justify;
       -ms-flex-pack: justify;
           justify-content: space-between;
-  width: 1000px;
+  width: 100%;
   max-width: 1200px;
   -webkit-box-align: center;
       -ms-flex-align: center;
@@ -2424,6 +2451,11 @@ footer p {
 
 */
 @media only screen and (max-width: 767px) and (orientation: portrait) {
+  /*HEADER*/
+  header, header:hover {
+    height: calc(40px + 1em);
+  }
+  /*FIN HEADER*/
   /*padding-top del body*/
   body {
     padding-top: 56px;
@@ -2440,6 +2472,43 @@ footer p {
   }
   .atencion #atencionArriba #tituloPrincipal #principalUltimo2 {
     display: block;
+  }
+  .persuasionCont {
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+  }
+  .persuasionCont #right,
+  .persuasionCont #left {
+    width: 100%;
+    margin-top: 1em;
+  }
+  .persuasionCont #imgRight {
+    -webkit-box-ordinal-group: 2;
+        -ms-flex-order: 1;
+            order: 1;
+  }
+  .persuasionCont #left {
+    -webkit-box-ordinal-group: 3;
+        -ms-flex-order: 2;
+            order: 2;
+  }
+  #solucionCont {
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+  }
+  #solucionCont p {
+    width: 100%;
+    margin-top: 1em;
   }
   /*nav*/
   #responsiveNav {
@@ -2462,10 +2531,10 @@ footer p {
     display: -webkit-box;
     display: -ms-flexbox;
     display: flex;
-    -webkit-box-orient: horizontal;
+    -webkit-box-orient: vertical;
     -webkit-box-direction: normal;
-        -ms-flex-direction: row;
-            flex-direction: row;
+        -ms-flex-direction: column;
+            flex-direction: column;
     -webkit-box-align: center;
         -ms-flex-align: center;
             align-items: center;
@@ -2501,6 +2570,53 @@ footer p {
   .titulo {
     font-size: 16px;
   }
+  /*beneficios*/
+  .beneficios .beneficio__caja--formato {
+    margin-bottom: 1em;
+  }
+  .beneficios .botonVenta {
+    margin-top: calc(3rem - 1em);
+  }
+  /*fin beneficios*/
+  /*-----TESTIMONIOS-----*/
+  #testimoniosVideos {
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+  }
+  #testimoniosVideos video {
+    margin-bottom: 1em;
+    margin-left: 0%;
+    width: 100%;
+  }
+  .testimonios .botonVenta {
+    margin-top: calc(3rem - 1em);
+  }
+  /*-----fin TESTIMONIOS-----*/
+  /*footer*/
+  .footer {
+    margin-top: 0%;
+    padding-top: 1em;
+  }
+  .footer_lists {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+  }
+  .footer_lists #enlaces, .footer_lists #rrss {
+    width: 100%;
+    text-align: center;
+    padding-bottom: 1em;
+  }
+  /*fin footer*/
 }
 
 /*media query aplicado para un dispsitivo celular estandar (md)
@@ -2508,6 +2624,9 @@ footer p {
 */
 @media only screen and (min-width: 767px) and (max-width: 1023px) and (orientation: portrait) {
   /*header*/
+  header, header:hover {
+    height: calc(40px + 1em);
+  }
   /*padding-top del body*/
   body {
     padding-top: 56px;
@@ -2539,12 +2658,57 @@ footer p {
   .atencion #atencionArriba #tituloPrincipal #principalUltimo2 {
     display: block;
   }
+  .persuasionCont {
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+  }
+  .persuasionCont #right,
+  .persuasionCont #left {
+    width: 100%;
+    margin-top: 1em;
+  }
+  .persuasionCont #imgRight {
+    -webkit-box-ordinal-group: 2;
+        -ms-flex-order: 1;
+            order: 1;
+  }
+  .persuasionCont #left {
+    -webkit-box-ordinal-group: 3;
+        -ms-flex-order: 2;
+            order: 2;
+  }
+  #solucionCont {
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+  }
+  #solucionCont p {
+    width: 100%;
+    margin-top: 1em;
+  }
   header {
     border: none;
   }
   .persuasion #solucion .elemento--centrado p {
     width: 600px;
   }
+  /*beneficios*/
+  .beneficios .beneficio__caja--formato {
+    margin-bottom: 1em;
+  }
+  .beneficios .botonVenta {
+    margin-top: calc(3rem - 1em);
+  }
+  /*fin beneficios*/
   #objecion1,
   #objecion3 {
     background-image: -webkit-gradient(linear, left top, right top, from(#1b1b1b), to(#3f3f3f));
@@ -2576,11 +2740,30 @@ footer p {
   .titulo {
     font-size: 30px;
   }
+  /*-----TESTIMONIOS-----*/
+  #testimoniosVideos {
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+  }
+  #testimoniosVideos video {
+    margin-bottom: 1em;
+    margin-left: 0%;
+    width: 100%;
+  }
+  .testimonios .botonVenta {
+    margin-top: calc(3rem - 1em);
+  }
+  /*-----fin TESTIMONIOS-----*/
 }
 
 /*media query aplicado para el conjunto vacío vertical (mayores a 1023)*/
 @media only screen and (min-width: 1024px) and (orientation: portrait) {
   /*header*/
+  header, header:hover {
+    height: calc(40px + 1em);
+  }
   /*padding-top del body*/
   body {
     padding-top: 56px;
@@ -2625,6 +2808,43 @@ footer p {
   .atencion #atencionArriba #tituloPrincipal #principalUltimo2 {
     display: block;
   }
+  .persuasionCont {
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+  }
+  .persuasionCont #right,
+  .persuasionCont #left {
+    width: 100%;
+    margin-top: 1em;
+  }
+  .persuasionCont #imgRight {
+    -webkit-box-ordinal-group: 2;
+        -ms-flex-order: 1;
+            order: 1;
+  }
+  .persuasionCont #left {
+    -webkit-box-ordinal-group: 3;
+        -ms-flex-order: 2;
+            order: 2;
+  }
+  #solucionCont {
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+  }
+  #solucionCont p {
+    width: 100%;
+    margin-top: 1em;
+  }
   /*boton whatsapp*/
   #botonWhatsapp {
     width: 100%;
@@ -2642,6 +2862,30 @@ footer p {
   .titulo {
     font-size: 30px;
   }
+  /*beneficios*/
+  .beneficios .beneficio__caja--formato {
+    margin-bottom: 1em;
+  }
+  .beneficios .botonVenta {
+    margin-top: calc(3rem - 1em);
+  }
+  /*fin beneficios*/
+  /*-----TESTIMONIOS-----*/
+  #testimoniosVideos {
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+  }
+  #testimoniosVideos video {
+    margin-bottom: 1em;
+    margin-left: 0%;
+    width: 100%;
+  }
+  .testimonios .botonVenta {
+    margin-top: calc(3rem - 1em);
+  }
+  /*-----fin TESTIMONIOS-----*/
 }
 
 /*media query aplicado para un dispositivo horizontal muy pequeño*/
@@ -2658,6 +2902,43 @@ footer p {
   .atencion #atencionArriba #tituloPrincipal #principalUltimo2 {
     display: block;
   }
+  .persuasionCont {
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+  }
+  .persuasionCont #right,
+  .persuasionCont #left {
+    width: 100%;
+    margin-top: 1em;
+  }
+  .persuasionCont #imgRight {
+    -webkit-box-ordinal-group: 2;
+        -ms-flex-order: 1;
+            order: 1;
+  }
+  .persuasionCont #left {
+    -webkit-box-ordinal-group: 3;
+        -ms-flex-order: 2;
+            order: 2;
+  }
+  #solucionCont {
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+  }
+  #solucionCont p {
+    width: 100%;
+    margin-top: 1em;
+  }
   /*nav*/
   #responsiveNav {
     display: block;
@@ -2672,6 +2953,22 @@ footer p {
     height: auto;
   }
   /*fin nav*/
+  /*-----TESTIMONIOS-----*/
+  #testimoniosVideos {
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+  }
+  #testimoniosVideos video {
+    margin-bottom: 1em;
+    width: 100%;
+    margin-left: 0%;
+  }
+  .testimonios .botonVenta {
+    margin-top: calc(3rem - 1em);
+  }
+  /*-----fin TESTIMONIOS-----*/
 }
 
 /*media query aplicado para un dispositivo horizontal pequeño, tableta*/
