@@ -64,7 +64,7 @@
             </nav>
         </div>
 
-       
+
         <div class="header__hIzq" id="hIzq">
             <div id="logCaja">
                 <a href="../index.html" style="text-decoration: none;">
@@ -95,23 +95,42 @@
     </div>
 
     <section class="extractos">
-        <div id="extractosTestimoniales">
-            <div id="videoSaction">
-                <video src="../videos/testi1.mp4"="auto" controls>Tu navegador no puede cargar este video</video>
-                <p>Copy del video</p>
-                <video src="../videos/testi2.mp4"="auto" controls>Tu navegador no puede cargar este video</video>
-                <p>Copy del video</p>
-                <video src="../videos/testi3.mp4"="auto" controls>Tu navegador no puede cargar este video</video>
-                <p>Copy del video</p>
+        <div id="extractosTestimoniales" class="extractos--formatoContenedor">
+            <div class="testimoniosContenedor">
+                <div class="bloqueTestimonial" id="firstinList">
+                    <video src="videos/testimonio1.mp4" preload="auto" controls>Tu reproductor no puede
+                        reproducir este
+                        video</video>
+                    <p>Este es el copy del video este es el copy del video</p>
+                </div>
+                <div class="bloqueTestimonial">
+                    <video src="videos/testimonio2.mp4" preload="auto" controls>Tu reproductor no puede reproducir este
+                        video</video>
+                    <p>Este es el copy del video este es el copy del video</p>
+                </div>
+                <div class="bloqueTestimonial">
+                    <video src="videos/testimonio3.mp4" preload="auto" controls>Tu reproductor no puede reproducir este
+                        video</video>
+                    <p>Este es el copy del video este es el copy del video</p>
+                </div>
             </div>
-            <div id="imageneSaction">
-                <image src="../imagenes/testi1.jpg" alt="testimonio_incontext">
-                    <p>Copy de la imagen</p>
-                    <image src="../imagenes/testi2.jpg" alt="testimonio_incontext">
-                        <p>Copy de la imagen</p>
-                        <image src="../imagenes/testi3.jpg" alt="testimonio_incontext">
-                            <p>Copy de la imagen</p>
+        </div>
+        <div id="imageneSaction" class="extractos--formatoContenedor">
+            <div class="testimoniosContenedor">
+                <div class="bloqueTestimonial" id="firstinList">
+                    <img src="../imagenes/what.jpg"></image>
+                    <p>Este es el copy de la imagen bla bla bla bla bla bla bla</p>
+                </div>
+                <div class="bloqueTestimonial">
+                    <img src="../imagenes/what.jpg"></image>
+                    <p>Este es el copy de la imagen bla bla bla bla bla bla bla</p>
+                </div>
+                <div class="bloqueTestimonial">
+                    <img src="../imagenes/what.jpg"></image>
+                    <p>Este es el copy de la imagen bla bla bla bla bla bla bla</p>
+                </div>
             </div>
+        </div>
         </div>
         <div class="elemento--centrado">
             <button class="botonVenta"><a href="#">conocer las demas historias</a></button>
@@ -124,15 +143,21 @@
     </div>
     <section class="entrevistas">
         <div id="listaTestimonial">
-            <h3>Mariano, chileno con 3 meses de curso</h3>
-            <video src="../videos/testimoniovideo1.mp4" preload="auto" controls>Tu navegador no puede cargar este
-                video</video>
-            <h3>Mariano, chileno con 3 meses de curso</h3>
-            <video src="../videos/testimoniovideo2.mp4" preload="auto" controls>Tu navegador no puede cargar este
-                video</video>
-            <h3>Mariano, chileno con 3 meses de curso</h3>
-            <video src="../videos/testimoniovideo3" preload="auto" controls>Tu navegador no puede cargar este
-                video</video>
+            <div class="listaTestimonial__bloqueVideo--formato" id="firstinList">
+                <h3>Mariano, chileno con <span>3 meses de curso</span></h3>
+                <video src="../videos/testimoniovideo1.mp4" preload="auto" controls>Tu navegador no puede cargar este
+                    video</video>
+            </div>
+            <div class="listaTestimonial__bloqueVideo--formato">
+                <h3>Mariano, chileno con <span>3 meses de curso</span></h3>
+                <video src="../videos/testimoniovideo2.mp4" preload="auto" controls>Tu navegador no puede cargar este
+                    video</video>
+            </div>
+            <div class="listaTestimonial__bloqueVideo--formato">
+                <h3>Mariano, chileno con <span>3 meses de curso</span></h3>
+                <video src="../videos/testimoniovideo3" preload="auto" controls>Tu navegador no puede cargar este
+                    video</video>
+            </div>
         </div>
         <div class="elemento--centrado">
             <button class="botonVenta"><a href="../secciones/cursos.html">COMPRAR AHORA</a></button>

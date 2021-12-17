@@ -674,6 +674,9 @@ footer p {
 
 */
 @media only screen and (max-width: 767px) and (orientation: portrait) {
+#firstinList{
+        margin-left: 1em;
+}
 
     /*HEADER*/
     header,
@@ -817,7 +820,7 @@ footer p {
 
     /*-----TESTIMONIOS-----*/
 
-    #testimoniosVideos {
+    .testimoniosVideos {
         flex-direction: column;
 
         video {
@@ -1028,7 +1031,7 @@ footer p {
 
     /*-----TESTIMONIOS-----*/
 
-    #testimoniosVideos {
+    .testimoniosVideos {
         flex-direction: column;
 
         video {
@@ -1172,7 +1175,7 @@ footer p {
 
     /*-----TESTIMONIOS-----*/
 
-    #testimoniosVideos {
+    .testimoniosVideos {
         flex-direction: column;
 
         video {
@@ -1194,6 +1197,10 @@ footer p {
 
 /*media query aplicado para un dispositivo horizontal muy pequeño*/
 @media only screen and (max-width: 767px) and (orientation: landscape) {
+    #firstinList{
+        margin-left: 0%;
+}
+
 
     /*header*/
     header,
@@ -1268,7 +1275,7 @@ footer p {
 
     /*-----TESTIMONIOS-----*/
 
-    #testimoniosVideos {
+    .testimoniosVideos {
         flex-direction: column;
 
         video {
