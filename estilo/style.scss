@@ -479,51 +479,8 @@ header {
     transition: 0.5s;
     transition-timing-function: ease-out;
 
-    #logCaja p {
-        display: none;
-        filter: opacity(0%);
-        transition: 0.8s;
-    }
 }
 
-header:hover {
-    border: none;
-    border-bottom: $color-secundario;
-    border-bottom-style: solid;
-    border-bottom-width: 2px;
-    height: 100px;
-
-    #logCaja p {
-        display: block;
-        filter: opacity(100%);
-        transition: 0.8s;
-    }
-
-
-    .nav-itemm {
-        background-color: $color-secundario;
-        border: 2px $color-secundario-oscuro solid;
-        border-top: hidden;
-        border-bottom: hidden;
-        transition: 0.3s;
-
-        .nav-linkk {
-            color: $color-terciario;
-            transition: 0.5s;
-        }
-    }
-
-    .nav-itemm:hover {
-        background-color: rgb(36, 112, 184);
-        border: 2px $color-secundario solid;
-        border-top: hidden;
-        border-bottom: hidden;
-
-        .nav-linkk {
-            color: $color-terciario !important;
-        }
-    }
-}
 
 
 .nav-itemm {
@@ -718,11 +675,21 @@ footer p {
 */
 @media only screen and (max-width: 767px) and (orientation: portrait) {
 
-/*HEADER*/
-header, header:hover{
-height: calc(40px + 1em);
-}
-/*FIN HEADER*/
+    /*HEADER*/
+    header,
+    header:hover {
+        height: calc(40px + 1em);
+
+        #hIzq {
+            display: none;
+        }
+
+        #hDer {
+            display: none;
+        }
+    }
+
+    /*FIN HEADER*/
 
     /*padding-top del body*/
     body {
@@ -781,17 +748,6 @@ height: calc(40px + 1em);
         display: block;
     }
 
-    #hIzq {
-        display: none;
-    }
-
-    #hDer {
-        display: none;
-    }
-
-    header {
-        height: auto;
-    }
 
     /*fin nav*/
 
@@ -844,18 +800,18 @@ height: calc(40px + 1em);
         font-size: 16px;
     }
 
-        /*beneficios*/
+    /*beneficios*/
 
-.beneficios{
+    .beneficios {
 
-    .beneficio__caja--formato{
-        margin-bottom: 1em;
+        .beneficio__caja--formato {
+            margin-bottom: 1em;
+        }
+
+        .botonVenta {
+            margin-top: calc(3rem - 1em);
+        }
     }
-
-    .botonVenta{
-        margin-top: calc(3rem - 1em);
-    }
-}
 
     /*fin beneficios*/
 
@@ -864,41 +820,58 @@ height: calc(40px + 1em);
     #testimoniosVideos {
         flex-direction: column;
 
-        video{
+        video {
             margin-bottom: 1em;
             margin-left: 0%;
             width: 100%;
         }
     }
-    
-    .testimonios{
-            .botonVenta{
-                margin-top: calc(3rem - 1em);
-            }
+
+    .testimonios {
+        .botonVenta {
+            margin-top: calc(3rem - 1em);
         }
+    }
+
     /*-----fin TESTIMONIOS-----*/
 
-        /*footer*/
+    /*footer*/
 
-        .footer{
-            margin-top: 0%;
-            padding-top: 1em;
-        }
+    .footer {
+        margin-top: 0%;
+        padding-top: 1em;
+    }
 
-        .footer_lists{
-            display: flex;
-            flex-direction: column;
-            align-items: center;
+    .footer_lists {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
 
-            #enlaces,#rrss{
+        #enlaces,
+        #rrss {
             width: 100%;
             text-align: center;
             padding-bottom: 1em;
-            }
-
         }
 
-        /*fin footer*/
+    }
+
+    /*fin footer*/
+
+/*=====pagina cursos=====*/
+
+    /*llamar atencion*/
+
+    #tituloSec {
+        display: none;
+    }
+
+    #tituloSec2 {
+        display: block;
+    }
+
+    /*FIN llamar atencion*
+/*=====fin pagina cursos=====*/
 
 }
 
@@ -910,9 +883,19 @@ height: calc(40px + 1em);
     /*header*/
 
 
-header, header:hover{
-    height: calc(40px + 1em);
+    header,
+    header:hover {
+        height: calc(40px + 1em);
+
+        #hIzq {
+            display: none;
+        }
+
+        #hDer {
+            display: none;
+        }
     }
+
 
 
     /*padding-top del body*/
@@ -927,17 +910,9 @@ header, header:hover{
         display: block;
     }
 
-    #hIzq {
-        display: none;
-    }
 
-    #hDer {
-        display: none;
-    }
 
-    header {
-        height: auto;
-    }
+
 
     /*fin nav*/
 
@@ -996,18 +971,18 @@ header, header:hover{
         width: 600px;
     }
 
-        /*beneficios*/
+    /*beneficios*/
 
-.beneficios{
+    .beneficios {
 
-    .beneficio__caja--formato{
-        margin-bottom: 1em;
+        .beneficio__caja--formato {
+            margin-bottom: 1em;
+        }
+
+        .botonVenta {
+            margin-top: calc(3rem - 1em);
+        }
     }
-
-    .botonVenta{
-        margin-top: calc(3rem - 1em);
-    }
-}
 
     /*fin beneficios*/
 
@@ -1056,18 +1031,19 @@ header, header:hover{
     #testimoniosVideos {
         flex-direction: column;
 
-        video{
+        video {
             margin-bottom: 1em;
             margin-left: 0%;
             width: 100%;
         }
     }
-    
-    .testimonios{
-            .botonVenta{
-                margin-top: calc(3rem - 1em);
-            }
+
+    .testimonios {
+        .botonVenta {
+            margin-top: calc(3rem - 1em);
         }
+    }
+
     /*-----fin TESTIMONIOS-----*/
 }
 
@@ -1077,8 +1053,17 @@ header, header:hover{
 
     /*header*/
 
-header, header:hover{
-    height: calc(40px + 1em);
+    header,
+    header:hover {
+        height: calc(40px + 1em);
+
+        #hIzq {
+            display: none;
+        }
+
+        #hDer {
+            display: none;
+        }
     }
 
 
@@ -1094,19 +1079,6 @@ header, header:hover{
         display: none;
     }
 
-    #hIzq {
-        display: flex;
-        justify-content: start;
-    }
-
-    #hDer {
-        display: flex;
-        justify-content: end;
-    }
-
-    header {
-        height: auto;
-    }
 
     #logCaja {
         margin-left: 1em;
@@ -1183,18 +1155,18 @@ header, header:hover{
         font-size: 30px;
     }
 
-        /*beneficios*/
+    /*beneficios*/
 
-.beneficios{
+    .beneficios {
 
-    .beneficio__caja--formato{
-        margin-bottom: 1em;
+        .beneficio__caja--formato {
+            margin-bottom: 1em;
+        }
+
+        .botonVenta {
+            margin-top: calc(3rem - 1em);
+        }
     }
-
-    .botonVenta{
-        margin-top: calc(3rem - 1em);
-    }
-}
 
     /*fin beneficios*/
 
@@ -1203,18 +1175,19 @@ header, header:hover{
     #testimoniosVideos {
         flex-direction: column;
 
-        video{
+        video {
             margin-bottom: 1em;
             margin-left: 0%;
             width: 100%;
         }
     }
-    
-    .testimonios{
-            .botonVenta{
-                margin-top: calc(3rem - 1em);
-            }
+
+    .testimonios {
+        .botonVenta {
+            margin-top: calc(3rem - 1em);
         }
+    }
+
     /*-----fin TESTIMONIOS-----*/
 
 }
@@ -1222,6 +1195,25 @@ header, header:hover{
 /*media query aplicado para un dispositivo horizontal muy pequeño*/
 @media only screen and (max-width: 767px) and (orientation: landscape) {
 
+    /*header*/
+    header,
+    header:hover {
+        height: calc(40px + 1em);
+
+        #hIzq {
+            display: none;
+        }
+
+        #hDer {
+            display: none;
+        }
+    }
+
+    body {
+        padding-top: 56px;
+    }
+
+    /*fin header*/
     .atencion #atencionArriba #imagenPrincipal {
         display: none;
     }
@@ -1272,18 +1264,6 @@ header, header:hover{
         display: block;
     }
 
-    #hIzq {
-        display: none;
-    }
-
-    #hDer {
-        display: none;
-    }
-
-    header {
-        height: auto;
-    }
-
     /*fin nav*/
 
     /*-----TESTIMONIOS-----*/
@@ -1291,19 +1271,30 @@ header, header:hover{
     #testimoniosVideos {
         flex-direction: column;
 
-        video{
+        video {
             margin-bottom: 1em;
             width: 100%;
             margin-left: 0%;
         }
     }
-    
-    .testimonios{
-            .botonVenta{
-                margin-top: calc(3rem - 1em);
-            }
+
+    .testimonios {
+        .botonVenta {
+            margin-top: calc(3rem - 1em);
         }
+    }
+
     /*-----fin TESTIMONIOS-----*/
+
+    /*=====Cursos.html=====*/
+    #tituloSec {
+        display: block;
+    }
+
+    #tituloSec2 {
+        display: none;
+    }
+    /*=====fin Cursos.html=====*/
 
 }
 
@@ -1326,6 +1317,19 @@ header, header:hover{
 
     .atencion #atencionArriba #tituloPrincipal #principalUltimo2 {
         display: none;
+    }
+
+    header:hover {
+
+        .nav-itemm:hover {
+            filter: brightness(1.25);
+            border-top: hidden;
+            border-bottom: hidden;
+
+            .nav-linkk {
+                color: $color-terciario !important;
+            }
+        }
     }
 
 
@@ -1392,6 +1396,19 @@ header, header:hover{
     }
 
     /*=====SECCION CURSOS=====*/
+    /*llamar atencion*/
+
+    #tituloSec {
+        display: block;
+    }
+
+    #tituloSec2 {
+        display: none;
+    }
+
+    /*FIN llamar atencion*
+
+
 
     /*metodoEstudio*/
 
@@ -1425,6 +1442,51 @@ header, header:hover{
     }
 
     /*header*/
+
+    #logCaja p {
+        display: none;
+        filter: opacity(0%);
+        transition: 0.8s;
+    }
+
+    header:hover {
+        border: none;
+        border-bottom: $color-secundario;
+        border-bottom-style: solid;
+        border-bottom-width: 2px;
+        height: 100px;
+
+        #logCaja p {
+            display: block;
+            filter: opacity(100%);
+            transition: 0.8s;
+        }
+
+
+        .nav-itemm {
+            background-color: $color-secundario;
+            border: 2px $color-secundario-oscuro solid;
+            border-top: hidden;
+            border-bottom: hidden;
+            transition: 0.3s;
+
+            .nav-linkk {
+                color: $color-terciario;
+                transition: 0.5s;
+            }
+        }
+
+        .nav-itemm:hover {
+            background-color: rgb(36, 112, 184);
+            border: 2px $color-secundario solid;
+            border-top: hidden;
+            border-bottom: hidden;
+
+            .nav-linkk {
+                color: $color-terciario !important;
+            }
+        }
+    }
 
     /*nav*/
     #responsiveNav {

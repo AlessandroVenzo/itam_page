@@ -1026,56 +1026,60 @@ main {
 }
 
 /*INFORMACIÓN_metodología*/
-#metodologia table th {
+#tablaMetodología th {
   text-transform: uppercase;
   font-weight: bolder;
-  padding-bottom: 2em;
+  color: #F4F4F4;
   text-align: center;
+  background-color: #1b1a33;
+  width: 1fr;
+  padding-top: 1em;
+  padding-bottom: 1em;
 }
 
-#metodologia table tr td {
+#tablaMetodología tr td {
   border-bottom: 2px;
-  border-bottom-color: #0C0C0C;
+  border-bottom-color: #0c0c0c;
   border-bottom-style: solid;
+  border-collapse: separate;
   text-align: center;
   margin-left: 2em;
+  color: #3C3B6E;
+  padding: 1em;
+  background-color: #0C0C0C;
+  width: 1fr;
 }
 
-#metodologia table {
-  max-width: 1200px;
-  padding: 2em;
-  border-style: solid;
-  border-width: 2px;
-  border-color: #0C0C0C;
-  background-color: #F4F4F4;
+#trPrincipal:hover {
+  -webkit-filter: none;
+          filter: none;
+}
+
+#tablaMetodología tr {
+  margin-top: 3em;
+}
+
+.trSecundario:hover {
+  -webkit-filter: brightness(1.25);
+          filter: brightness(1.25);
+}
+
+#tablaMetodología {
+  width: 1000px;
+  background-color: transparent;
 }
 
 /*FIN INFORMACIÓN_METODOLOGÍA*/
 /*INFORMACIÓN_TABLADESC*/
-#tablaDesc {
-  width: 500px;
-  height: auto;
-  background-color: #F4F4F4;
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-pack: center;
-      -ms-flex-pack: center;
-          justify-content: center;
-  -webkit-box-orient: vertical;
-  -webkit-box-direction: normal;
-      -ms-flex-direction: column;
-          flex-direction: column;
-  text-align: center;
-}
-
 #tablaVentajas {
-  width: 1000px;
   display: -ms-grid;
   display: grid;
       grid-template-areas: "a b c d e f" "g h i j k m" "n l o p q s" "t v w x y z" "za zb zc zd ze zf";
   margin-bottom: 2em;
   text-align: center;
+  -ms-grid-row-align: center;
+      align-self: center;
+  max-width: 1000px;
 }
 
 .item {
@@ -1093,10 +1097,8 @@ main {
   -webkit-box-pack: center;
       -ms-flex-pack: center;
           justify-content: center;
-  width: -webkit-fill-available;
-  width: -moz-available;
-  width: stretch;
-  height: 100%;
+  height: auto;
+  width: 1fr;
 }
 
 .itemCabeza {
@@ -1112,14 +1114,13 @@ main {
       -ms-flex-align: center;
           align-items: center;
   justify-items: center;
-  width: -webkit-fill-available;
-  width: -moz-available;
-  width: stretch;
-  height: auto;
   -webkit-box-pack: center;
       -ms-flex-pack: center;
           justify-content: center;
-  padding: 1em;
+  padding: 0.5em;
+  max-height: 100px;
+  min-height: 80px;
+  width: 1fr;
 }
 
 #itemNone {
@@ -1307,37 +1308,53 @@ main {
   grid-area: zf;
 }
 
-.tablaDesc li {
-  background-color: #0C0C0C;
-  list-style: none;
-  height: 40px;
-}
-
-.tablaDesc li ul li {
-  color: #F4F4F4;
-}
-
 /*responsividad de la tabla ventajas*/
 @media only screen and (max-width: 767px) and (orientation: landscape) {
-  #tablaVentajas .item4, #tablaVentajas .item10, #tablaVentajas .item16, #tablaVentajas .item22, #tablaVentajas .item28 {
+  #tablaVentajas .item4,
+  #tablaVentajas .item10,
+  #tablaVentajas .item16,
+  #tablaVentajas .item22,
+  #tablaVentajas .item28 {
     display: none;
   }
-  #tablaVentajas .item5, #tablaVentajas .item11, #tablaVentajas .item17, #tablaVentajas .item23, #tablaVentajas .item29 {
+  #tablaVentajas .item5,
+  #tablaVentajas .item11,
+  #tablaVentajas .item17,
+  #tablaVentajas .item23,
+  #tablaVentajas .item29 {
     display: none;
+  }
+  .itemCabeza {
+    font-size: 100%;
   }
 }
 
 @media only screen and (max-width: 767px) and (orientation: portrait) {
-  #tablaVentajas .item4, #tablaVentajas .item10, #tablaVentajas .item16, #tablaVentajas .item22, #tablaVentajas .item28 {
+  #tablaVentajas .item4,
+  #tablaVentajas .item10,
+  #tablaVentajas .item16,
+  #tablaVentajas .item22,
+  #tablaVentajas .item28 {
     display: none;
   }
-  #tablaVentajas .item5, #tablaVentajas .item11, #tablaVentajas .item17, #tablaVentajas .item23, #tablaVentajas .item29 {
+  #tablaVentajas .item5,
+  #tablaVentajas .item11,
+  #tablaVentajas .item17,
+  #tablaVentajas .item23,
+  #tablaVentajas .item29 {
     display: none;
+  }
+  .itemCabeza {
+    font-size: 100%;
   }
 }
 
 @media only screen and (min-width: 768px) and (max-width: 1020px) and (orientation: landscape) {
-  .item4, .item10, .item16, .item22, .item28 {
+  .item4,
+  .item10,
+  .item16,
+  .item22,
+  .item28 {
     display: none;
   }
 }
@@ -1405,10 +1422,6 @@ main {
   padding-bottom: 1em;
   padding-left: 1em;
   padding-right: 1em;
-}
-
-.modulo .temario {
-  list-style: circle !important;
 }
 
 .modulo:hover {
@@ -1508,6 +1521,16 @@ main {
 }
 
 /*tablaDesc*/
+.tablaDesc li {
+  background-color: #0C0C0C;
+  list-style: none;
+  height: 40px;
+}
+
+.tablaDesc li ul li {
+  color: #F4F4F4;
+}
+
 .tablaDesc__cuadroContenidos--formato {
   display: block;
 }
@@ -1547,17 +1570,6 @@ main {
   padding-bottom: 0.5em;
   margin: 0%;
   color: #0C0C0C !important;
-}
-
-.tablaDesc__cuadroContenidos--formato ul li .dropdown-item:hover {
-  background-color: #1b1a33;
-  -webkit-transform: scaleX(1.09) skewX(-10deg);
-          transform: scaleX(1.09) skewX(-10deg);
-  padding-left: 1em;
-  padding-right: 1em;
-  color: #F4F4F4 !important;
-  -webkit-transition-duration: 0.3s;
-          transition-duration: 0.3s;
 }
 
 /*-----FIN DESCRIPCIONPRODUCTO_CONTENIDOS-----*/
@@ -2158,56 +2170,6 @@ header {
           transition-timing-function: ease-out;
 }
 
-header #logCaja p {
-  display: none;
-  -webkit-filter: opacity(0%);
-          filter: opacity(0%);
-  -webkit-transition: 0.8s;
-  transition: 0.8s;
-}
-
-header:hover {
-  border: none;
-  border-bottom: #3C3B6E;
-  border-bottom-style: solid;
-  border-bottom-width: 2px;
-  height: 100px;
-}
-
-header:hover #logCaja p {
-  display: block;
-  -webkit-filter: opacity(100%);
-          filter: opacity(100%);
-  -webkit-transition: 0.8s;
-  transition: 0.8s;
-}
-
-header:hover .nav-itemm {
-  background-color: #3C3B6E;
-  border: 2px #1b1a33 solid;
-  border-top: hidden;
-  border-bottom: hidden;
-  -webkit-transition: 0.3s;
-  transition: 0.3s;
-}
-
-header:hover .nav-itemm .nav-linkk {
-  color: #F4F4F4;
-  -webkit-transition: 0.5s;
-  transition: 0.5s;
-}
-
-header:hover .nav-itemm:hover {
-  background-color: #2470b8;
-  border: 2px #3C3B6E solid;
-  border-top: hidden;
-  border-bottom: hidden;
-}
-
-header:hover .nav-itemm:hover .nav-linkk {
-  color: #F4F4F4 !important;
-}
-
 .nav-itemm {
   text-transform: uppercase;
   text-align: center;
@@ -2452,8 +2414,17 @@ footer p {
 */
 @media only screen and (max-width: 767px) and (orientation: portrait) {
   /*HEADER*/
-  header, header:hover {
+  header,
+  header:hover {
     height: calc(40px + 1em);
+  }
+  header #hIzq,
+  header:hover #hIzq {
+    display: none;
+  }
+  header #hDer,
+  header:hover #hDer {
+    display: none;
   }
   /*FIN HEADER*/
   /*padding-top del body*/
@@ -2513,15 +2484,6 @@ footer p {
   /*nav*/
   #responsiveNav {
     display: block;
-  }
-  #hIzq {
-    display: none;
-  }
-  #hDer {
-    display: none;
-  }
-  header {
-    height: auto;
   }
   /*fin nav*/
   .persuasion #solucion .elemento--centrado p {
@@ -2611,12 +2573,23 @@ footer p {
         -ms-flex-align: center;
             align-items: center;
   }
-  .footer_lists #enlaces, .footer_lists #rrss {
+  .footer_lists #enlaces,
+  .footer_lists #rrss {
     width: 100%;
     text-align: center;
     padding-bottom: 1em;
   }
   /*fin footer*/
+  /*=====pagina cursos=====*/
+  /*llamar atencion*/
+  #tituloSec {
+    display: none;
+  }
+  #tituloSec2 {
+    display: block;
+  }
+  /*FIN llamar atencion*
+/*=====fin pagina cursos=====*/
 }
 
 /*media query aplicado para un dispsitivo celular estandar (md)
@@ -2624,8 +2597,17 @@ footer p {
 */
 @media only screen and (min-width: 767px) and (max-width: 1023px) and (orientation: portrait) {
   /*header*/
-  header, header:hover {
+  header,
+  header:hover {
     height: calc(40px + 1em);
+  }
+  header #hIzq,
+  header:hover #hIzq {
+    display: none;
+  }
+  header #hDer,
+  header:hover #hDer {
+    display: none;
   }
   /*padding-top del body*/
   body {
@@ -2635,15 +2617,6 @@ footer p {
   /*nav*/
   #responsiveNav {
     display: block;
-  }
-  #hIzq {
-    display: none;
-  }
-  #hDer {
-    display: none;
-  }
-  header {
-    height: auto;
   }
   /*fin nav*/
   .atencion #atencionArriba #imagenPrincipal {
@@ -2761,8 +2734,17 @@ footer p {
 /*media query aplicado para el conjunto vacío vertical (mayores a 1023)*/
 @media only screen and (min-width: 1024px) and (orientation: portrait) {
   /*header*/
-  header, header:hover {
+  header,
+  header:hover {
     height: calc(40px + 1em);
+  }
+  header #hIzq,
+  header:hover #hIzq {
+    display: none;
+  }
+  header #hDer,
+  header:hover #hDer {
+    display: none;
   }
   /*padding-top del body*/
   body {
@@ -2772,25 +2754,6 @@ footer p {
   /*nav*/
   #responsiveNav {
     display: none;
-  }
-  #hIzq {
-    display: -webkit-box;
-    display: -ms-flexbox;
-    display: flex;
-    -webkit-box-pack: start;
-        -ms-flex-pack: start;
-            justify-content: start;
-  }
-  #hDer {
-    display: -webkit-box;
-    display: -ms-flexbox;
-    display: flex;
-    -webkit-box-pack: end;
-        -ms-flex-pack: end;
-            justify-content: end;
-  }
-  header {
-    height: auto;
   }
   #logCaja {
     margin-left: 1em;
@@ -2890,6 +2853,23 @@ footer p {
 
 /*media query aplicado para un dispositivo horizontal muy pequeño*/
 @media only screen and (max-width: 767px) and (orientation: landscape) {
+  /*header*/
+  header,
+  header:hover {
+    height: calc(40px + 1em);
+  }
+  header #hIzq,
+  header:hover #hIzq {
+    display: none;
+  }
+  header #hDer,
+  header:hover #hDer {
+    display: none;
+  }
+  body {
+    padding-top: 56px;
+  }
+  /*fin header*/
   .atencion #atencionArriba #imagenPrincipal {
     display: none;
   }
@@ -2943,15 +2923,6 @@ footer p {
   #responsiveNav {
     display: block;
   }
-  #hIzq {
-    display: none;
-  }
-  #hDer {
-    display: none;
-  }
-  header {
-    height: auto;
-  }
   /*fin nav*/
   /*-----TESTIMONIOS-----*/
   #testimoniosVideos {
@@ -2969,6 +2940,14 @@ footer p {
     margin-top: calc(3rem - 1em);
   }
   /*-----fin TESTIMONIOS-----*/
+  /*=====Cursos.html=====*/
+  #tituloSec {
+    display: block;
+  }
+  #tituloSec2 {
+    display: none;
+  }
+  /*=====fin Cursos.html=====*/
 }
 
 /*media query aplicado para un dispositivo horizontal pequeño, tableta*/
@@ -2984,6 +2963,15 @@ footer p {
   }
   .atencion #atencionArriba #tituloPrincipal #principalUltimo2 {
     display: none;
+  }
+  header:hover .nav-itemm:hover {
+    -webkit-filter: brightness(1.25);
+            filter: brightness(1.25);
+    border-top: hidden;
+    border-bottom: hidden;
+  }
+  header:hover .nav-itemm:hover .nav-linkk {
+    color: #F4F4F4 !important;
   }
   /*nav*/
   #responsiveNav {
@@ -3050,7 +3038,18 @@ footer p {
     width: 600px;
   }
   /*=====SECCION CURSOS=====*/
-  /*metodoEstudio*/
+  /*llamar atencion*/
+  #tituloSec {
+    display: block;
+  }
+  #tituloSec2 {
+    display: none;
+  }
+  /*FIN llamar atencion*
+
+
+
+    /*metodoEstudio*/
   /*FIN metodoEstudio*/
   /*=====FIN SECCION CURSOS=====*/
 }
@@ -3071,6 +3070,49 @@ footer p {
     display: none;
   }
   /*header*/
+  #logCaja p {
+    display: none;
+    -webkit-filter: opacity(0%);
+            filter: opacity(0%);
+    -webkit-transition: 0.8s;
+    transition: 0.8s;
+  }
+  header:hover {
+    border: none;
+    border-bottom: #3C3B6E;
+    border-bottom-style: solid;
+    border-bottom-width: 2px;
+    height: 100px;
+  }
+  header:hover #logCaja p {
+    display: block;
+    -webkit-filter: opacity(100%);
+            filter: opacity(100%);
+    -webkit-transition: 0.8s;
+    transition: 0.8s;
+  }
+  header:hover .nav-itemm {
+    background-color: #3C3B6E;
+    border: 2px #1b1a33 solid;
+    border-top: hidden;
+    border-bottom: hidden;
+    -webkit-transition: 0.3s;
+    transition: 0.3s;
+  }
+  header:hover .nav-itemm .nav-linkk {
+    color: #F4F4F4;
+    -webkit-transition: 0.5s;
+    transition: 0.5s;
+  }
+  header:hover .nav-itemm:hover {
+    background-color: #2470b8;
+    border: 2px #3C3B6E solid;
+    border-top: hidden;
+    border-bottom: hidden;
+  }
+  header:hover .nav-itemm:hover .nav-linkk {
+    color: #F4F4F4 !important;
+  }
   /*nav*/
   #responsiveNav {
     display: none;
