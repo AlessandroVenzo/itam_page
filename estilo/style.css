@@ -688,11 +688,108 @@ main {
 
 /**/
 /**/
-.why p,
-.how p {
+.whyDiv,
+.how {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  max-width: 1200px;
+}
+
+.whyDiv .cortador,
+.how .cortador {
+  height: 300px;
+  max-height: 300px;
+  overflow: hidden;
+  width: 300px;
+  display: inline;
+}
+
+.whyDiv #ladeadoDer,
+.whyDiv #ladeadoIzq,
+.how #ladeadoDer,
+.how #ladeadoIzq {
+  background-color: #0C0C0C;
+  color: #3C3B6E;
+  text-align: center;
+  margin-bottom: 3em;
+  display: -webkit-inline-box;
+  display: -ms-inline-flexbox;
+  display: inline-flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-pack: space-evenly;
+      -ms-flex-pack: space-evenly;
+          justify-content: space-evenly;
+  height: 300px;
+  max-height: 300px;
+  width: 75%;
+  padding: 1em;
+}
+
+.whyDiv #ladeadoDer p,
+.whyDiv #ladeadoIzq p,
+.how #ladeadoDer p,
+.how #ladeadoIzq p {
   color: #F4F4F4;
   background: #0C0C0C;
-  padding-top: 3em;
+  display: block;
+  margin: 0%;
+}
+
+.whyDiv #ladeadoDer h3,
+.whyDiv #ladeadoIzq h3,
+.how #ladeadoDer h3,
+.how #ladeadoIzq h3 {
+  display: block;
+}
+
+.whyDiv #ladeadoDer,
+.how #ladeadoDer {
+  -ms-grid-column-align: end;
+      justify-self: end;
+}
+
+.whyDiv #ladeadoIzq,
+.how #ladeadoIzq {
+  -ms-grid-column-align: start;
+      justify-self: start;
+}
+
+.whyDiv #whyImagen,
+.how #whyImagen {
+  position: relative;
+  right: 100px;
+}
+
+.why, .why #ladeadoDebajo {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.why #ladeadoDebajo p {
+  height: auto;
+  display: block;
+  background-color: #0C0C0C;
+  color: #3C3B6E;
+  text-align: center;
+  margin-bottom: 3em;
+  height: auto;
+  max-width: 1000px;
+  padding: 1em;
 }
 
 .what p {
@@ -700,115 +797,42 @@ main {
   background: #0C0C0C;
 }
 
-#ladeadoDer,
-#ladeadoIzq {
-  background-color: #0C0C0C;
-  color: #3C3B6E;
-  text-align: center;
-  margin-bottom: 3em;
+.why img,
+.how img {
+  height: 400px;
   display: inline;
 }
 
-#ladeadoDer {
-  -ms-grid-column: 2;
-  -ms-grid-column-span: 1;
-  grid-column: 2/3;
-  -ms-grid-row: 1;
-  -ms-grid-row-span: 1;
-  grid-row: 1/2;
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-orient: vertical;
-  -webkit-box-direction: normal;
-      -ms-flex-direction: column;
-          flex-direction: column;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
-  -webkit-box-pack: center;
-      -ms-flex-pack: center;
-          justify-content: center;
-}
-
-#ladeadoIzq {
-  -ms-grid-column: 1;
-  -ms-grid-column-span: 1;
-  grid-column: 1/2;
-  -ms-grid-row: 1;
-  -ms-grid-row-span: 1;
-  grid-row: 1/2;
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-orient: vertical;
-  -webkit-box-direction: normal;
-      -ms-flex-direction: column;
-          flex-direction: column;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
-  -webkit-box-pack: center;
-      -ms-flex-pack: center;
-          justify-content: center;
-}
-
-.why img,
-.how img,
-.what img {
-  width: 400px;
-}
-
-.cortador {
-  width: 300px;
-  height: 300px;
-  overflow: hidden;
-}
-
 /*-----WHY-----*/
-.why {
+#why {
   background-image: -webkit-gradient(linear, left bottom, left top, from(rgba(5, 5, 5, 0)), to(#0c0c0c)), url(../imagenes/whyWallp.jpg);
   background-image: linear-gradient(to top, rgba(5, 5, 5, 0), #0c0c0c), url(../imagenes/whyWallp.jpg);
   background-size: cover;
   background-repeat: no-repeat;
-  padding-left: 10%;
-  padding-right: 10%;
-  display: -ms-grid;
-  display: grid;
-  padding-top: 3em;
-  padding-bottom: 3em;
-}
-
-#whyImagen {
-  -ms-grid-column: 1;
-  -ms-grid-column-span: 1;
-  grid-column: 1/2;
-  -ms-grid-row: 1;
-  -ms-grid-row-span: 1;
-  grid-row: 1/2;
+  width: 100%;
+  height: auto;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
 }
 
 /*-----FIN WHY-----*/
 /*-----HOW-----*/
-.how {
+#how {
   background-image: url(../imagenes/howWallpaper.jpg);
   background-size: cover;
   background-repeat: no-repeat;
-  padding-left: 10%;
-  padding-right: 10%;
-  display: -ms-grid;
-  display: grid;
-  padding-top: 3em;
-  padding-bottom: 3em;
-}
-
-#howImagen {
-  -ms-grid-column: 2;
-  -ms-grid-column-span: 1;
-  grid-column: 2/3;
-  -ms-grid-row: 1;
-  -ms-grid-row-span: 1;
-  grid-row: 1/2;
+  width: 100%;
+  height: auto;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
 }
 
 /*-----FIN HOW-----*/
@@ -833,6 +857,7 @@ main {
   width: 600px;
   height: 250px;
   overflow: hidden;
+  margin-bottom: 2em;
 }
 
 /*-----FIN WHAT-----*/

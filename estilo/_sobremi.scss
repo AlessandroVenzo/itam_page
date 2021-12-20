@@ -1,140 +1,164 @@
+/*============ABOUT.HTML============*/
 
-    /*============ABOUT.HTML============*/
+/*-----GENERAL-----*/
 
-    /*-----GENERAL-----*/
-
-    /*conf general*/
+/*conf general*/
 
 @import"_general";
 
 /**/
 
-    .why p,
-    .how p {
-        color: $color-terciario;
-        background: $color-dark;
-        padding-top: 3em;
-    }
+.whyDiv,
+.how {
+    display: flex;
+    justify-content: center;
+    max-width: 1200px;
 
-    .what p {
-        color: $color-terciario;
-        background: $color-dark;
+    
+    .cortador {
+        height: 300px;
+        max-height: 300px;
+        overflow: hidden;
+        width: 300px;
+        display: inline;
     }
-
+    
     #ladeadoDer,
     #ladeadoIzq {
         background-color: $color-dark;
         color: $color-secundario;
         text-align: center;
         margin-bottom: 3em;
-        display: inline;
-    }
-
-    #ladeadoDer {
-        grid-column: 2/3;
-        grid-row: 1/2;
-        display: flex;
+        display: inline-flex;
         flex-direction: column;
-        align-items: center;
-        justify-content: center;
-    }
-
-    #ladeadoIzq {
-        grid-column: 1/2;
-        grid-row: 1/2;
-        display: flex;
-        flex-direction: column;
-        align-items: center;
-        justify-content: center;
-    }
-
-    .why img,
-    .how img,
-    .what img {
-        width: 400px;
-    }
-
-    .cortador {
-        width: 300px;
+        justify-content: space-evenly;
         height: 300px;
-        overflow: hidden;
+        max-height: 300px;
+        width: 75%;
+        padding: 1em;
+        
+        p {
+            color: $color-terciario;
+            background: $color-dark;
+            display: block;
+            margin: 0%;
+        }
+        
+        h3 {
+            display: block;
+        }
     }
 
-    /*-----WHY-----*/
-    .why {
-        background-image: linear-gradient(to top, rgba(5, 5, 5, 0), rgb(12, 12, 12)), url(../imagenes/whyWallp.jpg);
-        background-size: cover;
-        background-repeat: no-repeat;
-        padding-left: 10%;
-        padding-right: 10%;
-        display: grid;
-        padding-top: 3em;
-        padding-bottom: 3em;
+    
+    #ladeadoDer{
+        justify-self: end;
+    }
+    #ladeadoIzq{
+        justify-self: start;
     }
 
-    #whyImagen {
-        grid-column: 1/2;
-        grid-row: 1/2;
-    }
-
-
-    /*-----FIN WHY-----*/
-    /*-----HOW-----*/
-    .how {
-        background-image: url(../imagenes/howWallpaper.jpg);
-        background-size: cover;
-        background-repeat: no-repeat;
-        padding-left: 10%;
-        padding-right: 10%;
-        display: grid;
-
-        padding-top: 3em;
-        padding-bottom: 3em;
-    }
-
-    #howImagen {
-        grid-column: 2/3;
-        grid-row: 1/2;
-    }
-
-    /*-----FIN HOW-----*/
-    /*-----WHAT-----*/
-    .what {
-        background-image: url(../imagenes/whatWallpaper.jpg);
-        background-size: cover;
-        background-repeat: no-repeat;
-        padding-left: 10%;
-        padding-right: 10%;
-        padding-top: 3em;
-        text-align: center;
-    }
-
-    .what img {
+    #whyImagen{ //para modificar las imagenes
         position: relative;
-        margin-top: -120px;
-        width: 600px;
+        right:100px;
     }
+}
 
-    .cortadorWhat {
-        width: 600px;
-        height: 250px;
-        overflow: hidden;
-    }
-
-    /*-----FIN WHAT-----*/
-
-    /*-----REDES-----*/
-
-    .whatsappLogo {
-        width: 40px;
-        transition: 0.3s;
-    }
-
-    .whatsappLogo:hover {
-        transform: scale(1.05);
-    }
-
-    /*-----FIN REDES-----*/
+.why, .why #ladeadoDebajo{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
 
 
-    /*============FIN ABOUT.HTML============*/
+
+.why #ladeadoDebajo p{
+    height: auto;
+    display: block;
+    background-color: $color-dark;
+    color: $color-secundario;
+    text-align: center;
+    margin-bottom: 3em;
+    height: auto;
+    max-width: 1000px;
+    padding: 1em;
+}
+
+.what p {
+    color: $color-terciario;
+    background: $color-dark;
+}
+
+.why img,
+.how img {
+    height: 400px;
+    display: inline;
+}
+
+
+/*-----WHY-----*/
+#why {
+    background-image: linear-gradient(to top, rgba(5, 5, 5, 0), rgb(12, 12, 12)), url(../imagenes/whyWallp.jpg);
+    background-size: cover;
+    background-repeat: no-repeat;
+    width: 100%;
+    height: auto;
+    display: flex;
+    justify-content: center;
+}
+
+
+/*-----FIN WHY-----*/
+/*-----HOW-----*/
+#how {
+    background-image: url(../imagenes/howWallpaper.jpg);
+    background-size: cover;
+    background-repeat: no-repeat;
+    width: 100%;
+    height: auto;
+    display: flex;
+    justify-content: center;
+}
+
+
+/*-----FIN HOW-----*/
+/*-----WHAT-----*/
+.what {
+    background-image: url(../imagenes/whatWallpaper.jpg);
+    background-size: cover;
+    background-repeat: no-repeat;
+    padding-left: 10%;
+    padding-right: 10%;
+    padding-top: 3em;
+    text-align: center;
+}
+
+.what img {
+    position: relative;
+    margin-top: -120px;
+    width: 600px;
+}
+
+.cortadorWhat {
+    width: 600px;
+    height: 250px;
+    overflow: hidden;
+    margin-bottom: 2em;
+}
+
+/*-----FIN WHAT-----*/
+
+/*-----REDES-----*/
+
+.whatsappLogo {
+    width: 40px;
+    transition: 0.3s;
+}
+
+.whatsappLogo:hover {
+    transform: scale(1.05);
+}
+
+/*-----FIN REDES-----*/
+
+
+/*============FIN ABOUT.HTML============*/
