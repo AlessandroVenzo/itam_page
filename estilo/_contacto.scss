@@ -56,10 +56,14 @@
             transition: 0.3s;
         }
 
-        .inputText:hover {
+        .inputText:focus {
             transform: scale(1.02);
             background-color: $color-secundario;
             color: $color-terciario;
+        }
+
+        .inputText:hover{
+            transform: scale(1.02);
         }
 
 

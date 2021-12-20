@@ -967,11 +967,16 @@ main {
   transition: 0.3s;
 }
 
-#formContacto form .inputText:hover {
+#formContacto form .inputText:focus {
   -webkit-transform: scale(1.02);
           transform: scale(1.02);
   background-color: #3C3B6E;
   color: #F4F4F4;
+}
+
+#formContacto form .inputText:hover {
+  -webkit-transform: scale(1.02);
+          transform: scale(1.02);
 }
 
 #formContacto form select {
