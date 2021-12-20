@@ -127,10 +127,11 @@
 
     .whatsappLogo {
         width: 40px;
+        transition: 0.3s;
     }
 
     .whatsappLogo:hover {
-        width: 60px;
+        transform: scale(1.05);
     }
 
     /*-----FIN REDES-----*/

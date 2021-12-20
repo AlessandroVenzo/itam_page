@@ -5,10 +5,10 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
 
-    <meta name="description"
-        content="¿Deseas contactar con Itam? puedes hacerlo aquí mismo">
-        
-    <meta name="keywords" content="itam saller contacto, hablar con itam saller, itam context contacto, atencion cliente itam saller, in context marketing de afiliados"/>
+    <meta name="description" content="¿Deseas contactar con Itam? puedes hacerlo aquí mismo">
+
+    <meta name="keywords"
+        content="itam saller contacto, hablar con itam saller, itam context contacto, atencion cliente itam saller, in context marketing de afiliados" />
 
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <!-- CONEXIÓN con BOOTSTRAP-->
@@ -29,7 +29,7 @@
                         data-bs-target="#offcanvasNavbar" aria-controls="offcanvasNavbar">
                         <span class="navbar-toggler-icon"></span>
                     </button>
-                    <div class="offcanvas offcanvas-end bg-dark tabindex="-1" id="offcanvasNavbar"
+                    <div class="offcanvas offcanvas-end bg-dark tabindex=" -1" id="offcanvasNavbar"
                         aria-labelledby="offcanvasNavbarLabel">
                         <div class="offcanvas-header">
                             <button type="button" class="btn-close text-reset" data-bs-dismiss="offcanvas"
@@ -45,13 +45,16 @@
                                     <a class="nav-link " aria-current="page" href="../secciones/cursos.html">Cursos</a>
                                 </li>
                                 <li class="nav-item">
-                                    <a class="nav-link " aria-current="page" href="../secciones/testimonios.html">Testimonios</a>
+                                    <a class="nav-link " aria-current="page"
+                                        href="../secciones/testimonios.html">Testimonios</a>
                                 </li>
                                 <li class="nav-item">
-                                    <a class="nav-link " aria-current="page" href="../secciones/sobremi.html">Sobre mi</a>
+                                    <a class="nav-link " aria-current="page" href="../secciones/sobremi.html">Sobre
+                                        mi</a>
                                 </li>
                                 <li class="nav-item">
-                                    <a class="nav-link "aria-current="page" href="../secciones/contacto.html">Contacto</a>
+                                    <a class="nav-link " aria-current="page"
+                                        href="../secciones/contacto.html">Contacto</a>
                                 </li>
                             </ul>
                         </div>
@@ -89,35 +92,77 @@
             escríbenos y responderemos lo antes posible!
         </p>
     </section>
-    <section class="formulario section--format">
-        <form action="">
-            <fieldset>
-                <legend>Contactános!</legend>
-                <input type="text" placeholder="Tu nombre" title="Nombre" required>
-                <input type="email" placeholder="Tu correo" title="Correo" required>
-                <label for="Asunto">Asunto:</label>
-                <select name="Asunto">
-                    <option>Sobre In-Context</option>
-                    <option>Sobre Marketing de Afiliados</option>
-                    <option>Sobre Itam Saller</option>
-                    <option>Otro</option>
-                </select>
-                <textarea placeholder="Escribe tu mensaje" title="Mensaje" required></textarea>
-                <div id="contactoBotones">
-                    <input type="checkbox" checked>Suscribirme a newsletter<br>
-                    <input type="checkbox">Quiero información sobre ofertas<br>
-                    <input type="submit" value="Enviar">
-                    <input type="reset" value="Rehacer">
+    <section class="formulario section--format" id="formContacto">
+        <form target="_self">
+            <div class="row mb-3">
+                <!--este registra el email del correo-->
+                <label for="inputEmail3" class="col-sm-2 col-form-label">Email</label>
+                <div class="col-sm-10">
+                    <input type="email" class="form-control inputText" id="inputEmail3" required autocomplete="on">
                 </div>
-            </fieldset>
+            </div>
+            <div class="row mb-3">
+                <!--este brinda el asunto del correo-->
+                <label for="inputAbout" class="col-sm-2 col-form-label">Asunto</label>
+                <div class="col-sm-10">
+                    <select id="inputAbout" class="form-select" required>
+                        <option selected >Comentario sobre el curso</option>
+                        <option >Contacto con Itam</option>
+                        <option >Interés comercial</option>
+                    </select>
+                </div>
+            </div>
+            <div class="row mb-3">
+                <!--este permite escribir un mensaje de correo-->
+                <label for="inputTextbox" class="col-sm-2 col-form-label">Tu mensaje</label>
+                <div class="col-sm-10">
+                    <textarea type="textbox" class="form-control inputText" id="inputTextbox" required></textarea>
+            </div>
+            <div class="row-sm-12">
+                <div class="col-sm-12 offset-sm-0">
+                    <div class="form-check">
+                        <input class="form-check-input" type="checkbox" id="gridCheck1">
+                        <label class="form-check-label" for="gridCheck1">
+                            Recibir novedades al correo!
+                        </label>
+                    </div>
+                </div>
+            </div>
+            <!--No se consulta si el usuario es, o no, miembro de la plataforma. Esto se verifica contrastando su correo con nuestra base de datos-->
+            <div class="col-sm-12">
+                <!--este contiene los choice-->
+                <div class="row-sm-12">
+                    <div class="elemento--centrado">
+                    <h4>¿Has tomado el curso in-context?</h4>
+                    </div>
+                    <div class="form-check">
+                        <input class="form-check-input" type="radio" name="gridRadios" id="gridRadios1" value="option1"
+                            checked>
+                        <label class="form-check-label" for="gridRadios1">
+                            Si, lo he tomado
+                        </label>
+                    </div>
+                    <div class="form-check" id="form-check2">
+                        <input class="form-check-input" type="radio" name="gridRadios" id="gridRadios2" value="option2">
+                        <label class="form-check-label" for="gridRadios2">
+                            No, no lo he tomado
+                        </label>
+                    </div>
+                </div>
+            </div>
+            <div class="elemento--centrado">
+            <button type="submit" class="btn btn-primary" id="formContacto__enviar">Enviar</button>
+            </div>
         </form>
+
+
     </section>
 
 
     <section class="contacto">
         <p>También puedes contactarnos por whatsapp</p>
         <p>Toca para preguntar</p>
-        <img src="../media/flecha.png" style="width: 80px;" alt="flecha">
+        <img src="../imagenes/flecha.png" alt="flecha" id="flechaAtencionContacto">
         <a href="https://www.whatsapp.com/sendusamessage"><img src="../imagenes/whatsapp.png" class="whatsappLogo"></a>
     </section>
 
@@ -146,7 +191,7 @@
                 </ul>
             </div>
         </div>
-                <p>Itam Context 2022 © todos los derechos reservados.</p>
+        <p>Itam Context 2022 © todos los derechos reservados.</p>
     </footer>
     <!-- conexión con bootstrap-->
     <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.10.2/dist/umd/popper.min.js"

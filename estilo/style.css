@@ -839,10 +839,13 @@ main {
 /*-----REDES-----*/
 .whatsappLogo {
   width: 40px;
+  -webkit-transition: 0.3s;
+  transition: 0.3s;
 }
 
 .whatsappLogo:hover {
-  width: 60px;
+  -webkit-transform: scale(1.05);
+          transform: scale(1.05);
 }
 
 /*-----FIN REDES-----*/
@@ -895,46 +898,64 @@ main {
 
 /*-----FIN PRESENTACION-----*/
 /*-----FORMULARIO-----*/
-.formulario {
-  padding-left: 10%;
-  padding-right: 10%;
+#formContacto {
   width: 100%;
+  height: auto;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
   -webkit-box-pack: center;
       -ms-flex-pack: center;
           justify-content: center;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
 }
 
-.formulario form {
+#formContacto form {
   width: 1000px;
-  height: auto;
-  padding-top: 3em;
+  max-width: 1200px;
+  border: #1b1a33 3px solid;
+  padding: 3em;
 }
 
-.formulario fieldset {
-  background-color: #B22234;
-  padding-left: 20%;
-  padding-right: 20%;
-  padding-top: 5%;
-  padding-bottom: 5%;
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-orient: vertical;
-  -webkit-box-direction: normal;
-      -ms-flex-direction: column;
-          flex-direction: column;
-}
-
-.formulario input {
-  margin-bottom: 2em;
-}
-
-.formulario fieldset legend {
-  font-size: 30px;
+#formContacto form h4 {
+  margin: 2em 0% 2em 0%;
   color: #F4F4F4;
+  background-color: #3C3B6E;
+  padding: 0% 1em 0% 1em;
+}
+
+#formContacto form #formContacto__enviar {
+  display: block;
+}
+
+#formContacto form textarea {
+  margin-bottom: 1rem !important;
+}
+
+#formContacto form label {
+  color: #F4F4F4;
+}
+
+#formContacto form .inputText {
+  -webkit-transition: 0.3s;
+  transition: 0.3s;
+}
+
+#formContacto form .inputText:hover {
+  -webkit-transform: scale(1.02);
+          transform: scale(1.02);
+  background-color: #3C3B6E;
+  color: #F4F4F4;
+}
+
+#formContacto form select {
+  background-color: #3C3B6E;
+  color: #F4F4F4;
+}
+
+#formContacto form #form-check2 {
+  margin-bottom: 2em;
 }
 
 /*-----FIN FORMULARIO-----*/
@@ -955,6 +976,14 @@ main {
       -ms-flex-direction: column;
           flex-direction: column;
   width: 100%;
+}
+
+.contacto #flechaAtencionContacto {
+  width: 50px;
+  rotate: 90deg;
+  margin-bottom: 1em;
+  -webkit-filter: invert(1);
+          filter: invert(1);
 }
 
 /*-----FIN CONTACTO-----*/
