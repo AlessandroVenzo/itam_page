@@ -6,7 +6,7 @@
 
 .f_principal-normalise, p,
 main {
-  font-family: verdana;
+  font-family: helvetica;
   text-transform: none;
   font-style: normal;
 }
@@ -19,7 +19,7 @@ main {
 }
 
 .f_principal-uppercase {
-  font-family: verdana;
+  font-family: helvetica;
   text-transform: uppercase;
   font-style: normal;
   letter-spacing: 1.5px;
@@ -42,7 +42,7 @@ main {
 
 .f_principal-normalise, p,
 main {
-  font-family: verdana;
+  font-family: helvetica;
   text-transform: none;
   font-style: normal;
 }
@@ -55,7 +55,7 @@ main {
 }
 
 .f_principal-uppercase {
-  font-family: verdana;
+  font-family: helvetica;
   text-transform: uppercase;
   font-style: normal;
   letter-spacing: 1.5px;
@@ -128,7 +128,9 @@ main {
 #problema p,
 #agitacion p,
 #solucion p {
-  background-color: #F4F4F4;
+  background-color: #0C0C0C;
+  line-height: 2em;
+  letter-spacing: 1px;
 }
 
 .atencion {
@@ -267,16 +269,18 @@ main {
 /*-----BENEFICIOS-----*/
 .beneficios {
   padding-bottom: 0%;
-  background: url(../imagenes/beneficios.jpg);
-  background-attachment: fixed;
-  background-size: cover;
-  -webkit-backdrop-filter: blur(448px);
-  backdrop-filter: blur(448px);
+  /*background: url(../imagenes/beneficios.jpg);*/
+  /* background-attachment: fixed;*/
+  /*background-size: cover;*/
+  /*-webkit-backdrop-filter: blur(448px);*/
+  /*backdrop-filter: blur(448px);*/
+  background-color: #0C0C0C;
 }
 
 .beneficios p {
-  background-color: rgba(60, 93, 241, 0.7);
+  background-color: #111020;
   margin: 0%;
+  font-family: helvetica;
 }
 
 #beneficiosli {
@@ -301,6 +305,10 @@ main {
   padding: 5px;
 }
 
+.beneficio__caja--formato p {
+  padding: 0.3em;
+}
+
 .beneficio__caja--formato img {
   border-radius: 300px;
 }
@@ -313,6 +321,7 @@ main {
   color: #F4F4F4;
   margin: 0%;
   padding: 5px;
+  margin-top: 1em;
 }
 
 #objecion1,
@@ -324,7 +333,6 @@ main {
   -webkit-transition: all 0.3s;
   transition: all 0.3s;
   z-index: 4;
-  height: auto;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -345,7 +353,6 @@ main {
   -webkit-transition: all 0.3s;
   transition: all 0.3s;
   z-index: 4;
-  height: auto;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -436,8 +443,9 @@ main {
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
-  padding-top: 1em;
   padding-bottom: 1em;
+  border: none !important;
+  height: auto;
 }
 
 .objeciones {
@@ -660,7 +668,7 @@ main {
 
 .f_principal-normalise, p,
 main {
-  font-family: verdana;
+  font-family: helvetica;
   text-transform: none;
   font-style: normal;
 }
@@ -673,7 +681,7 @@ main {
 }
 
 .f_principal-uppercase {
-  font-family: verdana;
+  font-family: helvetica;
   text-transform: uppercase;
   font-style: normal;
   letter-spacing: 1.5px;
@@ -883,7 +891,7 @@ main {
 
 .f_principal-normalise, p,
 main {
-  font-family: verdana;
+  font-family: helvetica;
   text-transform: none;
   font-style: normal;
 }
@@ -896,7 +904,7 @@ main {
 }
 
 .f_principal-uppercase {
-  font-family: verdana;
+  font-family: helvetica;
   text-transform: uppercase;
   font-style: normal;
   letter-spacing: 1.5px;
@@ -1026,7 +1034,7 @@ main {
 
 .f_principal-normalise, p,
 main {
-  font-family: verdana;
+  font-family: helvetica;
   text-transform: none;
   font-style: normal;
 }
@@ -1039,7 +1047,7 @@ main {
 }
 
 .f_principal-uppercase {
-  font-family: verdana;
+  font-family: helvetica;
   text-transform: uppercase;
   font-style: normal;
   letter-spacing: 1.5px;
@@ -2002,7 +2010,9 @@ header {
 }
 
 .persuasion {
-  background-image: url(../imagenes/persuasion.png);
+  /* background-image: url(../imagenes/persuasion.png);*/
+  background-image: -webkit-gradient(linear, left top, left bottom, from(#030c0e), to(#090d13));
+  background-image: linear-gradient(to bottom, #030c0e, #090d13);
   background-color: #0C0C0C;
   background-position-x: -400px;
   -webkit-box-shadow: rgba(0, 0, 0, 0.63) 0px -5px 60px;
@@ -2057,18 +2067,20 @@ title {
 }
 
 .titulo {
-  background: -webkit-gradient(linear, left bottom, left top, from(#1b1a33), to(#3C3B6E));
-  background: linear-gradient(to top, #1b1a33, #3C3B6E);
+  background-color: #F4F4F4;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+  border-bottom: 20px solid #B22234;
+  border-top: 20px solid #B22234;
   text-align: center;
   width: 100%;
-  color: #F4F4F4;
+  color: #B22234;
   font-size: 40px;
   font-weight: 300;
   font-style: normal;
   letter-spacing: 2px;
-  padding-bottom: 1rem;
-  padding-top: 1rem;
-  text-shadow: black 0px 0px 10px;
+  padding-bottom: calc(1rem - 20px);
+  padding-top: calc(1rem - 20px);
   margin: 0%;
 }
 
@@ -2111,13 +2123,15 @@ title {
 .tituloBen {
   font-size: 20px;
   display: inline-block;
-  color: #3C3B6E;
-  background: -webkit-gradient(linear, left top, left bottom, from(#1c1c1c), to(#090909));
-  background: linear-gradient(#1c1c1c, #090909);
+  color: #F4F4F4;
+  text-decoration: underline;
+  /*background: linear-gradient(#1c1c1c, #090909);*/
+  background-color: #1b1a33;
   text-align: center;
   width: 100%;
   font-weight: lighter;
   margin-top: 1em;
+  padding: 0.5em;
 }
 
 .text--normalise {
@@ -2144,17 +2158,23 @@ h5 {
   font-size: 30px;
 }
 
-.tituloMediocre, .objecionCaja_titulo {
+.tituloMediocre, .persuasion .tituloMediocre, .objecionCaja_titulo {
   background-color: #0C0C0C;
-  padding-left: 0.5em;
-  padding-right: 0.5em;
-  color: #3C3B6E;
+  padding: 0.5em;
+  color: #F4F4F4;
   height: auto;
   display: block;
+  width: 100vw;
+}
+
+.persuasion .tituloMediocre, .persuasion .objecionCaja_titulo {
+  -webkit-box-shadow: #B22234 0px 5px 0px 0px;
+          box-shadow: #B22234 0px 5px 0px 0px;
 }
 
 .objecionCaja_titulo {
-  display: inline;
+  display: inline-block;
+  width: auto;
 }
 
 h3 {

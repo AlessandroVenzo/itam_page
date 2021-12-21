@@ -201,7 +201,9 @@ header {
 }
 
 .persuasion {
-    background-image: url(../imagenes/persuasion.png);
+   /* background-image: url(../imagenes/persuasion.png);*/
+   background-image: linear-gradient(to bottom, rgb(3, 12, 14), rgb(9, 13, 19));
+
     background-color: $color-dark;
     background-position-x: -400px;
     box-shadow: rgba(0, 0, 0, 0.63) 0px -5px 60px;
@@ -252,18 +254,21 @@ title {
 }
 
 .titulo {
-    background: linear-gradient(to top, $color-secundario-oscuro, $color-secundario);
+    background-color: $color-terciario;
+    box-sizing: border-box;
+    border-bottom: 20px solid $color-primario;
+    border-top: 20px solid $color-primario;
     text-align: center;
     width: 100%;
-    color: $color-terciario;
+    color: $color-primario;
     font-size: 40px;
     @extend .f_secundaria-uppercase;
     font-weight: 300;
     font-style: normal;
     letter-spacing: 2px;
-    padding-bottom: 1rem;
-    padding-top: 1rem;
-    text-shadow: black 0px 0px 10px;
+    padding-bottom: calc(1rem - 20px);
+    padding-top: calc(1rem - 20px);
+ 
     margin: 0%;
 }
 
@@ -305,12 +310,15 @@ title {
 .tituloBen {
     font-size: 20px;
     display: inline-block;
-    color: $color-secundario;
-    background: linear-gradient(#1c1c1c, #090909);
+    color: $color-terciario;
+    text-decoration: underline;
+    /*background: linear-gradient(#1c1c1c, #090909);*/
+    background-color: $color-secundario-oscuro;
     text-align: center;
     width: 100%;
     font-weight: lighter;
     margin-top: 1em;
+    padding: 0.5em;
 }
 
 .text--normalise {
@@ -339,16 +347,22 @@ h5 {
 
 .tituloMediocre {
     background-color: $color-dark;
-    padding-left: 0.5em;
-    padding-right: 0.5em;
-    color: $color-secundario;
+    padding: 0.5em;
+    color: $color-terciario;
     height: auto;
     display: block;
+    width: 100vw;
+}
+
+.persuasion .tituloMediocre{
+    box-shadow: $color-primario 0px 5px 0px 0px;
+    @extend .tituloMediocre;
 }
 
 .objecionCaja_titulo {
     @extend .tituloMediocre;
-    display: inline;
+    display: inline-block;
+    width: auto;
 }
 
 h3 {

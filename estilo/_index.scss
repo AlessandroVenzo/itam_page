@@ -55,7 +55,10 @@
 #problema p,
 #agitacion p,
 #solucion p {
-    background-color: $color-terciario;
+    background-color: $color-dark;
+    line-height: 2em;
+    letter-spacing: 1px;
+
 }
 
 .atencion {
@@ -177,15 +180,17 @@
 
 .beneficios {
     padding-bottom: 0%;
-    background: url(../imagenes/beneficios.jpg);
-    background-attachment: fixed;
-    background-size: cover;
-    -webkit-backdrop-filter: blur(448px);
-    backdrop-filter: blur(448px);
+    /*background: url(../imagenes/beneficios.jpg);*/
+   /* background-attachment: fixed;*/
+    /*background-size: cover;*/
+    /*-webkit-backdrop-filter: blur(448px);*/
+    /*backdrop-filter: blur(448px);*/
+    background-color: $color-dark;
 
     p {
-        background-color: rgba(60, 93, 241, 0.700);
+        background-color: #111020;
         margin: 0%;
+        font-family: $fuente-principal;
     }
 }
 
@@ -204,6 +209,11 @@
     width: 333.6px;
     padding: 5px;
 
+
+    p{
+        padding: 0.3em;
+    }
+
     img {
         border-radius: 300px
     }
@@ -219,6 +229,7 @@
     color: $color-terciario;
     margin: 0%;
     padding: 5px;
+    margin-top: 1em;
 }
 
 #objecion1,
@@ -228,8 +239,6 @@
     margin-bottom: 1em;
     transition: all 0.3s;
     z-index: 4;
-    height: auto;
-
     display: flex;
     align-content: center;
     justify-content: space-between;
@@ -243,8 +252,6 @@
     margin-bottom: 1em;
     transition: all 0.3s;
     z-index: 4;
-    height: auto;
-
     display: flex;
     align-content: center;
     justify-content: space-between;
@@ -304,8 +311,9 @@
     max-width: 1200px;
     display: flex;
     align-items: center;
-    padding-top: 1em;
     padding-bottom: 1em;
+    border: none !important;
+    height: auto;
 }
 
 .objeciones {
