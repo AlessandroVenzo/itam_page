@@ -67,6 +67,13 @@
     /*fin responsividad de la testimonios videos*/
 }
 
+
+/*introduccion*/
+#introduccion p{
+    max-width: 1200px;
+}
+
+/*fin introduccion*/
 /*-----INFORMACION-----*/
 
 .informacion {
@@ -370,34 +377,39 @@ filter: brightness(1.25);
 /*-----DESCRIPCIONPRODUCTO-----*/
 
 /*-----DESCRIPCIONPRODUCTO_METODOESTUDIO-----*/
-
-
 #metodoEstudio {
     display: flex;
     justify-content: center;
-    padding: 0%;
+    padding: 0% ;
     margin: 0%;
-    width: 100%;
+width: 100%;
+    padding-top: 2em;
+
+    ol{
+        max-width: 1200px;
+        padding: 0% ;
+        margin: 0%;
+    }
 }
 
 #planEstudio {
     display: grid;
     grid-template-columns: repeat(auto-fill, minmax(20em, 1fr));
     gap: 1rem;
-    width: 100%;
     height: auto;
     margin-top: 2em;
     padding-left: 0%;
     justify-self: center;
+    width: 100%;
 }
 
 .modulo {
     list-style: none;
-    border: solid $color-primario 1px;
     text-align: center;
-    background-color: $color-dark;
+    background-color: $color-secundario-oscuro;
     display: flex;
     flex-direction: column;
+    transition: all 0.1s ease-out;
 
     h4 {
         height: 40%;
@@ -420,9 +432,9 @@ filter: brightness(1.25);
 }
 
 .modulo:hover {
-    transform: scale(1.1);
+    transform: scale(1.05);
     background-color: $color-secundario-oscuro;
-    transition: all 0.1s ease-out;
+    box-shadow: black 0px 0px 30px;
 }
 
 .temario {
@@ -436,6 +448,10 @@ filter: brightness(1.25);
 
 /*-----FIN DESCRIPCIONPRODUCTO_METODOESTUDIO-----*/
 /*-----DESCRIPCIONPRODUCTO_CONTENIDOS-----*/
+
+.contenidos{
+    margin-top: 0%;
+}
 
 .descripcionProducto p {
     text-align: center;
@@ -461,11 +477,11 @@ filter: brightness(1.25);
 
 #cuadroContenido {
     height: auto;
-    width: 800px;
+    max-width: 800px;
     padding-top: 1em;
-    padding-left: 3em;
-    padding-right: 3em;
-    padding-bottom: 1em;
+    padding-left: 1em;
+    padding-right: 1em;
+    padding-bottom: 3em;
 }
 
 #cuadroContenido h3 {
@@ -484,7 +500,6 @@ filter: brightness(1.25);
 }
 
 .contenidos {
-    padding-top: 2em;
     display: flex;
     justify-content: center;
     background-color: $color-dark;
@@ -538,12 +553,12 @@ filter: brightness(1.25);
         align-items: center;
 
         li {
+            
             .dropdown-item {
                 background-color: $color-terciario;
-                padding: 0%;
-                padding-top: 0.5em;
-                padding-bottom: 0.5em;
+                padding: 0.5em;
                 margin: 0%;
+                height: fit-content;
                 color: $color-dark !important;
             }
         }

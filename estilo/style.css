@@ -105,6 +105,13 @@ main {
 
 #atencionAbajo {
   width: 100%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
 }
 
 #atencionAbajo h5 {
@@ -116,6 +123,22 @@ main {
 #videoMain video {
   border-radius: 24px;
   margin-top: 2em;
+  width: 100%;
+  -ms-flex-item-align: center;
+      -ms-grid-row-align: center;
+      align-self: center;
+}
+
+#videoMain {
+  max-width: 460px;
+  -ms-flex-item-align: center;
+      align-self: center;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
 }
 
 #problema,
@@ -269,11 +292,6 @@ main {
 /*-----BENEFICIOS-----*/
 .beneficios {
   padding-bottom: 0%;
-  /*background: url(../imagenes/beneficios.jpg);*/
-  /* background-attachment: fixed;*/
-  /*background-size: cover;*/
-  /*-webkit-backdrop-filter: blur(448px);*/
-  /*backdrop-filter: blur(448px);*/
   background-color: #0C0C0C;
 }
 
@@ -696,86 +714,7 @@ main {
 
 /**/
 /**/
-.whyDiv,
-.how {
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-pack: center;
-      -ms-flex-pack: center;
-          justify-content: center;
-  max-width: 1200px;
-}
-
-.whyDiv .cortador,
-.how .cortador {
-  height: 300px;
-  max-height: 300px;
-  overflow: hidden;
-  width: 300px;
-  display: inline;
-}
-
-.whyDiv #ladeadoDer,
-.whyDiv #ladeadoIzq,
-.how #ladeadoDer,
-.how #ladeadoIzq {
-  background-color: #0C0C0C;
-  color: #3C3B6E;
-  text-align: center;
-  margin-bottom: 3em;
-  display: -webkit-inline-box;
-  display: -ms-inline-flexbox;
-  display: inline-flex;
-  -webkit-box-orient: vertical;
-  -webkit-box-direction: normal;
-      -ms-flex-direction: column;
-          flex-direction: column;
-  -webkit-box-pack: space-evenly;
-      -ms-flex-pack: space-evenly;
-          justify-content: space-evenly;
-  height: 300px;
-  max-height: 300px;
-  width: 75%;
-  padding: 1em;
-}
-
-.whyDiv #ladeadoDer p,
-.whyDiv #ladeadoIzq p,
-.how #ladeadoDer p,
-.how #ladeadoIzq p {
-  color: #F4F4F4;
-  background: #0C0C0C;
-  display: block;
-  margin: 0%;
-}
-
-.whyDiv #ladeadoDer h3,
-.whyDiv #ladeadoIzq h3,
-.how #ladeadoDer h3,
-.how #ladeadoIzq h3 {
-  display: block;
-}
-
-.whyDiv #ladeadoDer,
-.how #ladeadoDer {
-  -ms-grid-column-align: end;
-      justify-self: end;
-}
-
-.whyDiv #ladeadoIzq,
-.how #ladeadoIzq {
-  -ms-grid-column-align: start;
-      justify-self: start;
-}
-
-.whyDiv #whyImagen,
-.how #whyImagen {
-  position: relative;
-  right: 100px;
-}
-
-.why, .why #ladeadoDebajo {
+.cajasHistoria {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -788,27 +727,78 @@ main {
           align-items: center;
 }
 
-.why #ladeadoDebajo p {
+.cajasHistoria .Titular {
+  width: 100%;
+  max-width: 1200px;
+  -ms-flex-item-align: center;
+      align-self: center;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  background-color: #3C3B6E;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
   height: auto;
-  display: block;
-  background-color: #0C0C0C;
-  color: #3C3B6E;
-  text-align: center;
-  margin-bottom: 3em;
-  height: auto;
-  max-width: 1000px;
-  padding: 1em;
+  margin-bottom: 2em;
 }
 
-.what p {
-  color: #F4F4F4;
-  background: #0C0C0C;
+.cajasHistoria .Titular .cortador {
+  width: 300px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  height: 300px;
+  overflow: hidden;
 }
 
-.why img,
-.how img {
+.cajasHistoria .Titular .cortador img {
   height: 400px;
-  display: inline;
+  -ms-flex-item-align: center;
+      -ms-grid-row-align: center;
+      align-self: center;
+}
+
+.cajasHistoria .Titular .Ladeado {
+  width: 900px;
+  -ms-flex-item-align: center;
+      -ms-grid-row-align: center;
+      align-self: center;
+  text-align: center;
+  color: #F4F4F4;
+  padding: 2em;
+}
+
+.cajasHistoria #howTitular {
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: reverse;
+      -ms-flex-direction: row-reverse;
+          flex-direction: row-reverse;
+}
+
+.ladeadoDebajo {
+  max-width: 1200px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+}
+
+.ladeadoDebajo p {
+  background-color: #0C0C0C;
+  line-height: 2em;
+  letter-spacing: 1px;
+  padding-left: 1em;
+  padding-right: 1em;
 }
 
 /*-----WHY-----*/
@@ -817,14 +807,7 @@ main {
   background-image: linear-gradient(to top, rgba(5, 5, 5, 0), #0c0c0c), url(../imagenes/whyWallp.jpg);
   background-size: cover;
   background-repeat: no-repeat;
-  width: 100%;
-  height: auto;
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-pack: center;
-      -ms-flex-pack: center;
-          justify-content: center;
+  margin-top: 0%;
 }
 
 /*-----FIN WHY-----*/
@@ -833,14 +816,6 @@ main {
   background-image: url(../imagenes/howWallpaper.jpg);
   background-size: cover;
   background-repeat: no-repeat;
-  width: 100%;
-  height: auto;
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-pack: center;
-      -ms-flex-pack: center;
-          justify-content: center;
 }
 
 /*-----FIN HOW-----*/
@@ -853,6 +828,16 @@ main {
   padding-right: 10%;
   padding-top: 3em;
   text-align: center;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
 }
 
 .what img {
@@ -1143,6 +1128,12 @@ main {
   }
 }
 
+/*introduccion*/
+#introduccion p {
+  max-width: 1200px;
+}
+
+/*fin introduccion*/
 /*-----INFORMACION-----*/
 .informacion {
   background-image: -webkit-gradient(linear, left bottom, left top, from(#040404), to(#0C0C0C));
@@ -1501,6 +1492,13 @@ main {
   padding: 0%;
   margin: 0%;
   width: 100%;
+  padding-top: 2em;
+}
+
+#metodoEstudio ol {
+  max-width: 1200px;
+  padding: 0%;
+  margin: 0%;
 }
 
 #planEstudio {
@@ -1509,19 +1507,18 @@ main {
   -ms-grid-columns: (minmax(20em, 1fr))[auto-fill];
       grid-template-columns: repeat(auto-fill, minmax(20em, 1fr));
   gap: 1rem;
-  width: 100%;
   height: auto;
   margin-top: 2em;
   padding-left: 0%;
   -ms-grid-column-align: center;
       justify-self: center;
+  width: 100%;
 }
 
 .modulo {
   list-style: none;
-  border: solid #B22234 1px;
   text-align: center;
-  background-color: #0C0C0C;
+  background-color: #1b1a33;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -1529,6 +1526,8 @@ main {
   -webkit-box-direction: normal;
       -ms-flex-direction: column;
           flex-direction: column;
+  -webkit-transition: all 0.1s ease-out;
+  transition: all 0.1s ease-out;
 }
 
 .modulo h4 {
@@ -1552,11 +1551,11 @@ main {
 }
 
 .modulo:hover {
-  -webkit-transform: scale(1.1);
-          transform: scale(1.1);
+  -webkit-transform: scale(1.05);
+          transform: scale(1.05);
   background-color: #1b1a33;
-  -webkit-transition: all 0.1s ease-out;
-  transition: all 0.1s ease-out;
+  -webkit-box-shadow: black 0px 0px 30px;
+          box-shadow: black 0px 0px 30px;
 }
 
 .temario {
@@ -1570,6 +1569,10 @@ main {
 
 /*-----FIN DESCRIPCIONPRODUCTO_METODOESTUDIO-----*/
 /*-----DESCRIPCIONPRODUCTO_CONTENIDOS-----*/
+.contenidos {
+  margin-top: 0%;
+}
+
 .descripcionProducto p {
   text-align: center;
 }
@@ -1600,11 +1603,11 @@ main {
 
 #cuadroContenido {
   height: auto;
-  width: 800px;
+  max-width: 800px;
   padding-top: 1em;
-  padding-left: 3em;
-  padding-right: 3em;
-  padding-bottom: 1em;
+  padding-left: 1em;
+  padding-right: 1em;
+  padding-bottom: 3em;
 }
 
 #cuadroContenido h3 {
@@ -1623,7 +1626,6 @@ main {
 }
 
 .contenidos {
-  padding-top: 2em;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -1692,10 +1694,11 @@ main {
 
 .tablaDesc__cuadroContenidos--formato ul li .dropdown-item {
   background-color: #F4F4F4;
-  padding: 0%;
-  padding-top: 0.5em;
-  padding-bottom: 0.5em;
+  padding: 0.5em;
   margin: 0%;
+  height: -webkit-fit-content;
+  height: -moz-fit-content;
+  height: fit-content;
   color: #0C0C0C !important;
 }
 
@@ -2116,8 +2119,14 @@ title {
   text-align: center;
   -webkit-text-decoration: underline white;
           text-decoration: underline white;
-  width: 100%;
+  max-width: 1200px;
   margin-bottom: 3rem;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
 }
 
 .tituloBen {
@@ -2175,6 +2184,7 @@ h5 {
 .objecionCaja_titulo {
   display: inline-block;
   width: auto;
+  color: #B22234;
 }
 
 h3 {
@@ -2286,7 +2296,7 @@ button {
 /*-----HEADER-----*/
 header {
   border: none;
-  border-bottom: #B22234;
+  border-bottom: #521018;
   border-bottom-style: solid;
   border-bottom-width: 2px;
   -webkit-box-sizing: border-box;
@@ -2443,7 +2453,7 @@ h1 {
       -ms-flex-pack: center;
           justify-content: center;
   height: 100%;
-  margin-left: 5px;
+  margin-left: 0px;
 }
 
 #hDer nav ul li a {
@@ -2484,7 +2494,7 @@ header nav ul {
           box-sizing: border-box;
 }
 
-.section--format {
+.section--format, .cajasHistoria {
   width: 100%;
   padding-top: 4em;
   padding-left: 1em;
@@ -2574,6 +2584,15 @@ footer p {
     padding-top: 56px;
   }
   /*fin padding-top del body*/
+  #atencionArriba {
+    width: 100%;
+    padding: 0%;
+  }
+  #tituloPrincipal {
+    width: 100%;
+    padding-left: 5px;
+    padding-right: 5px;
+  }
   .atencion #atencionArriba #imagenPrincipal {
     display: none;
   }
@@ -2667,7 +2686,7 @@ footer p {
     z-index: 5;
   }
   /*fin boton whatsapp*/
-  .section--format {
+  .section--format, .cajasHistoria {
     padding-top: 2em;
   }
   /*titulos*/
@@ -2732,6 +2751,14 @@ footer p {
   }
   /*FIN llamar atencion*
 /*=====fin pagina cursos=====*/
+  /*=====pagina sobremi=====*/
+  .cortador {
+    display: none !important;
+  }
+  .Ladeado {
+    width: 100% !important;
+  }
+  /*=====fin pagina sobremi=====*/
 }
 
 /*media query aplicado para un dispsitivo celular estandar (md)
@@ -2750,6 +2777,15 @@ footer p {
   header #hDer,
   header:hover #hDer {
     display: none;
+  }
+  #atencionArriba {
+    width: 100%;
+    padding: 0%;
+  }
+  #tituloPrincipal {
+    width: 100%;
+    padding-left: 5px;
+    padding-right: 5px;
   }
   /*padding-top del body*/
   body {
@@ -2848,7 +2884,7 @@ footer p {
     z-index: 5;
   }
   /*fin boton whatsapp*/
-  .section--format {
+  .section--format, .cajasHistoria {
     padding-top: 2em;
   }
   /*titulos*/
@@ -2960,7 +2996,7 @@ footer p {
     z-index: 5;
   }
   /*fin boton whatsapp*/
-  .section--format {
+  .section--format, .cajasHistoria {
     padding-top: 2em;
   }
   /*titulos*/

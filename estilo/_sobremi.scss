@@ -8,91 +8,67 @@
 
 /**/
 
-.whyDiv,
-.how {
-    display: flex;
-    justify-content: center;
-    max-width: 1200px;
-
-    
-    .cortador {
-        height: 300px;
-        max-height: 300px;
-        overflow: hidden;
-        width: 300px;
-        display: inline;
-    }
-    
-    #ladeadoDer,
-    #ladeadoIzq {
-        background-color: $color-dark;
-        color: $color-secundario;
-        text-align: center;
-        margin-bottom: 3em;
-        display: inline-flex;
-        flex-direction: column;
-        justify-content: space-evenly;
-        height: 300px;
-        max-height: 300px;
-        width: 75%;
-        padding: 1em;
-        
-        p {
-            color: $color-terciario;
-            background: $color-dark;
-            display: block;
-            margin: 0%;
-        }
-        
-        h3 {
-            display: block;
-        }
-    }
-
-    
-    #ladeadoDer{
-        justify-self: end;
-    }
-    #ladeadoIzq{
-        justify-self: start;
-    }
-
-    #whyImagen{ //para modificar las imagenes
-        position: relative;
-        right:100px;
-    }
-}
-
-.why, .why #ladeadoDebajo{
+.cajasHistoria {
+    @extend .section--format;
     display: flex;
     flex-direction: column;
     align-items: center;
+
+    .Titular {
+        width: 100%;
+        max-width: 1200px;
+        align-self: center;
+        display: flex;
+        flex-direction: row;
+        justify-content: space-between;
+        background-color: $color-secundario;
+        align-items: center;
+        height: auto;
+        margin-bottom: 2em;
+
+        .cortador {
+    width: 300px;
+            display: flex;
+            height: 300px;
+            overflow: hidden;
+
+            img {
+                height: 400px;
+                align-self: center;
+            }
+        }
+
+        .Ladeado {
+            width: 900px;
+            align-self: center;
+            text-align: center;
+            color: $color-terciario;
+            padding: 2em;
+        }
+        
+    }
+
+    #howTitular{
+        flex-direction: row-reverse;
+    }
+
+    
 }
 
+.ladeadoDebajo {
+    max-width: 1200px;
+    display: flex;
+    justify-content: center;
 
-
-.why #ladeadoDebajo p{
-    height: auto;
-    display: block;
-    background-color: $color-dark;
-    color: $color-secundario;
-    text-align: center;
-    margin-bottom: 3em;
-    height: auto;
-    max-width: 1000px;
-    padding: 1em;
+    p {
+        background-color: $color-dark;
+        line-height: 2em;
+        letter-spacing: 1px;
+        padding-left: 1em;
+        padding-right: 1em;
+    }
 }
 
-.what p {
-    color: $color-terciario;
-    background: $color-dark;
-}
-
-.why img,
-.how img {
-    height: 400px;
-    display: inline;
-}
 
 
 /*-----WHY-----*/
@@ -100,10 +76,7 @@
     background-image: linear-gradient(to top, rgba(5, 5, 5, 0), rgb(12, 12, 12)), url(../imagenes/whyWallp.jpg);
     background-size: cover;
     background-repeat: no-repeat;
-    width: 100%;
-    height: auto;
-    display: flex;
-    justify-content: center;
+    margin-top: 0%;
 }
 
 
@@ -113,10 +86,6 @@
     background-image: url(../imagenes/howWallpaper.jpg);
     background-size: cover;
     background-repeat: no-repeat;
-    width: 100%;
-    height: auto;
-    display: flex;
-    justify-content: center;
 }
 
 
@@ -130,6 +99,9 @@
     padding-right: 10%;
     padding-top: 3em;
     text-align: center;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
 }
 
 .what img {

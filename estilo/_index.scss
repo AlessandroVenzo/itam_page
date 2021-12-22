@@ -32,6 +32,8 @@
 
 #atencionAbajo {
     width: 100%;
+    display: flex;
+    flex-direction: column;
 }
 
 #atencionAbajo h5 {
@@ -43,6 +45,15 @@
 #videoMain video {
     border-radius: 24px;
     margin-top: 2em;
+    width: 100%;
+    align-self: center;
+}
+
+#videoMain{
+    max-width: 460px;
+    align-self: center;
+    display: flex;
+    justify-content: center;
 }
 
 #problema,
@@ -180,11 +191,7 @@
 
 .beneficios {
     padding-bottom: 0%;
-    /*background: url(../imagenes/beneficios.jpg);*/
-   /* background-attachment: fixed;*/
-    /*background-size: cover;*/
-    /*-webkit-backdrop-filter: blur(448px);*/
-    /*backdrop-filter: blur(448px);*/
+
     background-color: $color-dark;
 
     p {

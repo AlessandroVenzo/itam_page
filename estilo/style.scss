@@ -303,8 +303,11 @@ title {
     font-weight: lighter;
     text-align: center;
     text-decoration: underline white;
-    width: 100%;
+    max-width: 1200px;
     margin-bottom: 3rem;
+    display: flex;
+    justify-content: center;
+
 }
 
 .tituloBen {
@@ -363,6 +366,7 @@ h5 {
     @extend .tituloMediocre;
     display: inline-block;
     width: auto;
+    color: $color-primario;
 }
 
 h3 {
@@ -478,7 +482,7 @@ button {
 
 header {
     border: none;
-    border-bottom: $color-primario;
+    border-bottom:#521018;
     border-bottom-style: solid;
     border-bottom-width: 2px;
     box-sizing: border-box;
@@ -592,7 +596,7 @@ h1 {
     align-items: center;
     justify-content: center;
     height: 100%;
-    margin-left: 5px;
+    margin-left: 0px;
 }
 
 #hDer nav ul li a {
@@ -714,6 +718,15 @@ footer p {
     }
 
     /*fin padding-top del body*/
+#atencionArriba{
+    width: 100%;
+    padding: 0%;
+}
+    #tituloPrincipal{
+        width: 100%;
+        padding-left: 5px;
+        padding-right: 5px;
+    }
 
     .atencion #atencionArriba #imagenPrincipal {
         display: none;
@@ -889,6 +902,16 @@ footer p {
 
     /*FIN llamar atencion*
 /*=====fin pagina cursos=====*/
+/*=====pagina sobremi=====*/
+.cortador{
+    display: none !important;
+}
+
+.Ladeado{
+width:100% !important;
+}
+
+/*=====fin pagina sobremi=====*/
 
 }
 
@@ -913,7 +936,15 @@ footer p {
         }
     }
 
-
+    #atencionArriba{
+        width: 100%;
+        padding: 0%;
+    }
+        #tituloPrincipal{
+            width: 100%;
+            padding-left: 5px;
+            padding-right: 5px;
+        }
 
     /*padding-top del body*/
     body {
