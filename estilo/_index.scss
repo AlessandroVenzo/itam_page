@@ -47,10 +47,10 @@
     align-self: center;
 }
 
-#videoMain{
+#videoMain {
     max-width: 460px;
     align-self: center;
-        display: flex;
+    display: flex;
     justify-content: center;
 }
 
@@ -142,33 +142,38 @@
 
 #solucionCont {
     display: flex;
-    justify-content: space-evenly;
+    justify-content: space-between;
+    width: 100%;
+    max-width: 1200px;
+
 
     p {
-        width: 65%;
+        width: 75%;
         background: transparent;
         display: inline-block;
         order: 2;
+        margin: 1em;
+        flex-grow: 1;
     }
 
     #imagenProfe {
         text-align: center;
-        border: 5px solid $color-secundario-oscuro;
-        margin-right: 1em;
         order: 1;
-        max-height: 330px;
+        height: 330px;
+        margin: 0.5em;
+
+        figure {
+            border: 5px solid $color-secundario-oscuro;
+            padding-bottom: 0% !important;
+            margin-bottom: 0% !important;
+        }
+
     }
 
 
 
     #imagenDelProfe {
-        width: 300px;
-        display: inline;
-    }
-
-    figure {
-        padding-bottom: 0% !important;
-        margin-bottom: 0% !important;
+        width: 100%;
     }
 
     #figcaption {
@@ -217,30 +222,32 @@
     align-items: center;
 
 
-    p{
+    p {
         padding: 0.3em;
     }
 
-    .beneficioCircular{
-    width: 80px;
-    height: 80px;
-    overflow: hidden;
-    border-radius: 100%
+    .beneficioCircular {
+        width: 80px;
+        height: 80px;
+        overflow: hidden;
+        border-radius: 100%
     }
 }
 
 
 
-#beneficio1{
+#beneficio1 {
     width: 100px !important;
 }
-#beneficio2{
+
+#beneficio2 {
     width: 100px !important;
     position: relative;
     top: 0%;
     right: 10px;
 }
-#beneficio3{
+
+#beneficio3 {
     width: 80px !important;
     position: relative;
     top: 0%;
@@ -366,17 +373,6 @@
     padding-bottom: 0%;
 }
 
-.testimoniosVideos {
-    width: 100%;
-    display: flex;
-    justify-content: space-evenly;
-
-    video{
-        min-width: 200px;
-        align-self: center;
-        margin-left: 1em;
-    }
-}
 
 /*-----FIN TESTIMONIOS-----*/
 
@@ -402,21 +398,22 @@
     align-items: center;
     justify-content: center !important;
 
-    p, .pyrButton{
+    p,
+    .pyrButton {
         width: 100%;
         max-width: 1200px;
     }
 
 }
 
-.bootstrapPyr{
+.bootstrapPyr {
     width: 100%;
     max-width: 1200px;
     color: $color-terciario;
     background-color: $color-secundario;
     border: 2px solid $color-secundario-oscuro;
-    
-    .btn{
+
+    .btn {
         width: 100%;
         max-width: 1200px;
     }
@@ -429,8 +426,11 @@
     max-width: 1200px;
 }
 
-#collapsePyr1,#collapsePyr2,#collapsePyr3,#collapsePyr4{
-    width: 100% ;
+#collapsePyr1,
+#collapsePyr2,
+#collapsePyr3,
+#collapsePyr4 {
+    width: 100%;
     max-width: 1200px;
 }
 

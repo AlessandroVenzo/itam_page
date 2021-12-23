@@ -201,8 +201,8 @@ header {
 }
 
 .persuasion {
-   /* background-image: url(../imagenes/persuasion.png);*/
-   background-image: linear-gradient(to bottom, rgb(3, 12, 14), rgb(9, 13, 19));
+    /* background-image: url(../imagenes/persuasion.png);*/
+    background-image: linear-gradient(to bottom, rgb(3, 12, 14), rgb(9, 13, 19));
 
     background-color: $color-dark;
     background-position-x: -400px;
@@ -268,7 +268,7 @@ title {
     letter-spacing: 2px;
     padding-bottom: calc(1rem - 20px);
     padding-top: calc(1rem - 20px);
- 
+
     margin: 0%;
 }
 
@@ -309,9 +309,11 @@ title {
     justify-content: center;
 
 }
-#titulobencaja{
+
+#titulobencaja {
     width: 100%;
 }
+
 .tituloBen {
     font-size: 20px;
     display: inline-block;
@@ -359,7 +361,7 @@ h5 {
     width: 100vw;
 }
 
-.persuasion .tituloMediocre{
+.persuasion .tituloMediocre {
     box-shadow: $color-primario 0px 5px 0px 0px;
     @extend .tituloMediocre;
 }
@@ -484,7 +486,7 @@ button {
 
 header {
     border: none;
-    border-bottom:#521018;
+    border-bottom: #521018;
     border-bottom-style: solid;
     border-bottom-width: 2px;
     box-sizing: border-box;
@@ -643,820 +645,842 @@ header nav ul {
 
 /*------FIN BODY------*/
 
-/*-----FOOTER-----*/
-footer {
-    background-color: $color-terciario;
-    width: 100%;
-    display: flex;
-    flex-direction: column;
-    border-top: solid rgb(22, 19, 19) 2px;
-    align-items: center;
-}
+/*------TESTIMONIOS------*/
 
-.footer_lists {
+.testimoniosVideos {
     display: flex;
     justify-content: space-between;
     width: 100%;
     max-width: 1200px;
-    align-items: center;
-}
+    box-sizing: border-box;
 
-footer ul {
-    list-style: none;
-    margin: 0%;
-    padding: 0%;
-}
-
-#enlaces {
-    text-align: left;
-}
-
-#rrss {
-    text-align: right;
+    video {
+        width: 1fr;
+    }
 }
 
 
-.footerTitle {
-    font-weight: bold;
-}
+/*responsividad de los testimonios videos*/
 
-
-/*-----FIN FOOTER-----*/
-
-
-/*============RESPONSIVIDAD============*/
-
-/*media query aplicado para un dispsitivo celular pequeño (md)
-
-*/
-@media only screen and (max-width: 767px) and (orientation: portrait) {
-#firstinList{
-        margin-left: 1em;
-}
-
-    /*HEADER*/
-    header,
-    header:hover {
-        height: calc(40px + 1em);
-
-        #hIzq {
-            display: none;
-        }
-
-        #hDer {
-            display: none;
-        }
-    }
-
-    /*FIN HEADER*/
-
-    /*padding-top del body*/
-    body {
-        padding-top: 56px;
-    }
-
-    /*fin padding-top del body*/
-#atencionArriba{
-    width: 100%;
-    padding: 0%;
-}
-    #tituloPrincipal{
-        width: 100%;
-        padding-left: 5px;
-        padding-right: 5px;
-    }
-
-    .atencion #atencionArriba #imagenPrincipal {
-        display: none;
-    }
-
-    .atencion #atencionArriba #flechaAtencion {
-        display: none;
-    }
-
-    .atencion #atencionArriba #tituloPrincipal #principalUltimo {
-        display: none;
-    }
-
-    .atencion #atencionArriba #tituloPrincipal #principalUltimo2 {
-        display: block;
-    }
-
-    .persuasionCont {
-        flex-direction: column;
-        align-items: center;
-
-        #right,
-        #left {
-            width: 100%;
-            margin-top: 1em;
-        }
-
-        #imgRight {
-            order: 1;
-        }
-
-        #left {
-            order: 2;
-        }
-    }
-
-    #solucionCont {
-        align-items: center;
-        flex-direction: column;
-
-        p {
-            width: 100%;
-            margin-top: 1em;
-        }
-    }
-
-    /*nav*/
-    #responsiveNav {
-        display: block;
-    }
-
-
-    /*fin nav*/
-
-    .persuasion #solucion .elemento--centrado p {
-        width: 600px;
-    }
-
-    .objeciones {
-        display: flex;
-        flex-direction: column;
-        align-items: center;
-    }
-
-    #objecion1,
-    #objecion3 {
-        background-image: linear-gradient(to right, rgb(27, 27, 27), rgb(63, 63, 63));
-    }
-
-    #objecion2,
-    #objecion4 {
-        background-image: linear-gradient(to left, rgb(27, 27, 27), rgb(63, 63, 63));
-    }
-
-    .objecionCaja_p {
-        background-color: $color-dark;
-        color: $color-terciario;
-    }
-
-    /*boton whatsapp*/
-
-    #botonWhatsapp {
-        width: 100%;
-        height: auto;
-        position: fixed;
-        right: -86vw;
-        top: 60vh;
-        z-index: 5;
-    }
-
-    /*fin boton whatsapp*/
-
-    .section--format {
-        padding-top: 2em;
-    }
-
-    /*titulos*/
-
-
-    .titulo {
-        font-size: 16px;
-    }
-
-    /*beneficios*/
-
-    .beneficios {
-
-        .beneficio__caja--formato {
-            margin-bottom: 1em;
-        }
-
-        .botonVenta {
-            margin-top: calc(3rem - 1em);
-        }
-    }
-
-    /*fin beneficios*/
-
-    /*-----TESTIMONIOS-----*/
+@media only screen and (max-width: 767px) and (orientation: landscape) {
 
     .testimoniosVideos {
+        display: flex;
         flex-direction: column;
+    }
+
+}
+
+@media only screen and (max-width: 767px) and (orientation: portrait) {
+    .testimoniosVideos {
+        display: flex;
+        flex-direction: column;
+    }
+}
+
+@media only screen and (min-width: 768px) and (max-width: 1020px) and (orientation: landscape) {
+    .testimoniosVideos {
+        display: flex;
+        flex-direction: row;
+        width: 100%;
+        max-width: 1200px;
 
         video {
-            margin-bottom: 1em;
-            margin-left: 0%;
-            width: 100%;
+            width: 1fr;
+            margin: 0.3%;
         }
     }
+}
 
-    .testimonios {
-        .botonVenta {
-            margin-top: calc(3rem - 1em);
-        }
+/*fin responsividad de la testimonios videos*/
+/*------FIN TESTIMONIOS------*/
+
+/*redes*/
+
+.redes {
+    display: flex;
+    flex-direction: column;
+    align-content: center;
+}
+
+#redesContenedor {
+
+    width: 100%;
+    display: flex;
+    justify-content: center;
+
+    a{
+        border-radius: 100%;
     }
 
-    /*-----fin TESTIMONIOS-----*/
+    .divRed {
+        width: 80px;
+        height: 80px;
+        border-radius: 100%;
+        margin: 0.5em;
 
-    /*footer*/
+    }
+}
 
-    .footer {
-        margin-top: 0%;
-        padding-top: 1em;
+    #instaLogo {
+        background-image: url(../imagenes/logoinstagram.png);
+        background-size: cover;
+        background-size: 200%;
+        background-position: center;
+        background-repeat: no-repeat;
+    }
+    #linkeLogo {
+        background-image: url(../imagenes/logolinkedin.png);
+        background-size: 100%;
+        background-position: center;
+        background-repeat: no-repeat;
+    }
+    #faceLogo {
+        background-image: url(../imagenes/logoFacebook.png);
+        background-size: 120%;
+        background-position: center;
+        background-repeat: no-repeat;
+    }
+
+    /*fin redes*/
+
+
+    /*-----FOOTER-----*/
+    footer {
+        background-color: $color-terciario;
+        width: 100%;
+        display: flex;
+        flex-direction: column;
+        border-top: solid rgb(22, 19, 19) 2px;
+        align-items: center;
     }
 
     .footer_lists {
         display: flex;
-        flex-direction: column;
-        align-items: center;
-
-        #enlaces,
-        #rrss {
-            width: 100%;
-            text-align: center;
-            padding-bottom: 1em;
-        }
-
-    }
-
-    /*fin footer*/
-
-/*=====pagina cursos=====*/
-
-    /*llamar atencion*/
-
-    #tituloSec {
-        display: none;
-    }
-
-    #tituloSec2 {
-        display: block;
-    }
-
-    /*FIN llamar atencion*
-/*=====fin pagina cursos=====*/
-/*=====pagina sobremi=====*/
-.cortador{
-    display: none !important;
-}
-
-.Ladeado{
-width:100% !important;
-}
-
-/*=====fin pagina sobremi=====*/
-
-}
-
-/*media query aplicado para un dispsitivo celular estandar (md)
-
-*/
-@media only screen and (min-width: 767px) and (max-width: 1023px) and (orientation: portrait) {
-
-    /*header*/
-
-
-    header,
-    header:hover {
-        height: calc(40px + 1em);
-
-        #hIzq {
-            display: none;
-        }
-
-        #hDer {
-            display: none;
-        }
-    }
-
-    #atencionArriba{
+        justify-content: space-between;
         width: 100%;
+        max-width: 1200px;
+        align-items: center;
+    }
+
+    footer ul {
+        list-style: none;
+        margin: 0%;
         padding: 0%;
     }
-        #tituloPrincipal{
+
+    #enlaces {
+        text-align: left;
+    }
+
+    #rrss {
+        text-align: right;
+    }
+
+
+    .footerTitle {
+        font-weight: bold;
+    }
+
+
+    /*-----FIN FOOTER-----*/
+
+
+
+
+    /*============RESPONSIVIDAD============*/
+
+    /*media query aplicado para un dispsitivo celular pequeño (md)
+
+*/
+    @media only screen and (max-width: 767px) and (orientation: portrait) {
+        #firstinList {
+            margin-left: 1em;
+        }
+
+        /*HEADER*/
+        header,
+        header:hover {
+            height: calc(40px + 1em);
+
+            #hIzq {
+                display: none;
+            }
+
+            #hDer {
+                display: none;
+            }
+        }
+
+        /*FIN HEADER*/
+
+        /*padding-top del body*/
+        body {
+            padding-top: 56px;
+        }
+
+        /*fin padding-top del body*/
+        #atencionArriba {
+            width: 100%;
+            padding: 0%;
+        }
+
+        #tituloPrincipal {
             width: 100%;
             padding-left: 5px;
             padding-right: 5px;
         }
 
-    /*padding-top del body*/
-    body {
-        padding-top: 56px;
-    }
-
-    /*fin padding-top del body*/
-
-    /*nav*/
-    #responsiveNav {
-        display: block;
-    }
-
-
-
-
-
-    /*fin nav*/
-
-    .atencion #atencionArriba #imagenPrincipal {
-        display: none;
-    }
-
-    .atencion #atencionArriba #flechaAtencion {
-        display: none;
-    }
-
-    .atencion #atencionArriba #tituloPrincipal #principalUltimo {
-        display: none;
-    }
-
-    .atencion #atencionArriba #tituloPrincipal #principalUltimo2 {
-        display: block;
-    }
-
-    .persuasionCont {
-        flex-direction: column;
-        align-items: center;
-
-        #right,
-        #left {
-            width: 100%;
-            margin-top: 1em;
-        }
-
-        #imgRight {
-            order: 1;
-        }
-
-        #left {
-            order: 2;
-        }
-    }
-
-    #solucionCont {
-        align-items: center;
-        flex-direction: column;
-
-        p {
-            width: 100%;
-            margin-top: 1em;
-        }
-    }
-
-
-    header {
-        border: none;
-    }
-
-
-    .persuasion #solucion .elemento--centrado p {
-        width: 600px;
-    }
-
-    /*beneficios*/
-
-    .beneficios {
-
-        .beneficio__caja--formato {
-            margin-bottom: 1em;
-        }
-
-        .botonVenta {
-            margin-top: calc(3rem - 1em);
-        }
-    }
-
-    /*fin beneficios*/
-
-
-    #objecion1,
-    #objecion3 {
-        background-image: linear-gradient(to right, rgb(27, 27, 27), rgb(63, 63, 63));
-    }
-
-    #objecion2,
-    #objecion4 {
-        background-image: linear-gradient(to left, rgb(27, 27, 27), rgb(63, 63, 63));
-    }
-
-    .objecionCaja_p {
-        background-color: $color-dark;
-        color: $color-terciario;
-    }
-
-    /*boton whatsapp*/
-
-    #botonWhatsapp {
-        width: 100%;
-        height: auto;
-        position: fixed;
-        right: -92vw;
-        top: 60vh;
-        z-index: 5;
-    }
-
-    /*fin boton whatsapp*/
-
-    .section--format {
-        padding-top: 2em;
-    }
-
-    /*titulos*/
-
-
-    .titulo {
-        font-size: 30px;
-    }
-
-    /*-----TESTIMONIOS-----*/
-
-    .testimoniosVideos {
-        flex-direction: column;
-
-        video {
-            margin-bottom: 1em;
-            margin-left: 0%;
-            width: 100%;
-        }
-    }
-
-    .testimonios {
-        .botonVenta {
-            margin-top: calc(3rem - 1em);
-        }
-    }
-
-    /*-----fin TESTIMONIOS-----*/
-}
-
-/*media query aplicado para el conjunto vacío vertical (mayores a 1023)*/
-
-@media only screen and (min-width: 1024px) and (orientation: portrait) {
-
-    /*header*/
-
-    header,
-    header:hover {
-        height: calc(40px + 1em);
-
-        #hIzq {
+        .atencion #atencionArriba #imagenPrincipal {
             display: none;
         }
 
-        #hDer {
-            display: none;
-        }
-    }
-
-
-    /*padding-top del body*/
-    body {
-        padding-top: 56px;
-    }
-
-    /*fin padding-top del body*/
-
-    /*nav*/
-    #responsiveNav {
-        display: none;
-    }
-
-
-    #logCaja {
-        margin-left: 1em;
-    }
-
-    /*fin nav*/
-
-    .atencion #atencionArriba #imagenPrincipal {
-        display: none;
-    }
-
-    .atencion #atencionArriba #flechaAtencion {
-        display: none;
-    }
-
-    .atencion #atencionArriba #tituloPrincipal #principalUltimo {
-        display: none;
-    }
-
-    .atencion #atencionArriba #tituloPrincipal #principalUltimo2 {
-        display: block;
-    }
-
-    .persuasionCont {
-        flex-direction: column;
-        align-items: center;
-
-        #right,
-        #left {
-            width: 100%;
-            margin-top: 1em;
-        }
-
-        #imgRight {
-            order: 1;
-        }
-
-        #left {
-            order: 2;
-        }
-    }
-
-    #solucionCont {
-        align-items: center;
-        flex-direction: column;
-
-        p {
-            width: 100%;
-            margin-top: 1em;
-        }
-    }
-
-    /*boton whatsapp*/
-
-    #botonWhatsapp {
-        width: 100%;
-        height: auto;
-        position: fixed;
-        right: -92vw;
-        top: 60vh;
-        z-index: 5;
-    }
-
-    /*fin boton whatsapp*/
-
-    .section--format {
-        padding-top: 2em;
-    }
-
-    /*titulos*/
-
-
-    .titulo {
-        font-size: 30px;
-    }
-
-    /*beneficios*/
-
-    .beneficios {
-
-        .beneficio__caja--formato {
-            margin-bottom: 1em;
-        }
-
-        .botonVenta {
-            margin-top: calc(3rem - 1em);
-        }
-    }
-
-    /*fin beneficios*/
-
-    /*-----TESTIMONIOS-----*/
-
-    .testimoniosVideos {
-        flex-direction: column;
-
-        video {
-            margin-bottom: 1em;
-            margin-left: 0%;
-            width: 100%;
-        }
-    }
-
-    .testimonios {
-        .botonVenta {
-            margin-top: calc(3rem - 1em);
-        }
-    }
-
-    /*-----fin TESTIMONIOS-----*/
-
-}
-
-/*media query aplicado para un dispositivo horizontal muy pequeño*/
-@media only screen and (max-width: 767px) and (orientation: landscape) {
-    #firstinList{
-        margin-left: 0%;
-}
-
-
-    /*header*/
-    header,
-    header:hover {
-        height: calc(40px + 1em);
-
-        #hIzq {
+        .atencion #atencionArriba #flechaAtencion {
             display: none;
         }
 
-        #hDer {
+        .atencion #atencionArriba #tituloPrincipal #principalUltimo {
             display: none;
         }
-    }
 
-    body {
-        padding-top: 56px;
-    }
-
-    /*fin header*/
-    .atencion #atencionArriba #imagenPrincipal {
-        display: none;
-    }
-
-    .atencion #atencionArriba #flechaAtencion {
-        display: none;
-    }
-
-    .atencion #atencionArriba #tituloPrincipal #principalUltimo {
-        display: none;
-    }
-
-    .atencion #atencionArriba #tituloPrincipal #principalUltimo2 {
-        display: block;
-    }
-
-    .persuasionCont {
-        flex-direction: column;
-        align-items: center;
-
-        #right,
-        #left {
-            width: 100%;
-            margin-top: 1em;
+        .atencion #atencionArriba #tituloPrincipal #principalUltimo2 {
+            display: block;
         }
 
-        #imgRight {
-            order: 1;
-        }
+        .persuasionCont {
+            flex-direction: column;
+            align-items: center;
 
-        #left {
-            order: 2;
-        }
-    }
+            #right,
+            #left {
+                width: 100%;
+                margin-top: 1em;
+            }
 
-    #solucionCont {
-        align-items: center;
-        flex-direction: column;
+            #imgRight {
+                order: 1;
+            }
 
-        p {
-            width: 100%;
-            margin-top: 1em;
-        }
-    }
-
-    /*nav*/
-    #responsiveNav {
-        display: block;
-    }
-
-    /*fin nav*/
-
-    /*-----TESTIMONIOS-----*/
-
-    .testimoniosVideos {
-        flex-direction: column;
-
-        video {
-            margin-bottom: 1em;
-            width: 100%;
-            margin-left: 0%;
-        }
-    }
-
-    .testimonios {
-        .botonVenta {
-            margin-top: calc(3rem - 1em);
-        }
-    }
-
-    /*-----fin TESTIMONIOS-----*/
-
-    /*=====Cursos.html=====*/
-    #tituloSec {
-        display: block;
-    }
-
-    #tituloSec2 {
-        display: none;
-    }
-    /*=====fin Cursos.html=====*/
-
-}
-
-/*media query aplicado para un dispositivo horizontal pequeño, tableta*/
-
-@media only screen and (min-width: 768px) and (orientation: landscape) {
-
-
-    .atencion #atencionArriba #imagenPrincipal {
-        display: block;
-    }
-
-    .atencion #atencionArriba #flechaAtencion {
-        display: block;
-    }
-
-    .atencion #atencionArriba #tituloPrincipal #principalUltimo {
-        display: block;
-    }
-
-    .atencion #atencionArriba #tituloPrincipal #principalUltimo2 {
-        display: none;
-    }
-
-    header:hover {
-
-        .nav-itemm:hover {
-            filter: brightness(1.25);
-            border-top: hidden;
-            border-bottom: hidden;
-
-            .nav-linkk {
-                color: $color-terciario !important;
+            #left {
+                order: 2;
             }
         }
+
+        #solucionCont {
+            align-items: center;
+            flex-direction: column;
+
+            p {
+                width: 100%;
+                margin-top: 1em;
+            }
+        }
+
+        /*nav*/
+        #responsiveNav {
+            display: block;
+        }
+
+
+        /*fin nav*/
+
+        .persuasion #solucion .elemento--centrado p {
+            width: 600px;
+        }
+
+        .objeciones {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+        }
+
+        #objecion1,
+        #objecion3 {
+            background-image: linear-gradient(to right, rgb(27, 27, 27), rgb(63, 63, 63));
+        }
+
+        #objecion2,
+        #objecion4 {
+            background-image: linear-gradient(to left, rgb(27, 27, 27), rgb(63, 63, 63));
+        }
+
+        .objecionCaja_p {
+            background-color: $color-dark;
+            color: $color-terciario;
+        }
+
+        /*boton whatsapp*/
+
+        #botonWhatsapp {
+            width: 100%;
+            height: auto;
+            position: fixed;
+            right: -86vw;
+            top: 60vh;
+            z-index: 5;
+        }
+
+        /*fin boton whatsapp*/
+
+        .section--format {
+            padding-top: 2em;
+        }
+
+        /*titulos*/
+
+
+        .titulo {
+            font-size: 16px;
+        }
+
+        /*beneficios*/
+
+        .beneficios {
+
+            .beneficio__caja--formato {
+                margin-bottom: 1em;
+            }
+
+            .botonVenta {
+                margin-top: calc(3rem - 1em);
+            }
+        }
+
+        /*fin beneficios*/
+
+
+
+        /*footer*/
+
+        .footer {
+            margin-top: 0%;
+            padding-top: 1em;
+        }
+
+        .footer_lists {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+
+            #enlaces,
+            #rrss {
+                width: 100%;
+                text-align: center;
+                padding-bottom: 1em;
+            }
+
+        }
+
+        /*fin footer*/
+
+        /*=====pagina cursos=====*/
+
+        /*llamar atencion*/
+
+        #tituloSec {
+            display: none;
+        }
+
+        #tituloSec2 {
+            display: block;
+        }
+
+        /*FIN llamar atencion*
+/*=====fin pagina cursos=====*/
+
+
     }
 
+    /*media query aplicado para un dispsitivo celular estandar (md)
 
-    /*nav*/
-    #responsiveNav {
-        display: none;
+*/
+    @media only screen and (min-width: 767px) and (max-width: 1023px) and (orientation: portrait) {
+
+        /*header*/
+
+
+        header,
+        header:hover {
+            height: calc(40px + 1em);
+
+            #hIzq {
+                display: none;
+            }
+
+            #hDer {
+                display: none;
+            }
+        }
+
+        #atencionArriba {
+            width: 100%;
+            padding: 0%;
+        }
+
+        #tituloPrincipal {
+            width: 100%;
+            padding-left: 5px;
+            padding-right: 5px;
+        }
+
+        /*padding-top del body*/
+        body {
+            padding-top: 56px;
+        }
+
+        /*fin padding-top del body*/
+
+        /*nav*/
+        #responsiveNav {
+            display: block;
+        }
+
+
+
+
+
+        /*fin nav*/
+
+        .atencion #atencionArriba #imagenPrincipal {
+            display: none;
+        }
+
+        .atencion #atencionArriba #flechaAtencion {
+            display: none;
+        }
+
+        .atencion #atencionArriba #tituloPrincipal #principalUltimo {
+            display: none;
+        }
+
+        .atencion #atencionArriba #tituloPrincipal #principalUltimo2 {
+            display: block;
+        }
+
+        .persuasionCont {
+            flex-direction: column;
+            align-items: center;
+
+            #right,
+            #left {
+                width: 100%;
+                margin-top: 1em;
+            }
+
+            #imgRight {
+                order: 1;
+            }
+
+            #left {
+                order: 2;
+            }
+        }
+
+        #solucionCont {
+            align-items: center;
+            flex-direction: column;
+
+            p {
+                width: 100%;
+                margin-top: 1em;
+            }
+        }
+
+
+        header {
+            border: none;
+        }
+
+
+        .persuasion #solucion .elemento--centrado p {
+            width: 600px;
+        }
+
+        /*beneficios*/
+
+        .beneficios {
+
+            .beneficio__caja--formato {
+                margin-bottom: 1em;
+            }
+
+            .botonVenta {
+                margin-top: calc(3rem - 1em);
+            }
+        }
+
+        /*fin beneficios*/
+
+
+        #objecion1,
+        #objecion3 {
+            background-image: linear-gradient(to right, rgb(27, 27, 27), rgb(63, 63, 63));
+        }
+
+        #objecion2,
+        #objecion4 {
+            background-image: linear-gradient(to left, rgb(27, 27, 27), rgb(63, 63, 63));
+        }
+
+        .objecionCaja_p {
+            background-color: $color-dark;
+            color: $color-terciario;
+        }
+
+        /*boton whatsapp*/
+
+        #botonWhatsapp {
+            width: 100%;
+            height: auto;
+            position: fixed;
+            right: -92vw;
+            top: 60vh;
+            z-index: 5;
+        }
+
+        /*fin boton whatsapp*/
+
+        .section--format {
+            padding-top: 2em;
+        }
+
+        /*titulos*/
+
+
+        .titulo {
+            font-size: 30px;
+        }
+
     }
 
-    #hIzq {
-        display: flex;
+    /*media query aplicado para el conjunto vacío vertical (mayores a 1023)*/
+
+    @media only screen and (min-width: 1024px) and (orientation: portrait) {
+
+        /*header*/
+
+        header,
+        header:hover {
+            height: calc(40px + 1em);
+
+            #hIzq {
+                display: none;
+            }
+
+            #hDer {
+                display: none;
+            }
+        }
+
+
+        /*padding-top del body*/
+        body {
+            padding-top: 56px;
+        }
+
+        /*fin padding-top del body*/
+
+        /*nav*/
+        #responsiveNav {
+            display: none;
+        }
+
+
+        #logCaja {
+            margin-left: 1em;
+        }
+
+        /*fin nav*/
+
+        .atencion #atencionArriba #imagenPrincipal {
+            display: none;
+        }
+
+        .atencion #atencionArriba #flechaAtencion {
+            display: none;
+        }
+
+        .atencion #atencionArriba #tituloPrincipal #principalUltimo {
+            display: none;
+        }
+
+        .atencion #atencionArriba #tituloPrincipal #principalUltimo2 {
+            display: block;
+        }
+
+        .persuasionCont {
+            flex-direction: column;
+            align-items: center;
+
+            #right,
+            #left {
+                width: 100%;
+                margin-top: 1em;
+            }
+
+            #imgRight {
+                order: 1;
+            }
+
+            #left {
+                order: 2;
+            }
+        }
+
+        #solucionCont {
+            align-items: center;
+            flex-direction: column;
+
+            p {
+                width: 100%;
+                margin-top: 1em;
+            }
+        }
+
+        /*boton whatsapp*/
+
+        #botonWhatsapp {
+            width: 100%;
+            height: auto;
+            position: fixed;
+            right: -92vw;
+            top: 60vh;
+            z-index: 5;
+        }
+
+        /*fin boton whatsapp*/
+
+        .section--format {
+            padding-top: 2em;
+        }
+
+        /*titulos*/
+
+
+        .titulo {
+            font-size: 30px;
+        }
+
+        /*beneficios*/
+
+        .beneficios {
+
+            .beneficio__caja--formato {
+                margin-bottom: 1em;
+            }
+
+            .botonVenta {
+                margin-top: calc(3rem - 1em);
+            }
+        }
+
+        /*fin beneficios*/
+
+
     }
 
-    #hDer {
-        display: flex;
+    /*media query aplicado para un dispositivo horizontal muy pequeño*/
+    @media only screen and (max-width: 767px) and (orientation: landscape) {
+        #firstinList {
+            margin-left: 0%;
+        }
+
+
+        /*header*/
+        header,
+        header:hover {
+            height: calc(40px + 1em);
+
+            #hIzq {
+                display: none;
+            }
+
+            #hDer {
+                display: none;
+            }
+        }
+
+        body {
+            padding-top: 56px;
+        }
+
+        /*fin header*/
+        .atencion #atencionArriba #imagenPrincipal {
+            display: none;
+        }
+
+        .atencion #atencionArriba #flechaAtencion {
+            display: none;
+        }
+
+        .atencion #atencionArriba #tituloPrincipal #principalUltimo {
+            display: none;
+        }
+
+        .atencion #atencionArriba #tituloPrincipal #principalUltimo2 {
+            display: block;
+        }
+
+        .persuasionCont {
+            flex-direction: column;
+            align-items: center;
+
+            #right,
+            #left {
+                width: 100%;
+                margin-top: 1em;
+            }
+
+            #imgRight {
+                order: 1;
+            }
+
+            #left {
+                order: 2;
+            }
+        }
+
+        #solucionCont {
+            align-items: center;
+            flex-direction: column;
+
+            p {
+                width: 100%;
+                margin-top: 1em;
+            }
+        }
+
+        /*nav*/
+        #responsiveNav {
+            display: block;
+        }
+
+        /*fin nav*/
+
+
+
+        /*=====Cursos.html=====*/
+        #tituloSec {
+            display: block;
+        }
+
+        #tituloSec2 {
+            display: none;
+        }
+
+        /*=====fin Cursos.html=====*/
+
     }
 
-    /*fin nav*/
+    /*media query aplicado para un dispositivo horizontal pequeño, tableta*/
 
-    .atencion {
-        background-image: linear-gradient(to top, rgba(0, 0, 0, 0.733), rgba(0, 0, 0, 0)), url(../imagenes/atencion.jpg);
-        background-size: cover;
-        background-repeat: no-repeat;
-        background-attachment: fixed;
-    }
+    @media only screen and (min-width: 768px) and (orientation: landscape) {
 
-    .atencion #atencionAbajo h5 {
-        font-size: 30px;
-        text-shadow: black 0px 0px 30px;
-        font-weight: light;
-        letter-spacing: 1px;
-    }
 
-    .atencion #atencionArriba {
-        padding-left: 0%;
-        padding-right: 0%;
-        justify-content: space-evenly;
-    }
+        .atencion #atencionArriba #imagenPrincipal {
+            display: block;
+        }
 
-    #tituloPrincipal {
-        animation-name: entradaIzq;
-        animation-duration: 0.8s;
-        animation-iteration-count: 1;
-        animation-timing-function: ease-out;
-        z-index: 2;
-    }
+        .atencion #atencionArriba #flechaAtencion {
+            display: block;
+        }
 
-    .atencion #atencionArriba #flechaAtencion {
-        animation: aparicionFlecha 0.8s 0.6s, flechaCongelada 0.8s 0.6s infinite;
-        z-index: 1;
-    }
+        .atencion #atencionArriba #tituloPrincipal #principalUltimo {
+            display: block;
+        }
 
-    #imagenAtencion {
-        visibility: hidden;
-        animation: imagenAparicion 0.8s 1.2s, imagenCongelada 0.8s 1.2s infinite;
-        animation-timing-function: ease-out;
-    }
+        .atencion #atencionArriba #tituloPrincipal #principalUltimo2 {
+            display: none;
+        }
 
-    .persuasion #solucion .elemento--centrado p {
-        width: 600px;
-    }
+        header:hover {
 
-    .persuasion #solucion .elemento--centrado p {
-        width: 600px;
-    }
+            .nav-itemm:hover {
+                filter: brightness(1.25);
+                border-top: hidden;
+                border-bottom: hidden;
 
-    /*=====SECCION CURSOS=====*/
-    /*llamar atencion*/
+                .nav-linkk {
+                    color: $color-terciario !important;
+                }
+            }
+        }
 
-    #tituloSec {
-        display: block;
-    }
 
-    #tituloSec2 {
-        display: none;
-    }
+        /*nav*/
+        #responsiveNav {
+            display: none;
+        }
 
-    /*FIN llamar atencion*
+        #hIzq {
+            display: flex;
+        }
+
+        #hDer {
+            display: flex;
+        }
+
+        /*fin nav*/
+
+        .atencion {
+            background-image: linear-gradient(to top, rgba(0, 0, 0, 0.733), rgba(0, 0, 0, 0)), url(../imagenes/atencion.jpg);
+            background-size: cover;
+            background-repeat: no-repeat;
+            background-attachment: fixed;
+        }
+
+        .atencion #atencionAbajo h5 {
+            font-size: 30px;
+            text-shadow: black 0px 0px 30px;
+            font-weight: light;
+            letter-spacing: 1px;
+        }
+
+        .atencion #atencionArriba {
+            padding-left: 0%;
+            padding-right: 0%;
+            justify-content: space-evenly;
+        }
+
+        #tituloPrincipal {
+            animation-name: entradaIzq;
+            animation-duration: 0.8s;
+            animation-iteration-count: 1;
+            animation-timing-function: ease-out;
+            z-index: 2;
+        }
+
+        .atencion #atencionArriba #flechaAtencion {
+            animation: aparicionFlecha 0.8s 0.6s, flechaCongelada 0.8s 0.6s infinite;
+            z-index: 1;
+        }
+
+        #imagenAtencion {
+            visibility: hidden;
+            animation: imagenAparicion 0.8s 1.2s, imagenCongelada 0.8s 1.2s infinite;
+            animation-timing-function: ease-out;
+        }
+
+        .persuasion #solucion .elemento--centrado p {
+            width: 600px;
+        }
+
+        .persuasion #solucion .elemento--centrado p {
+            width: 600px;
+        }
+
+        /*=====SECCION CURSOS=====*/
+        /*llamar atencion*/
+
+        #tituloSec {
+            display: block;
+        }
+
+        #tituloSec2 {
+            display: none;
+        }
+
+        /*FIN llamar atencion*
 
 
 
@@ -1464,162 +1488,162 @@ width:100% !important;
 
 
 
-    /*FIN metodoEstudio*/
+        /*FIN metodoEstudio*/
 
-    /*=====FIN SECCION CURSOS=====*/
+        /*=====FIN SECCION CURSOS=====*/
 
-}
+    }
 
-/*media query aplicado para un dispositivo horizontal medio
+    /*media query aplicado para un dispositivo horizontal medio
 */
 
-@media only screen and (min-width: 1200px) and (orientation: landscape) {
+    @media only screen and (min-width: 1200px) and (orientation: landscape) {
 
-    .atencion #atencionArriba #imagenPrincipal {
-        display: block;
-    }
+        .atencion #atencionArriba #imagenPrincipal {
+            display: block;
+        }
 
-    .atencion #atencionArriba #flechaAtencion {
-        display: block;
-    }
+        .atencion #atencionArriba #flechaAtencion {
+            display: block;
+        }
 
-    .atencion #atencionArriba #tituloPrincipal #principalUltimo {
-        display: block;
-    }
+        .atencion #atencionArriba #tituloPrincipal #principalUltimo {
+            display: block;
+        }
 
-    .atencion #atencionArriba #tituloPrincipal #principalUltimo2 {
-        display: none;
-    }
+        .atencion #atencionArriba #tituloPrincipal #principalUltimo2 {
+            display: none;
+        }
 
-    /*header*/
-
-    #logCaja p {
-        display: none;
-        filter: opacity(0%);
-        transition: 0.8s;
-    }
-
-    header:hover {
-        border: none;
-        border-bottom: $color-secundario;
-        border-bottom-style: solid;
-        border-bottom-width: 2px;
-        height: 100px;
+        /*header*/
 
         #logCaja p {
-            display: block;
-            filter: opacity(100%);
+            display: none;
+            filter: opacity(0%);
             transition: 0.8s;
         }
 
+        header:hover {
+            border: none;
+            border-bottom: $color-secundario;
+            border-bottom-style: solid;
+            border-bottom-width: 2px;
+            height: 100px;
 
-        .nav-itemm {
-            background-color: $color-secundario;
-            border: 2px $color-secundario-oscuro solid;
-            border-top: hidden;
-            border-bottom: hidden;
-            transition: 0.3s;
+            #logCaja p {
+                display: block;
+                filter: opacity(100%);
+                transition: 0.8s;
+            }
 
-            .nav-linkk {
-                color: $color-terciario;
-                transition: 0.5s;
+
+            .nav-itemm {
+                background-color: $color-secundario;
+                border: 2px $color-secundario-oscuro solid;
+                border-top: hidden;
+                border-bottom: hidden;
+                transition: 0.3s;
+
+                .nav-linkk {
+                    color: $color-terciario;
+                    transition: 0.5s;
+                }
+            }
+
+            .nav-itemm:hover {
+                background-color: rgb(36, 112, 184);
+                border: 2px $color-secundario solid;
+                border-top: hidden;
+                border-bottom: hidden;
+
+                .nav-linkk {
+                    color: $color-terciario !important;
+                }
             }
         }
 
-        .nav-itemm:hover {
-            background-color: rgb(36, 112, 184);
-            border: 2px $color-secundario solid;
-            border-top: hidden;
-            border-bottom: hidden;
-
-            .nav-linkk {
-                color: $color-terciario !important;
-            }
+        /*nav*/
+        #responsiveNav {
+            display: none;
         }
-    }
 
-    /*nav*/
-    #responsiveNav {
-        display: none;
-    }
+        #hIzq {
+            display: flex;
+        }
 
-    #hIzq {
-        display: flex;
-    }
+        #hDer {
+            display: flex;
+        }
 
-    #hDer {
-        display: flex;
-    }
-
-    /*fin nav*/
+        /*fin nav*/
 
 
-    #hDer #burger {
-        display: none;
-    }
+        #hDer #burger {
+            display: none;
+        }
 
-    .atencion {
-        background-image: linear-gradient(to top, rgba(0, 0, 0, 0.733), rgba(0, 0, 0, 0)), url(../imagenes/atencion.jpg);
-        background-size: cover;
-        background-repeat: no-repeat;
-        background-attachment: fixed;
-    }
+        .atencion {
+            background-image: linear-gradient(to top, rgba(0, 0, 0, 0.733), rgba(0, 0, 0, 0)), url(../imagenes/atencion.jpg);
+            background-size: cover;
+            background-repeat: no-repeat;
+            background-attachment: fixed;
+        }
 
-    .atencion #atencionAbajo h5 {
-        font-size: 30px;
-        text-shadow: black 0px 0px 30px;
-        font-weight: light;
-        letter-spacing: 1px;
-    }
+        .atencion #atencionAbajo h5 {
+            font-size: 30px;
+            text-shadow: black 0px 0px 30px;
+            font-weight: light;
+            letter-spacing: 1px;
+        }
 
-    .atencion #atencionArriba {
-        width: 100%;
-        padding-left: 0%;
-        padding-right: 0%;
-        display: flex;
-        justify-content: space-evenly;
-    }
+        .atencion #atencionArriba {
+            width: 100%;
+            padding-left: 0%;
+            padding-right: 0%;
+            display: flex;
+            justify-content: space-evenly;
+        }
 
-    #tituloPrincipal {
-        animation-name: entradaIzq;
-        animation-duration: 0.8s;
-        animation-iteration-count: 1;
-        animation-timing-function: ease-out;
-        z-index: 2;
-    }
+        #tituloPrincipal {
+            animation-name: entradaIzq;
+            animation-duration: 0.8s;
+            animation-iteration-count: 1;
+            animation-timing-function: ease-out;
+            z-index: 2;
+        }
 
-    .atencion #atencionArriba #flechaAtencion {
-        animation: aparicionFlecha 0.8s 0.6s, flechaCongelada 0.8s 0.6s infinite;
-        z-index: 1;
-    }
+        .atencion #atencionArriba #flechaAtencion {
+            animation: aparicionFlecha 0.8s 0.6s, flechaCongelada 0.8s 0.6s infinite;
+            z-index: 1;
+        }
 
-    #imagenAtencion {
-        visibility: hidden;
-        animation: imagenAparicion 0.8s 1.2s, imagenCongelada 0.8s 1.2s infinite;
-        animation-timing-function: ease-out;
-    }
+        #imagenAtencion {
+            visibility: hidden;
+            animation: imagenAparicion 0.8s 1.2s, imagenCongelada 0.8s 1.2s infinite;
+            animation-timing-function: ease-out;
+        }
 
-    .persuasion #solucion .elemento--centrado p {
-        width: 600px;
+        .persuasion #solucion .elemento--centrado p {
+            width: 600px;
+        }
+
+
     }
 
 
-}
+    @media only screen and (min-width: 1757px) and (orientation: landscape) {
+        /*boton whatsapp*/
 
+        #botonWhatsapp a img {
+            width: 80px;
+            transition: all 0.5s;
+        }
 
-@media only screen and (min-width: 1757px) and (orientation: landscape) {
-    /*boton whatsapp*/
+        #botonWhatsapp a img:hover {
+            z-index: 5;
+            transform: scale(1.4);
+            filter: drop-shadow(rgba(0, 0, 0, 0.767) 0px 0px 5px);
+        }
 
-    #botonWhatsapp a img {
-        width: 80px;
-        transition: all 0.5s;
+        /*fin boton whatsapp*/
     }
-
-    #botonWhatsapp a img:hover {
-        z-index: 5;
-        transform: scale(1.4);
-        filter: drop-shadow(rgba(0, 0, 0, 0.767) 0px 0px 5px);
-    }
-
-    /*fin boton whatsapp*/
-}

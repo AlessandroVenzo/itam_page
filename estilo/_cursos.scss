@@ -24,52 +24,10 @@
     padding-left: 10%;
     padding-right: 10%;
 
-    .testimoniosVideos {
-        display: flex;
-        justify-content: space-evenly;
-
-        video {
-            width: 1fr;
-        }
-    }
-
-
-    /*responsividad de los testimonios videos*/
-
-    @media only screen and (max-width: 767px) and (orientation: landscape) {
-
-        .testimoniosVideos {
-            display: flex;
-            flex-direction: column;
-        }
-
-    }
-
-    @media only screen and (max-width: 767px) and (orientation: portrait) {
-        .testimoniosVideos {
-            display: flex;
-            flex-direction: column;
-        }
-    }
-
-    @media only screen and (min-width: 768px) and (max-width: 1020px) and (orientation: landscape) {
-        .testimoniosVideos {
-            display: flex;
-            flex-direction: row;
-            width: 100%;
-
-            video {
-                margin-left: 1em;
-            }
-        }
-    }
-
-    /*fin responsividad de la testimonios videos*/
 }
 
-
 /*introduccion*/
-#introduccion p{
+#introduccion p {
     max-width: 1200px;
 }
 
@@ -110,7 +68,7 @@
     width: 1fr;
 }
 
-#trPrincipal:hover{
+#trPrincipal:hover {
     filter: none;
 }
 
@@ -118,8 +76,8 @@
     margin-top: 3em;
 }
 
-.trSecundario:hover{
-filter: brightness(1.25);
+.trSecundario:hover {
+    filter: brightness(1.25);
 }
 
 
@@ -379,77 +337,117 @@ filter: brightness(1.25);
 /*-----DESCRIPCIONPRODUCTO_METODOESTUDIO-----*/
 #metodoEstudio {
     display: flex;
-    justify-content: center;
-    padding: 0% ;
-    margin: 0%;
-width: 100%;
-    padding-top: 2em;
-
-    ol{
-        max-width: 1200px;
-        padding: 0% ;
-        margin: 0%;
-    }
-}
-
-#planEstudio {
-    display: grid;
-    grid-template-columns: repeat(auto-fill, minmax(20em, 1fr));
-    gap: 1rem;
-    height: auto;
-    margin-top: 2em;
-    padding-left: 0%;
-    justify-self: center;
-    width: 100%;
-}
-
-.modulo {
-    list-style: none;
-    text-align: center;
-    background-color: $color-secundario-oscuro;
-    display: flex;
     flex-direction: column;
-    transition: all 0.1s ease-out;
-
-    h4 {
-        height: 40%;
-        display: flex;
-        align-items: center;
-        justify-content: center;
-        font-size: 20px;
-        background: $color-secundario;
-        line-height: 100%;
+    justify-content: center;
+    align-content: flex-start;
+    padding: 0%;
+    margin: 0%;
+    width: 100%;
+    max-width: 1200px;
+    padding-top: 2em;
+    
+    .card{
+        background-color: transparent !important;
+    }
+    .pyrButton .bootstrapPyr {
+        background-image: linear-gradient(to right, $color-primario, $color-secundario);
+        font-family: $fuente-principal;
+        text-transform: uppercase;
+        transition: all 0.1s ease-out;
+    }
+    .pyrButton .bootstrapPyr:hover {
         padding-top: 1em;
         padding-bottom: 1em;
-        padding-left: 1em;
-        padding-right: 1em;
+    }
+.pyrButton{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    
+}
+
+    .collapse {
+
+        transition: all 0.1s ease-out;
+        .card-body {
+            padding: 0%;
+            
+
+            .planEstudio {
+                margin: 0%;
+                padding: 0%;
+                display: grid;
+                grid-template-columns: repeat(auto-fill, minmax(20em, 1fr));
+                gap: 0.3%;
+                height: auto;
+                justify-self: center;
+                width: 100%;
+                max-width: 1200px;
+
+                
+                .modulo {
+                    list-style: none;
+                    text-align: center;
+                    background-color: $color-secundario-oscuro;
+                    display: flex;
+                    flex-direction: column;
+                    transition: all 0.1s ease-out;
+                    flex-grow: 0;
+                    
+                    h4 {
+                        height: 40%;
+                        display: flex;
+                        align-items: center;
+                        justify-content: center;
+                        font-size: 20px;
+                        background: $color-secundario;
+                        line-height: 100%;
+                        padding-top: 1em;
+                        padding-bottom: 1em;
+                        padding-left: 1em;
+                        padding-right: 1em;
+                    }
+                
+                    .temario {
+                        @extend .lista--formateada;
+                    }
+                
+                }
+                
+                .blockMod3{
+                    flex-grow: 1 !important;
+                }
+                .modulo:hover {
+                    transform: scale(1.05);
+                    background-color: $color-secundario-oscuro;
+                    box-shadow: black 0px 0px 30px;
+                }
+                
+                .temario {
+                    padding-top: 1em;
+                    padding-bottom: 1em;
+                }
+                
+                li {
+                    color: $color-terciario;
+                }
+            }
+        }
     }
 
-    .temario {
-        @extend .lista--formateada;
+    .pyrButton a{
+        border: none;
     }
 
+
 }
 
-.modulo:hover {
-    transform: scale(1.05);
-    background-color: $color-secundario-oscuro;
-    box-shadow: black 0px 0px 30px;
-}
 
-.temario {
-    padding-top: 1em;
-    padding-bottom: 1em;
-}
-
-#planEstudio li {
-    color: $color-terciario;
-}
 
 /*-----FIN DESCRIPCIONPRODUCTO_METODOESTUDIO-----*/
 /*-----DESCRIPCIONPRODUCTO_CONTENIDOS-----*/
 
-.contenidos{
+.contenidos {
     margin-top: 0%;
 }
 
@@ -553,7 +551,7 @@ width: 100%;
         align-items: center;
 
         li {
-            
+
             .dropdown-item {
                 background-color: $color-terciario;
                 padding: 0.5em;
