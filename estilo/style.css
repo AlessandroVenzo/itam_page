@@ -1067,8 +1067,6 @@ main {
 
 .contacto #flechaAtencionContacto {
   width: 50px;
-  rotate: 90deg;
-  transform: rotate(90deg);
   -ms-transform: rotate(90deg);
   /* IE 9 */
   -moz-transform: rotate(90deg);
