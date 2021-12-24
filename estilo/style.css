@@ -1798,6 +1798,7 @@ main {
   width: 100%;
   margin-bottom: 0%;
   max-width: 1200px;
+  text-align: left;
 }
 
 .discursoNeutral .pSpace {
@@ -1815,6 +1816,7 @@ main {
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
+  text-align: left;
 }
 
 /*-----FIN DISCURSO NEUTRAL-----*/
