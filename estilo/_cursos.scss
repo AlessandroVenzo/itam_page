@@ -476,10 +476,7 @@
 #cuadroContenido {
     height: auto;
     max-width: 800px;
-    padding-top: 1em;
-    padding-left: 1em;
-    padding-right: 1em;
-    padding-bottom: 3em;
+
 }
 
 #cuadroContenido h3 {
@@ -575,6 +572,23 @@
 .discursoNeutral {
     padding-left: 10%;
     padding-right: 10%;
+p{
+    background-color: $color-secundario-oscuro;
+    padding: 1em;
+    line-height: 2em;
+    letter-spacing: 1px;
+    width: 100%;
+    margin-bottom: 0%;
+    max-width: 1200px;
+}
+.pSpace{
+    margin-bottom: 1em;
+}
+.elemento--centrado{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
 }
 
 

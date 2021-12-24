@@ -36,21 +36,28 @@ h5 {
 
     0% {
         transform: scale(0);
+        -webkit-transform: scale(0); 
         filter: blur(4px), saturate(0);
+        -webkit-filter: blur(4px); 
     }
 
     30% {
         transform: scale(1.1);
+        -webkit-transform: scale(1.1); 
         filter: blur(3px), saturate(1);
+        -webkit-filter: blur(3px); 
     }
 
     60% {
         transform: scale(0.8);
+        -webkit-transform: scale(0.8); 
         filter: blur(0px);
+                -webkit-filter: blur(0px);
     }
 
     99% {
         transform: scale(1);
+        -webkit-transform: scale(1); 
         filter: blur(0px);
         visibility: visible;
     }
@@ -59,11 +66,13 @@ h5 {
 @keyframes imagenCongelada {
 
     99% {
+                -webkit-transform: scale(1); 
         transform: scale(1);
         visibility: visible;
     }
 
     100% {
+                -webkit-transform: scale(1); 
         transform: scale(1);
         visibility: visible;
     }
@@ -98,24 +107,27 @@ h5 {
 
     0% {
         translate: -400px;
+        -webkit-transform: translateX(-400px); 
         opacity: 0;
         filter: blur(4px);
         visibility: visible;
     }
 
     40% {
+        -webkit-transform: translateX(20px); 
         translate: 20px;
         opacity: 1;
         filter: blur(2px);
     }
 
     70% {
+        -webkit-transform: translateX(-20px); 
         translate: -20px;
         filter: blur(2px);
     }
 
     99% {
-        translate: 0px;
+        -webkit-transform: translateX(0px); 
         filter: blur(0px);
     }
 
@@ -248,8 +260,6 @@ title {
     color: $color-terciario;
     text-align: left;
     background-color: $color-dark;
-    width: 300px !important;
-    margin-left: 3rem;
 
 }
 
@@ -304,7 +314,7 @@ title {
     text-align: center;
     text-decoration: underline white;
     max-width: 1200px;
-    margin-bottom: 3rem;
+    //margin-bottom: 3rem;//
     display: flex;
     justify-content: center;
 
@@ -794,9 +804,6 @@ header nav ul {
 
 */
     @media only screen and (max-width: 767px) and (orientation: portrait) {
-        #firstinList {
-            margin-left: 1em;
-        }
 
         /*HEADER*/
         header,
@@ -827,8 +834,17 @@ header nav ul {
 
         #tituloPrincipal {
             width: 100%;
-            padding-left: 5px;
-            padding-right: 5px;
+            padding-left: 0px;
+            padding-right: 0px;
+            h2{
+                font-size: 30px;
+            }
+        }
+
+        #atencionAbajo{
+            strong{
+                font-size: 20px;
+            }
         }
 
         .atencion #atencionArriba #imagenPrincipal {
@@ -873,6 +889,7 @@ header nav ul {
             p {
                 width: 100%;
                 margin-top: 1em;
+                padding: 2em;
             }
         }
 
@@ -1019,8 +1036,17 @@ header nav ul {
 
         #tituloPrincipal {
             width: 100%;
-            padding-left: 5px;
-            padding-right: 5px;
+            padding-left: 0px;
+            padding-right: 0px;
+            h2{
+                font-size: 30px;
+            }
+        }
+
+        #atencionAbajo{
+            strong{
+                font-size: 20px;
+            }
         }
 
         /*padding-top del body*/
@@ -1083,6 +1109,7 @@ header nav ul {
             p {
                 width: 100%;
                 margin-top: 1em;
+                padding: 2em;
             }
         }
 
@@ -1234,6 +1261,7 @@ header nav ul {
             p {
                 width: 100%;
                 margin-top: 1em;
+                padding: 2em;
             }
         }
 
@@ -1299,6 +1327,22 @@ header nav ul {
                 display: none;
             }
         }
+#atencionArriba{
+    padding-left: 0%;
+    padding-right : 0%;
+}
+        #tituloPrincipal{
+            width: 100%;
+            h2{
+                font-size: 40px;
+            }
+        }
+
+        #atencionAbajo{
+            strong{
+                font-size: 25px;
+            }
+        }
 
         body {
             padding-top: 56px;
@@ -1347,6 +1391,7 @@ header nav ul {
             p {
                 width: 100%;
                 margin-top: 1em;
+                padding: 2em;
             }
         }
 

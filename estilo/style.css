@@ -4,7 +4,7 @@
   padding-bottom: 4em;
 }
 
-.f_principal-normalise, p,
+.f_principal-normalise, strong, p,
 main {
   font-family: helvetica;
   text-transform: none;
@@ -40,7 +40,7 @@ main {
   padding-bottom: 4em;
 }
 
-.f_principal-normalise, p,
+.f_principal-normalise, strong, p,
 main {
   font-family: helvetica;
   text-transform: none;
@@ -79,11 +79,6 @@ main {
   -webkit-box-pack: center;
       -ms-flex-pack: center;
           justify-content: center;
-}
-
-.atencion #atencionArriba #tituloPrincipal {
-  margin-left: 0%;
-  width: 400px;
 }
 
 #imagenPrincipal {
@@ -287,6 +282,8 @@ main {
   padding: 0%;
 }
 
+/*responsividad de solucion cont*/
+/*fin responsividad de solucion cont*/
 /*-----FIN PERSUASION-----*/
 /*-----BENEFICIOS-----*/
 .beneficios {
@@ -330,6 +327,8 @@ main {
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
+  -webkit-transition-duration: 0.5s;
+          transition-duration: 0.5s;
 }
 
 .beneficio__caja--formato p {
@@ -343,22 +342,29 @@ main {
   border-radius: 100%;
 }
 
+.beneficio__caja--formato:hover {
+  transform: translateY(-20px);
+  -webkit-transform: translateY(-20px);
+}
+
 #beneficio1 {
-  width: 100px !important;
+  width: 100px;
 }
 
 #beneficio2 {
-  width: 100px !important;
+  width: 180px;
   position: relative;
   top: 0%;
-  right: 10px;
+  right: 45px;
 }
 
 #beneficio3 {
-  width: 80px !important;
+  width: 80px;
   position: relative;
   top: 0%;
-  right: 10px;
+  right: 5px;
+  filter: invert(1);
+  -webkit-filter: invert(1);
 }
 
 /*-----FIN BENEFICIOS-----*/
@@ -692,6 +698,10 @@ main {
       align-self: center;
 }
 
+#firstVideoTest {
+  padding-top: 0%;
+}
+
 /*============ABOUT.HTML============*/
 /*-----GENERAL-----*/
 /*conf general*/
@@ -700,7 +710,7 @@ main {
   padding-bottom: 4em;
 }
 
-.f_principal-normalise, p,
+.f_principal-normalise, strong, p,
 main {
   font-family: helvetica;
   text-transform: none;
@@ -764,7 +774,7 @@ main {
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
-  height: 300px;
+  height: 200px;
   margin-bottom: 2em;
 }
 
@@ -866,7 +876,6 @@ main {
   background-image: linear-gradient(to top, rgba(5, 5, 5, 0), #0c0c0c), url(../imagenes/whyWallp.jpg);
   background-size: cover;
   background-repeat: no-repeat;
-  padding-top: 0%;
 }
 
 /*-----FIN WHY-----*/
@@ -942,7 +951,7 @@ main {
   padding-bottom: 4em;
 }
 
-.f_principal-normalise, p,
+.f_principal-normalise, strong, p,
 main {
   font-family: helvetica;
   text-transform: none;
@@ -1091,7 +1100,7 @@ main {
   padding-bottom: 4em;
 }
 
-.f_principal-normalise, p,
+.f_principal-normalise, strong, p,
 main {
   font-family: helvetica;
   text-transform: none;
@@ -1677,10 +1686,6 @@ main {
 #cuadroContenido {
   height: auto;
   max-width: 800px;
-  padding-top: 1em;
-  padding-left: 1em;
-  padding-right: 1em;
-  padding-bottom: 3em;
 }
 
 #cuadroContenido h3 {
@@ -1785,6 +1790,33 @@ main {
   padding-right: 10%;
 }
 
+.discursoNeutral p {
+  background-color: #1b1a33;
+  padding: 1em;
+  line-height: 2em;
+  letter-spacing: 1px;
+  width: 100%;
+  margin-bottom: 0%;
+  max-width: 1200px;
+}
+
+.discursoNeutral .pSpace {
+  margin-bottom: 1em;
+}
+
+.discursoNeutral .elemento--centrado {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
 /*-----FIN DISCURSO NEUTRAL-----*/
 /*============FIN CURSOS.HTML============*/
 /*============FIN importacion============*/
@@ -1804,26 +1836,26 @@ h5 {
 /*animaciones*/
 @-webkit-keyframes imagenAparicion {
   0% {
+    transform: scale(0);
     -webkit-transform: scale(0);
-            transform: scale(0);
-    -webkit-filter: blur(4px), saturate(0);
-            filter: blur(4px), saturate(0);
+    filter: blur(4px), saturate(0);
+    -webkit-filter: blur(4px);
   }
   30% {
+    transform: scale(1.1);
     -webkit-transform: scale(1.1);
-            transform: scale(1.1);
-    -webkit-filter: blur(3px), saturate(1);
-            filter: blur(3px), saturate(1);
+    filter: blur(3px), saturate(1);
+    -webkit-filter: blur(3px);
   }
   60% {
+    transform: scale(0.8);
     -webkit-transform: scale(0.8);
-            transform: scale(0.8);
+    filter: blur(0px);
     -webkit-filter: blur(0px);
-            filter: blur(0px);
   }
   99% {
+    transform: scale(1);
     -webkit-transform: scale(1);
-            transform: scale(1);
     -webkit-filter: blur(0px);
             filter: blur(0px);
     visibility: visible;
@@ -1831,26 +1863,26 @@ h5 {
 }
 @keyframes imagenAparicion {
   0% {
+    transform: scale(0);
     -webkit-transform: scale(0);
-            transform: scale(0);
-    -webkit-filter: blur(4px), saturate(0);
-            filter: blur(4px), saturate(0);
+    filter: blur(4px), saturate(0);
+    -webkit-filter: blur(4px);
   }
   30% {
+    transform: scale(1.1);
     -webkit-transform: scale(1.1);
-            transform: scale(1.1);
-    -webkit-filter: blur(3px), saturate(1);
-            filter: blur(3px), saturate(1);
+    filter: blur(3px), saturate(1);
+    -webkit-filter: blur(3px);
   }
   60% {
+    transform: scale(0.8);
     -webkit-transform: scale(0.8);
-            transform: scale(0.8);
+    filter: blur(0px);
     -webkit-filter: blur(0px);
-            filter: blur(0px);
   }
   99% {
+    transform: scale(1);
     -webkit-transform: scale(1);
-            transform: scale(1);
     -webkit-filter: blur(0px);
             filter: blur(0px);
     visibility: visible;
@@ -1860,12 +1892,12 @@ h5 {
 @-webkit-keyframes imagenCongelada {
   99% {
     -webkit-transform: scale(1);
-            transform: scale(1);
+    transform: scale(1);
     visibility: visible;
   }
   100% {
     -webkit-transform: scale(1);
-            transform: scale(1);
+    transform: scale(1);
     visibility: visible;
   }
 }
@@ -1873,12 +1905,12 @@ h5 {
 @keyframes imagenCongelada {
   99% {
     -webkit-transform: scale(1);
-            transform: scale(1);
+    transform: scale(1);
     visibility: visible;
   }
   100% {
     -webkit-transform: scale(1);
-            transform: scale(1);
+    transform: scale(1);
     visibility: visible;
   }
 }
@@ -1936,24 +1968,27 @@ h5 {
 @-webkit-keyframes aparicionFlecha {
   0% {
     translate: -400px;
+    -webkit-transform: translateX(-400px);
     opacity: 0;
     -webkit-filter: blur(4px);
             filter: blur(4px);
     visibility: visible;
   }
   40% {
+    -webkit-transform: translateX(20px);
     translate: 20px;
     opacity: 1;
     -webkit-filter: blur(2px);
             filter: blur(2px);
   }
   70% {
+    -webkit-transform: translateX(-20px);
     translate: -20px;
     -webkit-filter: blur(2px);
             filter: blur(2px);
   }
   99% {
-    translate: 0px;
+    -webkit-transform: translateX(0px);
     -webkit-filter: blur(0px);
             filter: blur(0px);
   }
@@ -1967,24 +2002,27 @@ h5 {
 @keyframes aparicionFlecha {
   0% {
     translate: -400px;
+    -webkit-transform: translateX(-400px);
     opacity: 0;
     -webkit-filter: blur(4px);
             filter: blur(4px);
     visibility: visible;
   }
   40% {
+    -webkit-transform: translateX(20px);
     translate: 20px;
     opacity: 1;
     -webkit-filter: blur(2px);
             filter: blur(2px);
   }
   70% {
+    -webkit-transform: translateX(-20px);
     translate: -20px;
     -webkit-filter: blur(2px);
             filter: blur(2px);
   }
   99% {
-    translate: 0px;
+    -webkit-transform: translateX(0px);
     -webkit-filter: blur(0px);
             filter: blur(0px);
   }
@@ -2138,8 +2176,6 @@ title {
   color: #F4F4F4;
   text-align: left;
   background-color: #0C0C0C;
-  width: 300px !important;
-  margin-left: 3rem;
 }
 
 .titulo {
@@ -2193,7 +2229,6 @@ title {
   -webkit-text-decoration: underline white;
           text-decoration: underline white;
   max-width: 1200px;
-  margin-bottom: 3rem;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -2755,9 +2790,6 @@ footer ul {
 
 */
 @media only screen and (max-width: 767px) and (orientation: portrait) {
-  #firstinList {
-    margin-left: 1em;
-  }
   /*HEADER*/
   header,
   header:hover {
@@ -2783,8 +2815,14 @@ footer ul {
   }
   #tituloPrincipal {
     width: 100%;
-    padding-left: 5px;
-    padding-right: 5px;
+    padding-left: 0px;
+    padding-right: 0px;
+  }
+  #tituloPrincipal h2 {
+    font-size: 30px;
+  }
+  #atencionAbajo strong {
+    font-size: 20px;
   }
   .atencion #atencionArriba #imagenPrincipal {
     display: none;
@@ -2834,6 +2872,7 @@ footer ul {
   #solucionCont p {
     width: 100%;
     margin-top: 1em;
+    padding: 2em;
   }
   /*nav*/
   #responsiveNav {
@@ -2953,8 +2992,14 @@ footer ul {
   }
   #tituloPrincipal {
     width: 100%;
-    padding-left: 5px;
-    padding-right: 5px;
+    padding-left: 0px;
+    padding-right: 0px;
+  }
+  #tituloPrincipal h2 {
+    font-size: 30px;
+  }
+  #atencionAbajo strong {
+    font-size: 20px;
   }
   /*padding-top del body*/
   body {
@@ -3014,6 +3059,7 @@ footer ul {
   #solucionCont p {
     width: 100%;
     margin-top: 1em;
+    padding: 2em;
   }
   header {
     border: none;
@@ -3138,6 +3184,7 @@ footer ul {
   #solucionCont p {
     width: 100%;
     margin-top: 1em;
+    padding: 2em;
   }
   /*boton whatsapp*/
   #botonWhatsapp {
@@ -3183,6 +3230,19 @@ footer ul {
   header #hDer,
   header:hover #hDer {
     display: none;
+  }
+  #atencionArriba {
+    padding-left: 0%;
+    padding-right: 0%;
+  }
+  #tituloPrincipal {
+    width: 100%;
+  }
+  #tituloPrincipal h2 {
+    font-size: 40px;
+  }
+  #atencionAbajo strong {
+    font-size: 25px;
   }
   body {
     padding-top: 56px;
@@ -3236,6 +3296,7 @@ footer ul {
   #solucionCont p {
     width: 100%;
     margin-top: 1em;
+    padding: 2em;
   }
   /*nav*/
   #responsiveNav {

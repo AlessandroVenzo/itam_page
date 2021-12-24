@@ -13,10 +13,6 @@
     justify-content: center;
 }
 
-.atencion #atencionArriba #tituloPrincipal {
-    margin-left: 0%;
-    width: 400px;
-}
 
 #imagenPrincipal {
     order: 3;
@@ -175,7 +171,6 @@
     }
 
 
-
     #imagenDelProfe {
         width: 100%;
     }
@@ -191,6 +186,13 @@
         padding: 0%;
     }
 }
+
+/*responsividad de solucion cont*/
+
+
+
+/*fin responsividad de solucion cont*/
+
 
 /*-----FIN PERSUASION-----*/
 /*-----BENEFICIOS-----*/
@@ -217,6 +219,7 @@
     margin: 0%;
 }
 
+
 .beneficio__caja--formato {
     text-align: center;
     width: 333.6px;
@@ -224,6 +227,7 @@
     display: flex;
     flex-direction: column;
     align-items: center;
+    transition-duration: 0.5s;
 
 
     p {
@@ -238,24 +242,31 @@
     }
 }
 
+.beneficio__caja--formato:hover{
+    transform: translateY(-20px);
+    -webkit-transform: translateY(-20px);
+}
+
 
 
 #beneficio1 {
-    width: 100px !important;
+    width: 100px;
 }
 
 #beneficio2 {
-    width: 100px !important;
+    width: 180px;
     position: relative;
     top: 0%;
-    right: 10px;
+    right: 45px;
 }
 
 #beneficio3 {
-    width: 80px !important;
+    width: 80px;
     position: relative;
     top: 0%;
-    right: 10px;
+    right: 5px;
+    filter: invert(1);
+    -webkit-filter: invert(1);
 }
 
 
