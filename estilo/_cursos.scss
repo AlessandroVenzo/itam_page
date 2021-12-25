@@ -458,6 +458,7 @@
 .descripcionProducto {
     padding-left: 10%;
     padding-right: 10%;
+padding-bottom: 0.4em;
 }
 
 .contenidoMenu h4 {
@@ -476,7 +477,6 @@
 #cuadroContenido {
     height: auto;
     max-width: 800px;
-
 }
 
 #cuadroContenido h3 {
@@ -527,6 +527,8 @@
 
 .tablaDesc__cuadroContenidos--formato {
     display: block;
+
+
 
     button {
         width: 100%;
