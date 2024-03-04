@@ -10,6 +10,7 @@ Este sitio ha sido formado en base a la formación del [instituto Coderhouse en 
 Este sitio puede verse aquí: https://itamcontext.netlify.app/
 
 ----
+
 ## General Repo Metadata
 
 Mantained: No <br>
@@ -17,3 +18,8 @@ Production Proved: Yes <br>
 Able to Production: Yes <br>
 Methodologies: Feature Branching <br>
 Frameworks: Bootstrap Css <br>
+
+## Enlaces de interes:
+
+LinkedIn: https://www.linkedin.com/in/jose-pepe-web-soft-dev/  <br>
+Github: https://github.com/Jose-Simon-Pepe
